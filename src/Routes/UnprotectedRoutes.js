@@ -18,13 +18,13 @@ const UnProtectedRoutes = () => {
             />
 
             <Route
-            path="/team-086-group-a-frontend/registration"
-            exact={true}
-            component={RegistrationPages}
-          />
-            <Route 
-              path= "/team-086-group-a-frontend/contact"
-              exact = {true}
+              path="/team-086-group-a-frontend/registration"
+              exact={true}
+              component={RegistrationPages}
+            />
+            <Route
+              path="/team-086-group-a-frontend/contact"
+              exact={true}
               component={ContactPage}
             />
           </Switch>
