@@ -18,6 +18,7 @@ const NonRegisteredMemberContextProvider = (props) => {
       confirmPassword: "",
       formData: [],
     },
+
     collection: {
       specialOffers: [
         {

@@ -1,0 +1,147 @@
+.container {
+  width: 100%;
+  height: 70em;
+  background-color: green;
+}
+
+.wrapper {
+  width: 100%;
+  height: inherit;
+  display: grid;
+  grid-gap: 1em;
+}
+
+.sectionOne {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.aside {
+  flex-basis: 25%;
+  height: 29.5em;
+  border: 2px solid #ccc;
+}
+
+.avMenu {
+  background-color: red;
+  height: 3em;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-bottom: 3em;
+}
+
+.avMenu h3 {
+  text-transform: uppercase;
+}
+
+.checkIcon {
+  height: 20vh;
+}
+
+.list {
+  list-style: none;
+  height: 23.3em;
+  line-height: 2;
+}
+
+.category {
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #eee;
+  padding-left: 0.5em;
+  flex-basis: 100%;
+}
+
+.category:hover {
+  border-left: 5px solid red;
+}
+
+.display {
+  flex-basis: 65%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.menuDisplay {
+  width: 40%;
+  height: 30em;
+  display: flex;
+  border: 2px solid rgb(248, 109, 248);
+  overflow: hidden;
+}
+
+.menuImage {
+  width: 100%;
+  flex: 1;
+  height: 12em;
+}
+
+.menuImage img {
+  border-radius: 0;
+  width: 100%;
+  height: inherit;
+}
+
+.menuCaption {
+  height: 15em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.captionsWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 10em;
+  text-align: center;
+  transform: translateY(10%);
+  flex-wrap: wrap;
+}
+
+.captionsWrapper h3 {
+  text-transform: capitalize;
+}
+.captionsWrapper p {
+  font-weight: lighter;
+}
+
+.captionsWrapper span {
+  font-weight: bold;
+}
+
+.addCart {
+  width: 100%;
+  height: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addCart span {
+  width: 40%;
+  height: 2.5em;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #000;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.sectionTwo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}

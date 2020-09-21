@@ -21,7 +21,6 @@ const Routes = () => {
 
           <UnProtectedRoutes
             path="/team-086-group-a-frontend/home"
-            // exact
             component={LandingPage}
           />
 
@@ -32,19 +31,16 @@ const Routes = () => {
 
           <UnProtectedRoutes
             path="/team-086-group-a-frontend/signup"
-            // exact
             component={SignupRegistrationPage}
           />
 
           <UnProtectedRoutes
             path="/team-086-group-a-frontend/signin"
-            // exact
             component={SigninRegistrationPage}
           />
 
-          <UnProtectedRoutes
+          <ProtectedRoutes
             path="/team-086-group-a-frontend/menu"
-            // exact
             component={MenuPage}
           />
           <ProtectedRoutes

@@ -6,30 +6,43 @@
   flex-wrap: wrap;
 }
 
-.titleWrapper {
-  width: 30%;
+.CategoryWrapper {
   height: 6em;
+}
+
+.CategoryName {
+  width: 30%;
   display: flex;
+  justify-content: flex-start;
   align-items: center;
   transform: translateX(10%);
 }
 
 .tag {
+<<<<<<< HEAD
   flex-basis: 4%;
   height: 4em;
   background-color: #ff0000;
   flex-wrap: wrap;
+=======
+  width: 5%;
+  height: 4em;
+  background-color: #5adaf7;
+>>>>>>> added the searchbar and available menu section in the menu page
 }
 
-.title {
-  width: 100%;
+.cat {
   display: flex;
+  height: inherit;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
 }
 
-.title h2 {
-  font-size: 30pt;
+.cat h2 {
+  font-size: 27pt;
   text-transform: uppercase;
-  margin-left: 7%;
+  transform: translateX(7%);
 }
 
 .testimony {
@@ -47,9 +60,15 @@
   display: flex;
   justify-content: space-evenly;
   cursor: pointer;
+  flex-wrap: wrap;
 }
 
 .testimonyWrapper {
+<<<<<<< HEAD
+=======
+  width: 90%;
+  height: inherit;
+>>>>>>> added the searchbar and available menu section in the menu page
   background-color: #fff;
   flex-basis: 90%;
   display: flex;
