@@ -7,23 +7,23 @@ export default class Notification1 extends React.Component {
       <div>
         <div>
           <div>
-            <div><i class="fas fa-circle"></i></div>
-            <div><img src={Logo} alt="brand" /></div>
+            <div><i className="fas fa-circle"></i></div>
+            <div><img style={{backgroundColor: "red"}} src={Logo} alt="brand" /></div>
             <div><span>You have a new message</span></div>
             <div><span>8:45pm</span></div>
           </div>
         </div>
         <div>
           <div>
-            <div><i class="fas fa-circle"></i></div>
-            <div><span><i class="far fa-cog"></i></span></div>
+            <div><i className="fas fa-circle"></i></div>
+            <div><span><i className="far fa-cog"></i></span></div>
             <div><span>New customer registered</span></div>
             <div><span>1 hour ago</span></div>
           </div>
         </div>
         <div>
           <div>
-            <div><i class="fas fa-circle"></i></div>
+            <div><i className="fas fa-circle"></i></div>
             <div><span>15% OFF</span></div>
             <div><span>15% promo ends today</span></div>
             <div><span>3 hours ago</span></div>
@@ -31,8 +31,8 @@ export default class Notification1 extends React.Component {
         </div>
         <div>
           <div>
-            <div><i class="fas fa-circle"></i></div>
-            <div><span><i class="fad fa-star"></i></span></div>
+            <div><i className="fas fa-circle"></i></div>
+            <div><span><i className="fad fa-star"></i></span></div>
             <div><span>Your weekly ratings are ready</span></div>
             <div><span>3 hours ago</span></div>
           </div>

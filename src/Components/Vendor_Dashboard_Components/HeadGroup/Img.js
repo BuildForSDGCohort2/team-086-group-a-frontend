@@ -1,5 +1,5 @@
 import React from 'react';
-import TopImg from '../../../Asset/Rectangle 105.png';
+import TopImg from '../../../Asset/DASHBOARD.svg';
 
 export default class Img extends React.Component {
   render() {
