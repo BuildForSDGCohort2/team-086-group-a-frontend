@@ -1,13 +1,16 @@
 import React from 'react';
+import Heading from './Heading';
+import Welcome from './Welcome';
+import Img from './Img';
 
-export default class VendorDashboard extends React.Component {
+export default class HeadGroup extends React.Component {
   render() {
     return (
-      <>
-        <div className="container">
-
-        </div>
-      </>
+      <section>
+        <Heading />
+        <Welcome />
+        <Img />
+      </section>
     )
   }
 }
