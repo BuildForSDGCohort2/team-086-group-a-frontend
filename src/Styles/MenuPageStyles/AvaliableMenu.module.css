@@ -20,10 +20,21 @@
 
 .aside {
   flex-basis: 25%;
-  height: 29.5em;
+  height: 66.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.asideOne {
+  flex-basis: 100%;
   border: 2px solid #ccc;
 }
 
+.asideTwo {
+  flex-basis: 100%;
+  border: 2px solid #ccc;
+  margin-top: 5em;
+}
 .avMenu {
   background-color: red;
   height: 3em;
@@ -54,8 +65,8 @@
   font-weight: bold;
   text-transform: uppercase;
   background-color: #eee;
-  padding-left: 0.5em;
-  flex-basis: 100%;
+  padding-left: 2em;
+  font-weight: normal;
 }
 
 .category:hover {
@@ -64,23 +75,30 @@
 
 .display {
   flex-basis: 65%;
+  height: max-content;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
 .menuDisplay {
-  width: 40%;
-  height: 30em;
+  flex-basis: 40%;
+  height: max-content;
   display: flex;
-  border: 2px solid rgb(248, 109, 248);
+  border: 2px solid transparent;
   overflow: hidden;
 }
 
 .menuImage {
-  width: 100%;
-  flex: 1;
-  height: 12em;
+  height: 14em;
+}
+
+.caretAngle {
+  width: 13vw;
+  height: 10em;
+  background-color: #f76057;
+  clip-path: polygon(80% 0, 100% 24%, 100% 0);
+  transform: translate(95%, -145.5%);
 }
 
 .menuImage img {
