@@ -2,6 +2,7 @@
   width: 100%;
   height: 40em;
   margin-top: 5em;
+  flex-wrap: wrap;
 }
 
 .CategoryWrapper {
@@ -36,26 +37,24 @@
 }
 
 .blogsWrapper {
-  height: 30em;
   display: flex;
   justify-content: space-evenly;
+  height: 34em;
+  flex-wrap: wrap;
 }
 
 .contentWrapper {
-  background-color: #f8f8fc;
-  width: 30%;
-  height: 30em;
+  flex-basis: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid transparent;
+  border: 2px solid #eee;
 }
 
 .imgField {
-  width: 100%;
-  height: 20em;
-  margin-top: 30px;
   border: 2px solid transparent;
+  flex-basis: 100%;
+  margin-top: 30px;
   transition: transform 2s ease-in;
 }
 
@@ -64,15 +63,14 @@
 }
 
 .img {
-  width: 100%;
+  flex-basis: 100%;
   border: 0%;
-  position: relative;
   cursor: pointer;
 }
 
 .img img {
-  width: 100%;
   height: 20em;
+  flex-basis: 100%;
 }
 
 .itemCaption {
@@ -81,7 +79,8 @@
   width: 80%;
   height: 7em;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  transform: translateY(-50%);
 }
 
 .itemCaption h3 {

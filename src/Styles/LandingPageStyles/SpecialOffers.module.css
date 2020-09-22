@@ -1,10 +1,12 @@
 .section {
   width: 100%;
   height: 40em;
+  flex-wrap: wrap;
 }
 
 .CategoryWrapper {
   height: 6em;
+  flex-wrap: wrap;
 }
 
 .CategoryName {
@@ -35,20 +37,23 @@
 }
 
 .specialOffersWrapper {
-  height: 30em;
   display: flex;
+  height: 30em;
+  width: 100%;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .contentWrapper {
-  background-color: #f8f8fc;
-  width: 30%;
-  height: 30em;
+  flex-basis: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #f8f8fc;
   border: 1px solid #ccc;
   transition: transform 1s ease-in;
+  flex-wrap: wrap;
+  height: 33em;
 }
 
 .contentWrapper:hover {
@@ -56,33 +61,38 @@
 }
 
 .imgField {
-  width: 80%;
-  height: 20em;
-  margin-top: 30px;
+  width: 100%;
+  height: 17em;
+  display: flex;
   border: 2px solid #eee;
+  margin-top: 30px;
+  flex-wrap: wrap;
 }
 
 .img {
-  width: 100%;
+  flex-basis: 100%;
+  height: 15em;
   border: 0%;
-  position: relative;
   cursor: pointer;
-}
-
-.img img {
-  width: 100%;
-  height: 20em;
-}
-
-.discounts {
-  width: 15%;
-  height: 3em;
-  background-color: red;
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translate(530%, -120%);
+}
+
+.img img {
+  flex-basis: 100%;
+  height: 15em;
+}
+
+.discounts {
+  background-color: red;
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  height: 3em;
+  align-items: center;
   border-radius: 50%;
+  transform: translate(530%, -120%);
 }
 
 .discounts span {
@@ -92,10 +102,12 @@
 .itemCaption {
   display: flex;
   flex-direction: column;
-  width: 80%;
-  height: 7em;
   align-items: center;
   justify-content: space-evenly;
+  flex-basis: 20%;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  transform: translateY(25%);
 }
 
 .itemCaption h3 {
