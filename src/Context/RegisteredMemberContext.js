@@ -9,6 +9,7 @@ const RegisterContextMembers = React.createContext([{}, () => {}]);
 const RegisteredMemberContextProvider = (props) => {
   const [registeredMemberScreens, setRegisteredMemberScreens] = useState({
     menuSearchBar: "",
+    toggleMenuIcon: false,
     specifiedFood: [],
     collection: {
       categories: [

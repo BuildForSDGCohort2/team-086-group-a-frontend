@@ -7,8 +7,9 @@ import AvaliableMenuStyles from "../../Styles/MenuPageStyles/AvaliableMenu.modul
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCheckSquare,
-  faAngleDoubleDown,
   faLongArrowAltRight,
+  faCaretDown,
+  faCaretUp,
 } from "@fortawesome/free-solid-svg-icons";
 const AvaliableMenu = ({ match }) => {
   const {
@@ -25,6 +26,7 @@ const AvaliableMenu = ({ match }) => {
     category,
     menuDisplay,
     menuImage,
+    caretAngle,
     menuCaption,
     captionsWrapper,
     addCart,
@@ -65,7 +67,7 @@ const AvaliableMenu = ({ match }) => {
       }));
     };
     displayReadyFood();
-  }, []);
+  }, [setState, availableFood]);
 
   return (
     <section className={container}>
@@ -93,7 +95,14 @@ const AvaliableMenu = ({ match }) => {
               <div className={avMenu}>
                 <h3>filters</h3>
                 <FontAwesomeIcon
-                  icon={faAngleDoubleDown}
+                  icon={state.toggleMenuIcon ? faCaretDown : faCaretUp}
+                  size="2x"
+                  onClick={() =>
+                    setState((data) => ({
+                      ...data,
+                      toggleMenuIcon: !state.toggleMenuIcon,
+                    }))
+                  }
                   className={checkIcon}
                 />
               </div>
@@ -150,7 +159,9 @@ const AvaliableMenu = ({ match }) => {
                     src={image}
                     alt="food display"
                     className={menuImage}
+                    icon={<div className={caretAngle}></div>}
                   />
+
                   <figcaption className={menuCaption}>
                     <div className={captionsWrapper}>
                       <h3>{type}</h3>
@@ -171,86 +182,6 @@ const AvaliableMenu = ({ match }) => {
             )}
           </div>
         </div>
-
-        {/* <div className={section
-          <aside className={aside}>
-            <div className={avMenu}>
-              <h3>filters</h3>
-              <FontAwesomeIcon icon={faAngleDoubleDown} className={checkIcon} />
-            </div>
-            <div className={DropDowns}>
-              <div className={catWrapper}>
-                <div className={nameWrapper}>
-                  <FontAwesomeIcon
-                    icon={faLongArrowAltRight}
-                    className={trailingLine}
-                  />
-                  <h3>category</h3>
-                </div>
-                <ul className={filterCategoryList}>
-                  {filterCategory &&
-                    filterCategory.map((categoriesList, index) => (
-                      <CustomList
-                        text={categoriesList}
-                        key={index}
-                        click={handleListClick}
-                        className={filterCat}
-                      />
-                    ))}
-                </ul>
-              </div>
-
-              <div className={brandWrapper}>
-                <div className={secNameWrapper}>
-                  <FontAwesomeIcon
-                    icon={faLongArrowAltRight}
-                    className={trailingLine}
-                  />
-                  <h3>brands</h3>
-                </div>
-                <ul className={brandLists}>
-                  {brands &&
-                    brands.map((categoriesList, index) => (
-                      <CustomList
-                        text={categoriesList}
-                        key={index}
-                        click={handleListClick}
-                        className={brand}
-                      />
-                    ))}
-                </ul>
-              </div>
-            </div>
-          </aside>
-            </div> */}
-        {/* <div className={display}>
-            {specifiedFood.length > 0 ? (
-              specifiedFood.map(({ image, type, desc, price }, index) => (
-                <fieldset key={index} className={menuDisplay}>
-                  <CustomImage
-                    src={image}
-                    alt="food display"
-                    className={menuImage}
-                  />
-                  <figcaption className={menuCaption}>
-                    <div className={captionsWrapper}>
-                      <h3>{type}</h3>
-                      <p>{desc}</p>
-                      <span>${price}</span>
-                    </div>
-
-                    <div className={addCart}>
-                      <span>add to cart</span>
-                    </div>
-                  </figcaption>
-                </fieldset>
-              ))
-            ) : (
-              <div>
-                <h2>sorry! food will soon be ready</h2>
-              </div>
-            )}
-          </div> */}
       </div>
     </section>
   );
