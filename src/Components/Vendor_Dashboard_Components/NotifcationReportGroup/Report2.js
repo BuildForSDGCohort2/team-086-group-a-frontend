@@ -41,8 +41,8 @@ export default class Report2 extends React.Component {
           </div>
 
           <div>
-            <span>Last 7 days <i class="fas fa-caret-right"></i></span>
-            <span>List <i class="fas fa-caret-right"></i></span>
+            <span>Last 7 days <i className="fas fa-caret-right"></i></span>
+            <span>List <i className="fas fa-caret-right"></i></span>
           </div>
       </div>
     )

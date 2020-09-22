@@ -5,7 +5,7 @@ import Notification2 from './Notification2';
 export default class Notification extends React.Component {
   render() {
     return (
-      <div>
+      <div className="col-lg-8">
         <h1>Notification</h1>
         <Notification1 />
         <Notification2 />

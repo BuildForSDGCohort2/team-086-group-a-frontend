@@ -5,7 +5,7 @@ import Report2 from './Report2';
 export default class Report extends React.Component {
   render() {
     return (
-      <div>
+      <div className="col-lg-4">
         <h1>Report</h1>
         <Report1 />
         <Report2 />

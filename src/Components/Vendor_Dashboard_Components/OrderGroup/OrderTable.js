@@ -6,11 +6,13 @@ export default class OrderTable extends React.Component {
       <div>
         <table>
           <thead>
+            <tr>
             <th>Order ID</th>
             <th>Customer</th>
             <th>Date</th>
             <th>Status</th>
             <th>Actions</th>
+            </tr>
           </thead>
           <tbody>
             <tr>
@@ -19,8 +21,8 @@ export default class OrderTable extends React.Component {
               <td>05/30/2020</td>
               <td>Delivered</td>
               <td>
-                <span><i class="fal fa-ellipsis-v"></i></span>
-                <span><i class="fas fa-pen-square"></i></span>
+                <span><i className="fal fa-ellipsis-v"></i></span>
+                <span><i className="fas fa-pen-square"></i></span>
               </td>
             </tr>
             
@@ -30,8 +32,8 @@ export default class OrderTable extends React.Component {
               <td>05/30/2020</td>
               <td>Delivered</td>
               <td>
-                <span><i class="fal fa-ellipsis-v"></i></span>
-                <span><i class="fas fa-pen-square"></i></span>
+                <span><i className="fal fa-ellipsis-v"></i></span>
+                <span><i className="fas fa-pen-square"></i></span>
               </td>
             </tr>
             
@@ -41,8 +43,8 @@ export default class OrderTable extends React.Component {
               <td>05/30/2020</td>
               <td>Delivered</td>
               <td>
-                <span><i class="fal fa-ellipsis-v"></i></span>
-                <span><i class="fas fa-pen-square"></i></span>
+                <span><i className="fal fa-ellipsis-v"></i></span>
+                <span><i className="fas fa-pen-square"></i></span>
               </td>
             </tr>
             
@@ -52,8 +54,8 @@ export default class OrderTable extends React.Component {
               <td>05/30/2020</td>
               <td>Delivered</td>
               <td>
-                <span><i class="fal fa-ellipsis-v"></i></span>
-                <span><i class="fas fa-pen-square"></i></span>
+                <span><i className="fal fa-ellipsis-v"></i></span>
+                <span><i className="fas fa-pen-square"></i></span>
               </td>
             </tr>
             
@@ -63,8 +65,8 @@ export default class OrderTable extends React.Component {
               <td>05/30/2020</td>
               <td>Delivered</td>
               <td>
-                <span><i class="fal fa-ellipsis-v"></i></span>
-                <span><i class="fas fa-pen-square"></i></span>
+                <span><i className="fal fa-ellipsis-v"></i></span>
+                <span><i className="fas fa-pen-square"></i></span>
               </td>
             </tr>
             
@@ -74,8 +76,8 @@ export default class OrderTable extends React.Component {
               <td>05/30/2020</td>
               <td>Delivered</td>
               <td>
-                <span><i class="fal fa-ellipsis-v"></i></span>
-                <span><i class="fas fa-pen-square"></i></span>
+                <span><i className="fal fa-ellipsis-v"></i></span>
+                <span><i className="fas fa-pen-square"></i></span>
               </td>
             </tr>
             

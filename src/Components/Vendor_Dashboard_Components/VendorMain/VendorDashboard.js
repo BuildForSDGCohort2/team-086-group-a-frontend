@@ -3,17 +3,20 @@ import HeadGroup from '../HeadGroup/HeadGroup';
 import NotificationGroup from '../NotifcationReportGroup/NotificationReportGroup';
 import FavOrderGroup from '../FavOrderGroup/FavOrderGroup';
 import OrderGroup from '../OrderGroup/Orders';
-import VendorDashboardStyle from '../../../Styles/VendorDashboardStyle.module.css';
-
+import Header from '../../../Common/Header.Component/Header.jsx';
+import Footer from '../../../Common/Footer.component/Footer.jsx';
 export default class VendorDashboard extends React.Component {
   render() {
-    const { Body } = VendorDashboardStyle;
     return (
-      <div className={Body}>
-        <HeadGroup />
-        <NotificationGroup />
-        <FavOrderGroup />
-        <OrderGroup />
+      <div>
+        <Header />
+        <div className="container">
+          <HeadGroup />
+          <NotificationGroup />
+          <FavOrderGroup />
+          <OrderGroup />
+          <Footer />
+        </div>
       </div>
     );
   };
