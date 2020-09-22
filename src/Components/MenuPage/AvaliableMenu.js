@@ -10,7 +10,6 @@ const AvaliableMenu = () => {
     container,
     wrapper,
     sectionOne,
-    sectionTwo,
     aside,
     avMenu,
     checkIcon,
@@ -90,7 +89,11 @@ const AvaliableMenu = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
         <div className={sectionTwo}>
+=======
+        {/* <div className={section
+>>>>>>> wrapped the footer component on screen resize
           <aside className={aside}>
             <div className={avMenu}>
               <h3>filters</h3>

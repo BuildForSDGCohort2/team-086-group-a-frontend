@@ -19,16 +19,10 @@
 }
 
 .tag {
-<<<<<<< HEAD
   flex-basis: 4%;
   height: 4em;
   background-color: #ff0000;
   flex-wrap: wrap;
-=======
-  width: 5%;
-  height: 4em;
-  background-color: #5adaf7;
->>>>>>> added the searchbar and available menu section in the menu page
 }
 
 .cat {
@@ -64,11 +58,6 @@
 }
 
 .testimonyWrapper {
-<<<<<<< HEAD
-=======
-  width: 90%;
-  height: inherit;
->>>>>>> added the searchbar and available menu section in the menu page
   background-color: #fff;
   flex-basis: 90%;
   display: flex;

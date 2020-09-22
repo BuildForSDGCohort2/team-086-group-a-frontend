@@ -108,6 +108,7 @@ const Footer = () => {
                     <CustomButton text={"sign up"} className={button} />
                   </form>
                 </div>
+
                 <div className={text}>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
