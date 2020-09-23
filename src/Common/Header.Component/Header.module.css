@@ -17,20 +17,9 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  animation: fade 3s ease-in;
+  flex-wrap: wrap;
 }
 
-@keyframes fade {
-  from {
-    background-color: #fff;
-    width: 0%;
-  }
-
-  to {
-    background-color: rgba(0, 0, 0, 0.75);
-    width: 100%;
-  }
-}
 .logo {
   height: inherit;
   display: flex;
@@ -47,6 +36,8 @@
   justify-content: space-evenly;
   flex-basis: 60%;
   align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .navBars {
@@ -55,6 +46,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .navBars li {
@@ -67,6 +59,7 @@
   font-weight: bolder;
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .links:hover {
