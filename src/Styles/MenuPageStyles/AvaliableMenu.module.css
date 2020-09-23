@@ -1,7 +1,6 @@
 .container {
   width: 100%;
-  height: 70em;
-  background-color: green;
+  height: 100em;
 }
 
 .wrapper {
@@ -36,7 +35,7 @@
   margin-top: 5em;
 }
 .avMenu {
-  background-color: red;
+  background-color: #f76057;
   height: 3em;
   color: #fff;
   display: flex;
@@ -56,8 +55,7 @@
 
 .list {
   list-style: none;
-  height: 23.3em;
-  line-height: 2;
+  line-height: 1.5em;
 }
 
 .category {
@@ -70,7 +68,8 @@
 }
 
 .category:hover {
-  border-left: 5px solid red;
+  border-left: 5px solid #f76057;
+  font-weight: bold;
 }
 
 .display {
@@ -108,7 +107,7 @@
 }
 
 .menuCaption {
-  height: 15em;
+  height: 18em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -159,9 +158,93 @@
   cursor: pointer;
 }
 
-.sectionTwo {
-  width: 100%;
+.DropDowns {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: space-evenly;
+  height: 30em;
+}
+
+.catWrapper {
+  height: 13em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.nameWrapper {
+  display: flex;
+  align-items: center;
+  background-color: #eee;
+  height: 3em;
+}
+
+.nameWrapper h3 {
+  text-transform: uppercase;
+}
+
+.trailingLine {
+  margin: 5px;
+}
+
+.filterCategoryList {
+  list-style: none;
+}
+
+.filterCat {
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-left: 2em;
+  flex-basis: 100%;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.filterCat:hover {
+  border-left: 5px solid #f76057;
+  font-weight: bold;
+}
+
+.brandWrapper {
+  height: 20.2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 5em;
+  transform: translateY(-10%);
+}
+
+.secNameWrapper {
+  height: 3em;
+  display: flex;
+  align-items: center;
+  background-color: #eee;
+}
+
+.secNameWrapper h3 {
+  text-transform: uppercase;
+}
+
+.brandLists {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 1.5;
+}
+
+.brand {
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-left: 2em;
+  flex-basis: 100%;
+  font-weight: normal;
+  height: 15em;
+}
+
+.brand:hover {
+  border-left: 5px solid #f76057;
+  font-weight: bold;
 }

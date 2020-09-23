@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from "react";
+import { withRouter } from "react-router-dom";
 import { RegisterContextMembers } from "../../Context/RegisteredMemberContext";
 import CustomList from "../../Common/List.component/List";
 import CustomImage from "../../Common/Image.component/Image";
@@ -10,7 +11,6 @@ import {
   faCaretDown,
   faCaretUp,
 } from "@fortawesome/free-solid-svg-icons";
-
 const AvaliableMenu = ({ match }) => {
   const {
     container,
@@ -21,16 +21,6 @@ const AvaliableMenu = ({ match }) => {
     asideTwo,
     avMenu,
     checkIcon,
-    DropDowns,
-    catWrapper,
-    nameWrapper,
-    trailingLine,
-    filterCategoryList,
-    filterCat,
-    brandWrapper,
-    secNameWrapper,
-    brandLists,
-    brand,
     display,
     list,
     category,
@@ -40,6 +30,16 @@ const AvaliableMenu = ({ match }) => {
     menuCaption,
     captionsWrapper,
     addCart,
+    DropDowns,
+    catWrapper,
+    filterCategoryList,
+    nameWrapper,
+    secNameWrapper,
+    trailingLine,
+    filterCat,
+    brandWrapper,
+    brand,
+    brandLists,
   } = AvaliableMenuStyles;
   const [state, setState] = useContext(RegisterContextMembers);
   const { collection, specifiedFood } = state;
@@ -51,7 +51,7 @@ const AvaliableMenu = ({ match }) => {
       availableFood &&
       availableFood
         .filter((foodName) => foodName.name === target.innerText.toLowerCase())
-        .filter((v, i) => i <= 1);
+        .filter((v, i) => i <= 6);
     setState((data) => ({
       ...data,
       specifiedFood: response,
@@ -150,17 +150,6 @@ const AvaliableMenu = ({ match }) => {
                 </div>
               </div>
             </div>
-            <ul className={list}>
-              {categories &&
-                categories.map((categoriesList, index) => (
-                  <CustomList
-                    text={categoriesList}
-                    key={index}
-                    click={handleListClick}
-                    className={category}
-                  />
-                ))}
-            </ul>
           </aside>
           <div className={display}>
             {handleListClick && specifiedFood.length > 0 ? (
@@ -198,4 +187,4 @@ const AvaliableMenu = ({ match }) => {
   );
 };
 
-export default AvaliableMenu;
+export default withRouter(AvaliableMenu);

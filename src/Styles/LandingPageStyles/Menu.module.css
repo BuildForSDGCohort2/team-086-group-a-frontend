@@ -35,11 +35,6 @@
 }
 
 .menuWrapper {
-<<<<<<< HEAD
-=======
-  width: 100%;
-  height: 45em;
->>>>>>> added the searchbar and available menu section in the menu page
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -53,11 +48,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-<<<<<<< HEAD
   transition: flex-basis 2s ease;
-=======
-  transition: width 2s ease;
->>>>>>> added the searchbar and available menu section in the menu page
 }
 
 .contentWrapper:hover {
@@ -113,34 +104,20 @@
 }
 
 .more {
-<<<<<<< HEAD
   width: 100%;
   display: flex;
   justify-content: center;
   transform: translateY(-3em);
-=======
-  position: relative;
-  top: -6%;
->>>>>>> added the searchbar and available menu section in the menu page
   cursor: pointer;
   flex-wrap: wrap;
 }
 
 .moreWrapper {
-<<<<<<< HEAD
   flex-basis: 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transform: translate(44.5vw);
-=======
-  width: 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transform: translateX(91vw);
-  flex-wrap: wrap;
->>>>>>> added the searchbar and available menu section in the menu page
 }
 
 .moreWrapper span {
