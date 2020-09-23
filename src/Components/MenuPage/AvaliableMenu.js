@@ -60,7 +60,7 @@ const AvaliableMenu = ({ match }) => {
 
   useEffect(() => {
     const displayReadyFood = () => {
-      let response = availableFood && availableFood.filter((v, i) => i <= 1);
+      let response = availableFood && availableFood.filter((v, i) => i <= 3);
       setState((data) => ({
         ...data,
         specifiedFood: response,
