@@ -4,6 +4,7 @@ import LandingPage from "../Pages/LandingPage/LandingPage";
 import SigninRegistrationPage from "../Pages/RegistrationPages/SigninRegistration";
 import SignupRegistrationPage from "../Pages/RegistrationPages/RegistrationPages";
 import MenuPage from "../Pages/menuPage/MenuPage";
+import UserDashBoard from "../Pages/User_dashboard/UserDashboard";
 import UnProtectedRoutes from "./UnprotectedRoutes";
 import ProtectedRoutes from "./ProtectRouted";
 import NotFoundPage from "../Pages/NotFoundPages/NotFound";
@@ -46,9 +47,8 @@ const Routes = () => {
             component={MenuPage}
           />
           <ProtectedRoutes
-            path="/team-086-group-a-frontend/dash"
-            // exact={true}
-            render={() => <h1>Am protected </h1>}
+            path="/team-086-group-a-frontend/dashboard"
+            component={UserDashBoard}
           />
           <Route render={NotFoundPage} />
         </Switch>
