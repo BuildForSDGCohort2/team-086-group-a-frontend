@@ -6,7 +6,6 @@ import Drinks from "../Asset/Rectangle 27.png";
 import BreakFast from "../Asset/Ellipse 75.svg";
 
 const RegisterContextMembers = React.createContext([{}, () => {}]);
-
 const RegisteredMemberContextProvider = (props) => {
   const [registeredMemberScreens, setRegisteredMemberScreens] = useState({
     menuSearchBar: "",
@@ -37,6 +36,30 @@ const RegisteredMemberContextProvider = (props) => {
       },
 
       availableFood: [
+        {
+          name: "soup",
+          type: "egusi soup",
+          image: SoupOne,
+          desc: "Lorem ipsum, dolor sit amet consectetur adipi",
+          price: 60,
+          vendor: "dominos",
+        },
+        {
+          name: "soup",
+          type: "egusi soup",
+          image: SoupOne,
+          desc: "Lorem ipsum, dolor sit amet consectetur adipi",
+          price: 60,
+          vendor: "dominos",
+        },
+        {
+          name: "soup",
+          type: "egusi soup",
+          image: SoupOne,
+          desc: "Lorem ipsum, dolor sit amet consectetur adipi",
+          price: 60,
+          vendor: "dominos",
+        },
         {
           name: "soup",
           type: "egusi soup",
