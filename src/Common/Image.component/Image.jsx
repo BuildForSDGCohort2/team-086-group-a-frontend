@@ -18,6 +18,7 @@ const Image = ({
   zIndex,
   id,
   type,
+  icon,
 }) => {
   const { customImage, customImageWrapper } = ImageStyles;
   return (
@@ -43,6 +44,7 @@ const Image = ({
         id={id ? id : null}
         type={type ? type : null}
       />
+      <span>{icon ? icon : null}</span>
     </div>
   );
 };

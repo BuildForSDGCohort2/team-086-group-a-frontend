@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { NonRegisterContextMembers } from "../../Context/NonRegisteredMemberContext";
 import Header from "../../Common/Header.Component/Header";
 import VendorBar from "../../Components/LandingPage/Vendor_SignUp_Bar.jsx";
@@ -17,6 +17,9 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import LandingPageStyles from "../../Styles/LandingPageStyles/LandingPage.module.css";
 
 const LandingPage = () => {
+  useEffect(() => {
+    sessionStorage.setItem("Token", "hello");
+  }, []);
   const {
     allContainer,
     topArea,

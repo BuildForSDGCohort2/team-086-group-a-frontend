@@ -9,9 +9,10 @@ const Testimonials = () => {
   const { testimonials } = collection;
   const {
     section,
-    titleWrapper,
+    CategoryWrapper,
+    CategoryName,
     tag,
-    title,
+    cat,
     testimony,
     testimonyContainer,
     testimonyWrapper,
@@ -23,10 +24,12 @@ const Testimonials = () => {
 
   return (
     <section className={section}>
-      <div className={titleWrapper}>
-        <div className={tag}></div>
-        <div className={title}>
-          <h2>testimonials</h2>
+      <div className={CategoryWrapper}>
+        <div className={CategoryName}>
+          <div className={tag}></div>
+          <div className={cat}>
+            <h2>testimonials</h2>
+          </div>
         </div>
       </div>
       <div className={testimony}>
