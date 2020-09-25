@@ -1,7 +1,10 @@
 import React, { useContext, useEffect } from "react";
 import { RegisterContextMembers } from "../../Context/RegisteredMemberContext";
 import CustomImage from "../../Common/Image.component/Image";
-import CustomList from "../../Common/List.component/List";
+import CustomInput from "../../Common/Input.component/Input";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDotCircle } from "@fortawesome/free-solid-svg-icons";
+
 import NotificationStyles from "../../Styles/User_dashboard/Notification.module.css";
 const Notification = () => {
   const {
@@ -37,21 +40,19 @@ const Notification = () => {
         <h2>notification</h2>
       </div>
       <div className={notificationWrapper}>
-        {Notifications &&
-          Notifications.map(({ type, image }, index) => (
-            <div key={index} className={listWrapper}>
-              <div style={{ backgroundColor: "blue" }} className={list}>
+        <div className={listWrapper}>
+          {Notifications &&
+            Notifications.map(({ type, image }, index) => (
+              <div className={list} key={index}>
                 <div className={leftView}>
+                  <CustomInput type="radio" />
                   <CustomImage src={image} alt="food image" className={img} />
-                  <CustomList
-                    text={type + " available"}
-                    className={description}
-                  />
+                  <span className={description}>{type + " available"}</span>
                 </div>
                 <span className={duration}>2days ago</span>
               </div>
-            </div>
-          ))}
+            ))}
+        </div>
       </div>
     </section>
   );
