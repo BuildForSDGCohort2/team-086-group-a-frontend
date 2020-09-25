@@ -1,7 +1,8 @@
 import React from "react";
+import Header from "../../Common/Header.Component/Header";
 import DisplayPicture from "../../Components/User_dashboard/DisplayPicture";
 import Notification from "../../Components/User_dashboard/Notification";
-import Header from "../../Common/Header.Component/Header";
+import RecommendedRestaurants from "../../Components/User_dashboard/Restaurant";
 import Footer from "../../Common/Footer.component/Footer";
 const UserDashboard = () => {
   return (
@@ -9,6 +10,7 @@ const UserDashboard = () => {
       <Header />
       <DisplayPicture />
       <Notification />
+      <RecommendedRestaurants />
       <Footer />
     </div>
   );

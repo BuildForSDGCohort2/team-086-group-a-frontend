@@ -2,8 +2,6 @@ import React, { useContext, useEffect } from "react";
 import { RegisterContextMembers } from "../../Context/RegisteredMemberContext";
 import CustomImage from "../../Common/Image.component/Image";
 import CustomInput from "../../Common/Input.component/Input";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDotCircle } from "@fortawesome/free-solid-svg-icons";
 
 import NotificationStyles from "../../Styles/User_dashboard/Notification.module.css";
 const Notification = () => {

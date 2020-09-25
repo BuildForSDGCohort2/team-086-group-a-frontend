@@ -1,6 +1,5 @@
 .section {
   width: 50%;
-  /* height: 50em; */
   display: grid;
 }
 
@@ -39,6 +38,7 @@
   justify-content: space-around;
   align-items: center;
   border-radius: 5px;
+  filter: drop-shadow(3px 5px rgba(238, 238, 238, 0.544));
 }
 
 .leftView {
