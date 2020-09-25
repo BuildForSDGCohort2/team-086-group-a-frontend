@@ -11,6 +11,7 @@ const RegisteredMemberContextProvider = (props) => {
     menuSearchBar: "",
     toggleMenuIcon: false,
     specifiedFood: [],
+    Notifications: [],
     collection: {
       categories: [
         "soup",
@@ -43,6 +44,8 @@ const RegisteredMemberContextProvider = (props) => {
           desc: "Lorem ipsum, dolor sit amet consectetur adipi",
           price: 60,
           vendor: "dominos",
+          unique: false,
+          readyMeal: false,
         },
         {
           name: "soup",
@@ -51,6 +54,8 @@ const RegisteredMemberContextProvider = (props) => {
           desc: "Lorem ipsum, dolor sit amet consectetur adipi",
           price: 60,
           vendor: "dominos",
+          unique: false,
+          readyMeal: false,
         },
         {
           name: "soup",
@@ -59,6 +64,8 @@ const RegisteredMemberContextProvider = (props) => {
           desc: "Lorem ipsum, dolor sit amet consectetur adipi",
           price: 60,
           vendor: "dominos",
+          unique: false,
+          readyMeal: false,
         },
         {
           name: "soup",
@@ -67,6 +74,8 @@ const RegisteredMemberContextProvider = (props) => {
           desc: "Lorem ipsum, dolor sit amet consectetur adipi",
           price: 60,
           vendor: "dominos",
+          unique: false,
+          readyMeal: false,
         },
         {
           name: "soup",
@@ -75,6 +84,8 @@ const RegisteredMemberContextProvider = (props) => {
           desc: "Lorem ipsum, dolor sit amet consectetur adipi",
           price: 60,
           vendor: "dominos",
+          unique: false,
+          readyMeal: false,
         },
         {
           name: "soup",
@@ -83,6 +94,8 @@ const RegisteredMemberContextProvider = (props) => {
           desc: "Lorem ipsum, dolor sit amet consectetur adipi",
           price: 60,
           vendor: "dominos",
+          unique: true,
+          readyMeal: true,
         },
         {
           name: "rice",
@@ -91,6 +104,8 @@ const RegisteredMemberContextProvider = (props) => {
           desc: "Lorem ipsum, dolor sit amet consectetur adipi",
           price: 60,
           vendor: "52",
+          unique: true,
+          readyMeal: true,
         },
         {
           name: "rice",
@@ -99,6 +114,8 @@ const RegisteredMemberContextProvider = (props) => {
           desc: "Lorem ipsum, dolor sit amet consectetur adipi",
           price: 60,
           vendor: "52",
+          unique: true,
+          readyMeal: true,
         },
         {
           name: "rice",
@@ -107,6 +124,8 @@ const RegisteredMemberContextProvider = (props) => {
           desc: "Lorem ipsum, dolor sit amet consectetur adipi",
           price: 60,
           vendor: "52",
+          unique: false,
+          readyMeal: false,
         },
 
         {
@@ -116,6 +135,8 @@ const RegisteredMemberContextProvider = (props) => {
           desc: "Lorem ipsum, dolor sit amet consectetur adipi",
           price: 60,
           vendor: "sides",
+          unique: false,
+          readyMeal: false,
         },
         {
           name: "plantain plantain",
@@ -124,6 +145,8 @@ const RegisteredMemberContextProvider = (props) => {
           desc: "Lorem ipsum, dolor sit amet consectetur adipi",
           price: 60,
           vendor: "sides",
+          unique: false,
+          readyMeal: false,
         },
         {
           name: "plantain",
@@ -132,6 +155,8 @@ const RegisteredMemberContextProvider = (props) => {
           desc: "Lorem ipsum, dolor sit amet consectetur adipi",
           price: 60,
           vendor: "sides",
+          unique: true,
+          readyMeal: true,
         },
         {
           name: "fit meals",
@@ -140,6 +165,8 @@ const RegisteredMemberContextProvider = (props) => {
           desc: "Lorem ipsum, dolor sit amet consectetur adipi",
           price: 60,
           vendor: "home cooking",
+          unique: true,
+          readyMeal: true,
         },
         {
           name: "fit meals",
@@ -148,6 +175,8 @@ const RegisteredMemberContextProvider = (props) => {
           desc: "Lorem ipsum, dolor sit amet consectetur adipi",
           price: 60,
           vendor: "home cooking",
+          unique: false,
+          readyMeal: false,
         },
         {
           name: "fit meals",
@@ -156,6 +185,8 @@ const RegisteredMemberContextProvider = (props) => {
           desc: "Lorem ipsum, dolor sit amet consectetur adipi",
           price: 60,
           vendor: "home cooking",
+          unique: false,
+          readyMeal: false,
         },
         {
           name: "1k+ combos",
@@ -164,6 +195,8 @@ const RegisteredMemberContextProvider = (props) => {
           desc: "Lorem ipsum, dolor sit amet consectetur adipi",
           price: 60,
           vendor: "bukka hut",
+          unique: false,
+          readyMeal: false,
         },
         {
           name: "1k+ combos",
@@ -172,6 +205,8 @@ const RegisteredMemberContextProvider = (props) => {
           desc: "Lorem ipsum, dolor sit amet consectetur adipi",
           price: 60,
           vendor: "bukka hut",
+          unique: true,
+          readyMeal: false,
         },
         {
           name: "1k+ combos",
@@ -180,6 +215,8 @@ const RegisteredMemberContextProvider = (props) => {
           desc: "Lorem ipsum, dolor sit amet consectetur adipi",
           price: 60,
           vendor: "bukka hut",
+          unique: false,
+          readyMeal: false,
         },
         {
           name: "breakfast",
@@ -188,6 +225,8 @@ const RegisteredMemberContextProvider = (props) => {
           desc: "Lorem ipsum, dolor sit amet consectetur adipi",
           price: 60,
           vendor: "food & wine",
+          unique: true,
+          readyMeal: false,
         },
         {
           name: "breakfast",
@@ -196,6 +235,8 @@ const RegisteredMemberContextProvider = (props) => {
           desc: "Lorem ipsum, dolor sit amet consectetur adipi",
           price: 60,
           vendor: "food & wine",
+          unique: false,
+          readyMeal: false,
         },
         {
           name: "breakfast",
@@ -204,6 +245,8 @@ const RegisteredMemberContextProvider = (props) => {
           desc: "Lorem ipsum, dolor sit amet consectetur adipi",
           price: 60,
           vendor: "food & wine",
+          unique: false,
+          readyMeal: false,
         },
         {
           name: "sunday family",
@@ -212,6 +255,8 @@ const RegisteredMemberContextProvider = (props) => {
           desc: "Lorem ipsum, dolor sit amet consectetur adipi",
           price: 60,
           vendor: "food & wine",
+          unique: false,
+          readyMeal: false,
         },
         {
           name: "sunday family",
@@ -220,6 +265,8 @@ const RegisteredMemberContextProvider = (props) => {
           desc: "Lorem ipsum, dolor sit amet consectetur adipi",
           price: 60,
           vendor: "food & wine",
+          unique: false,
+          readyMeal: false,
         },
         {
           name: "sunday family",
@@ -228,10 +275,13 @@ const RegisteredMemberContextProvider = (props) => {
           desc: "Lorem ipsum, dolor sit amet consectetur adipi",
           price: 60,
           vendor: "food & wine",
+          unique: false,
+          readyMeal: false,
         },
       ],
     },
   });
+  // abstraction / encapsulation
 
   return (
     <RegisterContextMembers.Provider
