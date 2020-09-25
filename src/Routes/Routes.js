@@ -6,6 +6,7 @@ import SignupRegistrationPage from "../Pages/RegistrationPages/RegistrationPages
 import UnProtectedRoutes from "./UnprotectedRoutes";
 import ProtectedRoutes from "./ProtectRouted";
 import NotFoundPage from "../Pages/NotFoundPages/NotFound";
+import Testimonials from "../Pages/TestimonialsPage/Testimonials";
 
 const Routes = () => {
   return (
@@ -35,6 +36,11 @@ const Routes = () => {
             path="/team-086-group-a-frontend/signin"
             // exact
             component={SigninRegistrationPage}
+          />
+          <UnProtectedRoutes
+            path="/team-086-group-a-frontend/testimonials"
+            // exact
+            component={Testimonials}
           />
 
           <ProtectedRoutes
