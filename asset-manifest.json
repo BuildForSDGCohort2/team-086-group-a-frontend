@@ -1,23 +1,34 @@
 {
   "files": {
-    "main.css": "/team-086-group-a-frontend/static/css/main.e1612521.chunk.css",
-    "main.js": "/team-086-group-a-frontend/static/js/main.0902b789.chunk.js",
-    "main.js.map": "/team-086-group-a-frontend/static/js/main.0902b789.chunk.js.map",
+    "main.css": "/team-086-group-a-frontend/static/css/main.54f8f582.chunk.css",
+    "main.js": "/team-086-group-a-frontend/static/js/main.58210ef1.chunk.js",
+    "main.js.map": "/team-086-group-a-frontend/static/js/main.58210ef1.chunk.js.map",
     "runtime-main.js": "/team-086-group-a-frontend/static/js/runtime-main.df0d6e53.js",
     "runtime-main.js.map": "/team-086-group-a-frontend/static/js/runtime-main.df0d6e53.js.map",
-    "static/js/2.46e2f94a.chunk.js": "/team-086-group-a-frontend/static/js/2.46e2f94a.chunk.js",
-    "static/js/2.46e2f94a.chunk.js.map": "/team-086-group-a-frontend/static/js/2.46e2f94a.chunk.js.map",
+    "static/js/2.556b90af.chunk.js": "/team-086-group-a-frontend/static/js/2.556b90af.chunk.js",
+    "static/js/2.556b90af.chunk.js.map": "/team-086-group-a-frontend/static/js/2.556b90af.chunk.js.map",
     "index.html": "/team-086-group-a-frontend/index.html",
-    "precache-manifest.2d4df22415d2566c223365cf33613ba3.js": "/team-086-group-a-frontend/precache-manifest.2d4df22415d2566c223365cf33613ba3.js",
+    "precache-manifest.27d893343c2b1f2fd7bb7014a89d6814.js": "/team-086-group-a-frontend/precache-manifest.27d893343c2b1f2fd7bb7014a89d6814.js",
     "service-worker.js": "/team-086-group-a-frontend/service-worker.js",
-    "static/css/main.e1612521.chunk.css.map": "/team-086-group-a-frontend/static/css/main.e1612521.chunk.css.map",
-    "static/js/2.46e2f94a.chunk.js.LICENSE.txt": "/team-086-group-a-frontend/static/js/2.46e2f94a.chunk.js.LICENSE.txt",
-    "static/media/Rectangle 105.png": "/team-086-group-a-frontend/static/media/Rectangle 105.70a4ded6.png"
+    "static/css/main.54f8f582.chunk.css.map": "/team-086-group-a-frontend/static/css/main.54f8f582.chunk.css.map",
+    "static/js/2.556b90af.chunk.js.LICENSE.txt": "/team-086-group-a-frontend/static/js/2.556b90af.chunk.js.LICENSE.txt",
+    "static/media/Ellipse 75.svg": "/team-086-group-a-frontend/static/media/Ellipse 75.6e38a4a5.svg",
+    "static/media/Rectangle 105.png": "/team-086-group-a-frontend/static/media/Rectangle 105.70a4ded6.png",
+    "static/media/Rectangle 16.svg": "/team-086-group-a-frontend/static/media/Rectangle 16.e33d8c2c.svg",
+    "static/media/Rectangle 19.svg": "/team-086-group-a-frontend/static/media/Rectangle 19.d182f1f3.svg",
+    "static/media/LandingPage.module.css": "/team-086-group-a-frontend/static/media/Rectangle 194.657d2d93.svg",
+    "static/media/Rectangle 20.png": "/team-086-group-a-frontend/static/media/Rectangle 20.64f550fb.png",
+    "static/media/Rectangle 27.png": "/team-086-group-a-frontend/static/media/Rectangle 27.32b34165.png",
+    "static/media/Rectangle 676.svg": "/team-086-group-a-frontend/static/media/Rectangle 676.1f06b972.svg",
+    "static/media/Rectangle 680.svg": "/team-086-group-a-frontend/static/media/Rectangle 680.ddeddced.svg",
+    "static/media/Rectangle 681.png": "/team-086-group-a-frontend/static/media/Rectangle 681.2b4e9fe1.png",
+    "static/media/Rectangle 682.png": "/team-086-group-a-frontend/static/media/Rectangle 682.fcec850b.png",
+    "static/media/Rectangle 685.png": "/team-086-group-a-frontend/static/media/Rectangle 685.93367575.png"
   },
   "entrypoints": [
     "static/js/runtime-main.df0d6e53.js",
-    "static/js/2.46e2f94a.chunk.js",
-    "static/css/main.e1612521.chunk.css",
-    "static/js/main.0902b789.chunk.js"
+    "static/js/2.556b90af.chunk.js",
+    "static/css/main.54f8f582.chunk.css",
+    "static/js/main.58210ef1.chunk.js"
   ]
 }
