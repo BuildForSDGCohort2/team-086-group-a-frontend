@@ -27,7 +27,7 @@ const Restaurant = () => {
   return (
     <section className={container}>
       <div className={tag}>
-        <h2>recomended restaurants</h2>
+        <h2>recommended restaurants</h2>
       </div>
       <div className={iconWrapper}>
         <div className={restaurants}>{recomendedItems}</div>
