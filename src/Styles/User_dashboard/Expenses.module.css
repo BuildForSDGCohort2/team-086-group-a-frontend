@@ -1,6 +1,6 @@
 .expensesWrapper {
   width: 70%;
-  height: 14em;
+  height: 20em;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -51,13 +51,13 @@
 }
 
 .checkout {
-  height: 3.5em;
+  height: 3.2em;
   outline: none;
   width: max-content;
 }
 
 .checkout button {
-  width: 10vw;
+  width: 10em;
   flex-basis: 100%;
   border-radius: 5px;
   border-color: red;

@@ -10,7 +10,8 @@
 
 .tag h2 {
   text-transform: capitalize;
-  transform: translateX(12%);
+  transform: translateX(20%);
+  /* transform: translateX(40%); */
 }
 
 .iconWrapper {

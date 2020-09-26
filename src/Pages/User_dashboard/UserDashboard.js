@@ -5,6 +5,7 @@ import DisplayPicture from "../../Components/User_dashboard/DisplayPicture";
 import Notification from "../../Components/User_dashboard/Notification";
 import RecommendedRestaurants from "../../Components/User_dashboard/Restaurant";
 import UserOrders from "../../Components/User_dashboard/UserOrders";
+import RecommendedMeal from "../../Components/User_dashboard/RecommendedMeal";
 import Footer from "../../Common/Footer.component/Footer";
 
 const UserDashboard = () => {
@@ -22,6 +23,7 @@ const UserDashboard = () => {
           <UserOrders />
         </div>
       </div>
+      <RecommendedMeal />
       <Footer />
     </div>
   );
