@@ -17,7 +17,11 @@ const Expenses = () => {
         <p>total</p>
         <span>${270}</span>
       </div>
-      <CustomButton text={"checkout"} className={checkout} />
+      <CustomButton
+        text={"checkout"}
+        className={checkout}
+        backgroundColor={"#f76057"}
+      />
     </section>
   );
 };

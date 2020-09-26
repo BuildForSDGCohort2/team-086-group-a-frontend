@@ -1,6 +1,4 @@
 import React from "react";
-import CustomImage from "../../Common/Image.component/Image";
-import Image from "../../Asset/Rectangle 193.png";
 import DisplayPictureStyles from "../../Styles/User_dashboard/DisplayPicture.module.css";
 
 const DisplayPicture = () => {
@@ -11,7 +9,8 @@ const DisplayPicture = () => {
     tag,
     cat,
     imageContainer,
-    image,
+    bgWrapper,
+    textWrapper,
   } = DisplayPictureStyles;
   return (
     <div className={wrapper}>
@@ -23,8 +22,12 @@ const DisplayPicture = () => {
           </div>
         </div>
       </div>
-      <div className={imageContainer}>
-        <CustomImage src={Image} alt="display image" className={image} />
+      <div className={bgWrapper}>
+        <div className={imageContainer}>
+          <div className={textWrapper}>
+            <span>try create your own meal</span>
+          </div>
+        </div>
       </div>
     </div>
   );

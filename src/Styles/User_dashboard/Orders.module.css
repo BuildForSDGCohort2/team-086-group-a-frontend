@@ -3,13 +3,14 @@
   height: max-content;
   box-shadow: 3px 3px 15px 2px #ccc;
   height: 48em;
+  margin-bottom: 20px;
 }
 
 .tag {
   height: 3em;
   display: flex;
   align-items: center;
-  background-color: #f00;
+  background-color: #f76057;
 }
 
 .tag h2 {
