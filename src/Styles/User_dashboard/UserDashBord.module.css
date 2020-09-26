@@ -1,0 +1,22 @@
+.container {
+  width: 100%;
+  height: max-content;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.leftDisplay {
+  flex-basis: 60%;
+  height: max-content;
+}
+
+.order {
+  flex-basis: 25%;
+  height: max-content;
+  transform: translateY(3%);
+}
