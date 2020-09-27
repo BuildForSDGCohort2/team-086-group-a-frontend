@@ -10,6 +10,15 @@ const NonRegisterContextMembers = React.createContext([{}, () => {}]);
 const NonRegisteredMemberContextProvider = (props) => {
   const [nonRegisteredMemberScreens, setNonRegisteredMemberScreens] = useState({
     searchData: "",
+    HeaderNavLinksCollections: [
+      "home",
+      "about",
+      "menu",
+      "testimonials",
+      "contact",
+      "blogs",
+    ],
+
     regValue: {
       fullName: "",
       email: "",

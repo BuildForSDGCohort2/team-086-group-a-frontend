@@ -5,9 +5,10 @@ import CustomNavLinks from "../NavLink.component/NavLink";
 import CustomButton from "../Button.component/Button";
 import LogoImage from "../../Asset/android-chrome-192x192.png";
 import CustomList from "../../Common/List.component/List";
-import { HeaderNavLinksCollections } from "../../Utils/NavLinksCollections";
+// import { HeaderNavLinksCollections } from "../../Utils/NavLinksCollections";
 import HeaderStyles from "../Header.Component/Header.module.css";
-const Header = ({ history }) => {
+const Header = (props) => {
+  const { history, HeaderNavLinks } = props;
   const handleSignupButton = () => {
     // routing to the signin page
     history.push("/team-086-group-a-frontend/signin");
@@ -33,8 +34,8 @@ const Header = ({ history }) => {
         </div>
         <div className={navWrapper}>
           <div className={navBars}>
-            {HeaderNavLinksCollections &&
-              HeaderNavLinksCollections.map((navlinks, index) => (
+            {HeaderNavLinks &&
+              HeaderNavLinks.map((navlinks, index) => (
                 <CustomList
                   key={index}
                   text={

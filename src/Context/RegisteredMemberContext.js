@@ -12,6 +12,14 @@ const RegisteredMemberContextProvider = (props) => {
     toggleMenuIcon: false,
     specifiedFood: [],
     Notifications: [],
+    HeaderNavLinksRegCollections: [
+      "home",
+      "dashboard",
+      "menu",
+      "testimonials",
+      "contact",
+      "blogs",
+    ],
     collection: {
       categories: [
         "soup",

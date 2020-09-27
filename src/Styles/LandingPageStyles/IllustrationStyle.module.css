@@ -38,6 +38,7 @@
 .search:hover {
   color: #ff0000;
 }
+
 .select {
   flex-basis: 2%;
   display: flex;
@@ -45,6 +46,11 @@
   align-items: center;
   justify-content: space-around;
 }
+
+.select:hover {
+  color: #ff0000;
+}
+
 .pay {
   flex-basis: 2%;
   display: flex;
@@ -52,6 +58,11 @@
   align-items: center;
   justify-content: space-around;
 }
+
+.pay:hover {
+  color: #ff0000;
+}
+
 .delivery {
   flex-basis: 2%;
   display: flex;
