@@ -8,11 +8,11 @@ import MenuPageStyles from "../../Styles/MenuPageStyles/MenuPage.module.css";
 import { RegisterContextMembers } from "../../Context/RegisteredMemberContext";
 import { NonRegisterContextMembers } from "../../Context/NonRegisteredMemberContext";
 const MenuPage = () => {
-  const { container } = MenuPageStyles;
   const [state] = useContext(RegisterContextMembers);
   const [nonRegState] = useContext(NonRegisterContextMembers);
-  const { headerNavLinksRegCollections } = state;
   const { headerNavLinksCollections } = nonRegState;
+  const { container } = MenuPageStyles;
+  const { headerNavLinksRegCollections } = state;
 
   return (
     <div className={container}>

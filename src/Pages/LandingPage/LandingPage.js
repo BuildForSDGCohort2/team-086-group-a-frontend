@@ -30,8 +30,8 @@ const LandingPage = () => {
     searchIcon,
     input,
   } = LandingPageStyles;
-  const [datas] = useContext(NonRegisterContextMembers);
-  const { searchData, headerNavLinksCollections } = datas;
+  const [state] = useContext(NonRegisterContextMembers);
+  const { searchData, headerNavLinksCollections } = state;
 
   const handleChange = ({ target }) => {
     console.log("target.value", target.value);

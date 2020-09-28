@@ -1,0 +1,101 @@
+.bg {
+    background-color:  white;
+}
+
+/* #Top after image after nav */
+
+.images {
+    max-width:  auto;
+    margin:  0;
+    display:  flex;
+    justify-content:  center;
+    align-items:  center;
+    border:  0px solid red;
+    height:  200px;
+    text-align:  center;
+    background-color:  inherit;
+    background-image: url("../../Asset/com.jpg");
+    background-position:  center;
+    background-size:  cover;
+    color:  white;
+}
+
+
+/* Welcome Message */
+
+.contactTop {
+    text-align:  center;
+    background-color:  white;
+    margin-left:  0;
+    margin-right:  0;
+    margin-bottom:  0;
+    margin-top:  20px;
+    height:  auto;
+    position:  relative;
+}
+
+.conUs {
+    font-weight:  700;
+    align-items:  center;
+}
+
+.contactTop1 {
+    text-align:  center;
+    background-color:  white;
+    margin-left:  0;
+    margin-right:  0;
+    margin-bottom:  20px;
+    margin-top:  10px;
+    height:  auto;
+    position:  relative;
+}
+
+/* Small boxes */
+
+.allBoxes{
+    justify-content:  space-around;
+
+}
+
+.smallBox {
+    margin:  auto;
+    border:  1px solid black;
+    padding:  20px;
+    margin-left:  0;
+    margin-right:  0;
+}
+
+.smallBox > h5 {
+    text-align:  left;
+}
+
+/* Forma and map */
+
+.mapForm{
+    justify-content:  space-between;
+}
+
+.formGroup {
+    width:  100%;
+    height:  400px;
+    background-color:  white;
+    margin-top:  40px;
+    padding:  70px;
+    border:  1px solid salmon;
+}
+
+
+.formOrder {
+    padding-left:  20px;
+    padding-right:  20px;
+}
+
+.map{
+    height:  400px;
+    margin-bottom:  40px;
+    margin-top:  40px;
+    background-color:  azure;
+
+
+}
+

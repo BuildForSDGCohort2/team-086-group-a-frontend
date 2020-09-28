@@ -13,6 +13,7 @@ const UserDashboard = () => {
   const [state] = useContext(RegisterContextMembers);
   const { headerNavLinksRegCollections } = state;
   const { container, wrapper, leftDisplay, order } = userDashboardStyles;
+
   return (
     <div className={container}>
       <Header headerNavLinks={headerNavLinksRegCollections} />

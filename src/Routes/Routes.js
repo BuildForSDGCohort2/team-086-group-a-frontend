@@ -10,6 +10,7 @@ import ProtectedRoutes from "./ProtectRouted";
 import { NonRegisteredMemberContextProvider } from "../Context/NonRegisteredMemberContext";
 import NotFoundPage from "../Pages/NotFoundPages/NotFound";
 import Testimonials from "../Pages/TestimonialsPage/Testimonials";
+import ContactPage from "../Pages/ContactPageModule/contact";
 
 const Routes = () => {
   return (
@@ -22,28 +23,28 @@ const Routes = () => {
               exact
               component={LandingPage}
             />
-
             <UnProtectedRoutes
               path="/team-086-group-a-frontend/home"
               component={LandingPage}
             />
-
             <UnProtectedRoutes
               path="/team-086-group-a-frontend/signin"
               component={SigninRegistrationPage}
             />
-
             <UnProtectedRoutes
               path="/team-086-group-a-frontend/signup"
               component={SignupRegistrationPage}
             />
-
             <UnProtectedRoutes
               path="/team-086-group-a-frontend/testimonials"
               // exact
               component={Testimonials}
             />
-
+            <UnProtectedRoutes
+              path="/team-086-group-a-frontend/contact"
+              // exact
+              component={ContactPage}
+            />
             <ProtectedRoutes
               path="/team-086-group-a-frontend/menu"
               component={MenuPage}
