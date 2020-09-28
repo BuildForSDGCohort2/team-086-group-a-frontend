@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  height: 20em;
+  max-height: 50em;
 }
 
 .wrapper {
@@ -21,12 +21,14 @@
 }
 
 .logo {
-  flex-basis: 15%;
+  flex-basis: 12em;
   display: flex;
+  margin-bottom: 15px;
 }
 
 .logo img {
-  height: 50%;
+  height: 18em;
+  transform: translateY(3em);
 }
 
 .shortLinksWrapper {
@@ -38,14 +40,17 @@
 
 .quickLinks {
   font-size: 12px;
-  flex-basis: 20%;
+  flex-basis: 15em;
   text-transform: capitalize;
-  flex-wrap: wrap;
+  margin-bottom: 15px;
+  height: 25em;
+  transform: translateY(3em);
 }
 
 .quickLinks h3 {
   color: #fff;
   font-weight: bold;
+  font-size: 18px;
 }
 
 .listWrapper {
@@ -64,16 +69,20 @@
 .openingHours {
   text-transform: capitalize;
   font-size: 12px;
-  flex-basis: 20%;
-  flex-wrap: wrap;
+  flex-basis: 15em;
+  margin-bottom: 15px;
+  height: 25em;
+  transform: translateY(3em);
 }
 
 .openingHours h3 {
   color: #fff;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .openingHourDetail {
-  transform: translateY(60%);
+  transform: translateY(38%);
   color: #fff;
   line-height: 1.7;
   font-size: 1rem;
@@ -88,19 +97,22 @@
 }
 
 .contactInfo {
-  flex-basis: 20%;
+  flex-basis: 15em;
   text-transform: capitalize;
   font-size: 12px;
-  flex-wrap: wrap;
+  margin-bottom: 15px;
+  height: 25em;
+  transform: translateY(3em);
 }
 
 .contactInfo h3 {
   color: #fff;
-  align-self: flex-start;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .contactInfoDetail {
-  transform: translateY(25%);
+  transform: translateY(17%);
   color: #fff;
   font-size: 1rem;
 }
@@ -115,14 +127,17 @@ p {
   display: flex;
   flex-direction: column;
   text-transform: capitalize;
-  flex-basis: 20%;
+  flex-basis: 15em;
   font-size: 12px;
-  flex-wrap: wrap;
+  margin-bottom: 4em;
+  transform: translateY(3em);
+  height: 25em;
 }
 
 .subscribe h3 {
-  align-self: flex-start;
   color: #fff;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .subscribeEvents {
@@ -137,16 +152,16 @@ p {
 }
 
 .input {
-  width: 12vw;
-  height: 3em;
+  width: 12em;
+  height: 3.5em;
   padding: 10px;
   border-radius: 5px;
   outline: none;
 }
 
 .button {
-  height: 3em;
-  width: 5vw;
+  height: 3.2em;
+  width: 5em;
   border-color: #ff0000;
   font-size: 13px;
 }
@@ -172,14 +187,15 @@ p {
   color: #fff;
   text-transform: uppercase;
 }
+
 .brandslogos {
   display: flex;
   justify-content: space-evenly;
-  flex-basis: 20%;
+  flex-basis: 15em;
 }
 
 .hints {
-  flex-basis: 30%;
+  flex-basis: 20em;
   display: flex;
   justify-content: space-evenly;
 }

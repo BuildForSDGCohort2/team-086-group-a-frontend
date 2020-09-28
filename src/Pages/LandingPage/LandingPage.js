@@ -31,7 +31,7 @@ const LandingPage = () => {
     input,
   } = LandingPageStyles;
   const [datas] = useContext(NonRegisterContextMembers);
-  const { searchData } = datas;
+  const { searchData, headerNavLinksCollections } = datas;
 
   const handleChange = ({ target }) => {
     console.log("target.value", target.value);
@@ -40,7 +40,7 @@ const LandingPage = () => {
   return (
     <div className={allContainer}>
       <div className={topArea}>
-        <Header />
+        <Header headerNavLinks={headerNavLinksCollections} />
         <VendorBar />
         <div className={emphasis}>
           <div className={textWrapper}>

@@ -12,6 +12,14 @@ const RegisteredMemberContextProvider = (props) => {
     toggleMenuIcon: false,
     specifiedFood: [],
     Notifications: [],
+    headerNavLinksRegCollections: [
+      "home",
+      "dashboard",
+      "menu",
+      "testimonials",
+      "contact",
+      "blogs",
+    ],
     collection: {
       categories: [
         "soup",
@@ -24,6 +32,7 @@ const RegisteredMemberContextProvider = (props) => {
         "sunday family",
         "sides",
       ],
+
       filters: {
         category: ["popularity", "rating ", "price"],
         brands: [

@@ -59,15 +59,13 @@
 
 .testimonyWrapper {
   background-color: #fff;
-  flex-basis: 90%;
+  flex-basis: 30em;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   filter: drop-shadow(10px 10px 30px #ccc);
   transition: transform 2s ease-in;
-
-  flex-wrap: wrap;
 }
 
 .testimonyWrapper:hover {
@@ -75,7 +73,7 @@
 }
 
 .texts {
-  width: 75%;
+  width: 25em;
   display: flex;
   align-items: center;
   flex-basis: 50%;
