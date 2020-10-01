@@ -1,23 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "798c0adbab4d9ee40ed06158fb53e7f4",
+    "revision": "f0beddcf25490c7e476480b5ba2edb87",
     "url": "/team-086-group-a-frontend/index.html"
   },
   {
-    "revision": "403c95eee1a16c597671",
-    "url": "/team-086-group-a-frontend/static/css/main.54f8f582.chunk.css"
+    "revision": "ef81f1c117f494528d16",
+    "url": "/team-086-group-a-frontend/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "23f58439fed30b97291b",
-    "url": "/team-086-group-a-frontend/static/js/2.556b90af.chunk.js"
+    "revision": "76b3ecd5653d31f9ed21",
+    "url": "/team-086-group-a-frontend/static/css/main.1ce48517.chunk.css"
   },
   {
-    "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/team-086-group-a-frontend/static/js/2.556b90af.chunk.js.LICENSE.txt"
+    "revision": "ef81f1c117f494528d16",
+    "url": "/team-086-group-a-frontend/static/js/2.9dd209ce.chunk.js"
   },
   {
-    "revision": "403c95eee1a16c597671",
-    "url": "/team-086-group-a-frontend/static/js/main.58210ef1.chunk.js"
+    "revision": "00a645e4feb786f5c1a6c95b4bbab4f2",
+    "url": "/team-086-group-a-frontend/static/js/2.9dd209ce.chunk.js.LICENSE.txt"
+  },
+  {
+    "revision": "76b3ecd5653d31f9ed21",
+    "url": "/team-086-group-a-frontend/static/js/main.f9f65819.chunk.js"
   },
   {
     "revision": "6d18a78933fe92b23ac0",
@@ -38,6 +42,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "d182f1f3610116e069c67dabe111206e",
     "url": "/team-086-group-a-frontend/static/media/Rectangle 19.d182f1f3.svg"
+  },
+  {
+    "revision": "bf04343cc76a7b74a009e22ac07b828a",
+    "url": "/team-086-group-a-frontend/static/media/Rectangle 193.bf04343c.png"
   },
   {
     "revision": "657d2d93e7d54d746af15d8847c68fcb",
@@ -70,5 +78,13 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "933675755be1a44d1ca7f299a53e0299",
     "url": "/team-086-group-a-frontend/static/media/Rectangle 685.93367575.png"
+  },
+  {
+    "revision": "99abab8e8f786968edcdea0c64a92770",
+    "url": "/team-086-group-a-frontend/static/media/com.99abab8e.jpg"
+  },
+  {
+    "revision": "3dbc674886a6f2967f6b5b1fb47fe3e1",
+    "url": "/team-086-group-a-frontend/static/media/preWed.3dbc6748.png"
   }
 ]);
