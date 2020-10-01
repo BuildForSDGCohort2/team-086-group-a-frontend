@@ -7,36 +7,39 @@ export default class Notification1 extends React.Component {
     return (
       <ParentDiv className="container">
         <ChildDive>
-          <div>
+          <InnerDiv>
             <RedDot><i className="fas fa-circle"></i></RedDot>
             <ImageSpan><ImgStyle src={Logo} alt="brand" /></ImageSpan>
             <span><span>You have a new message</span></span>
             <FloatRightSpan><span>8:45pm</span></FloatRightSpan>
-          </div>
+          </InnerDiv>
         </ChildDive>
+
         <ChildDive>
-          <div>
+          <InnerDiv>
             <RedDot><i class="fas fa-cog"></i></RedDot>
             <span><CogSpan><i className="fas fa-cog"></i></CogSpan></span>
             <span><span>New customer registered</span></span>
             <FloatRightSpan><span>1 hour ago</span></FloatRightSpan>
-          </div>
+          </InnerDiv>
         </ChildDive>
+
         <ChildDive>
-          <div>
+          <InnerDiv>
             <span><i className="fas fa-circle"></i></span>
             <span><span>15% OFF</span></span>
             <span><span>15% promo ends today</span></span>
             <FloatRightSpan><span>3 hours ago</span></FloatRightSpan>
-          </div>
+          </InnerDiv>
         </ChildDive>
+        
         <ChildDive>
-          <div>
+          <InnerDiv>
             <span><i className="fas fa-circle"></i></span>
             <span><span><i className="fad fa-star"></i></span></span>
             <span><span>Your weekly ratings are ready</span></span>
             <FloatRightSpan><span>3 hours ago</span></FloatRightSpan>
-          </div>
+          </InnerDiv>
         </ChildDive>
         <span><span>Load More...</span></span>
       </ParentDiv>
@@ -58,19 +61,18 @@ const ChildDive = styled.div`
   background-color: white;
   margin: 20px 10px;
   box-shadow: 0 0 30px #ddd;
-  
+  align-items: center;
+  display: flex;
+  justify-content: center;
 `;
 
 const ImgStyle = styled.img`
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
 `;
 
 const CogSpan = styled.span`
   color: #f96058;
-  margin-bottom: 15px;
-  display: inline-block;
-  margin: 0 20px 0 18px;
   font-size: 2.5rem;
 `;
 
@@ -87,7 +89,12 @@ const RedDot = styled.i`
 `;
 
 const FloatRightSpan = styled.span`
-  float: right;
+  display: inline-block;
   font-size: 12px;
+  float: right;
+`;
+
+const InnerDiv = styled.div`
+  width: 100%;
 `;
 

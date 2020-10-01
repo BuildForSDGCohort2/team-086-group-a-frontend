@@ -6,7 +6,7 @@ import VendorDashboard from '../../Components/Vendor_Dashboard_Components/Vendor
 export default class VendorDashboardPage extends React.Component {
   render() {
     return (
-      <main>
+      <main className='container-fluid'>  
         <Header />
         <VendorDashboard />
         <Footer />
