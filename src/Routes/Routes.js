@@ -24,16 +24,6 @@ const Routes = () => {
             path="/team-086-group-a-frontend/home"
             component={LandingPage}
           />
-<<<<<<< HEAD
-=======
-          {/* start Testimonial Page route*/}
-          <UnProtectedRoutes
-            path="/team-086-group-a-frontend/testimonials"
-            // exact
-            component={Testimonials}
-          />
-          {/* end Testimonials page route */}
->>>>>>> 126c760d7b618955c5283cf35cfe1e23fc8a4213
 
           <UnProtectedRoutes
             path="/team-086-group-a-frontend/signin"
