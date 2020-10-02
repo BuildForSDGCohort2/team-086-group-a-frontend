@@ -36,10 +36,6 @@ const Routes = () => {
           />
 
           <UnProtectedRoutes
-            path="/team-086-group-a-frontend/signin"
-            component={SigninRegistrationPage}
-          />
-          <UnProtectedRoutes
             path="/team-086-group-a-frontend/testimonials"
             // exact
             component={Testimonials}

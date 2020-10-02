@@ -1,18 +1,15 @@
-import React from "react";
-import styled from "styled-components";
-import ClientDetails from "./ClientDetails";
+import React from 'react';
+import styled from 'styled-components';
+import ClientDetails from './ClientDetails';
+import Avatar from '../../Asset/preWed.png';
 
 export default class Thumbnail extends React.Component {
   render() {
     return (
       <DivStyle className="col-lg-3 col-md-4">
-        <Span1Style>
-          <i className="fas fa-quote-left"></i>
-        </Span1Style>
-        <ImgStyle src="images/preWed.png" alt="" />
-        <PAfterImg>
-          Lorem ipsum dolor sit, amet consectetur adipisicin
-        </PAfterImg>
+        <Span1Style><i className="fas fa-quote-left"></i></Span1Style>
+        <ImgStyle src={Avatar} alt="Aveteur"/>
+        <PAfterImg>Lorem ipsum dolor sit, amet consectetur adipisicin</PAfterImg>
         <ClientDetails />
         <Span2Style>
           <i className="fas fa-quote-right"></i>
