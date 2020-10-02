@@ -3,6 +3,7 @@ import Header from "../../Common/Header.Component/Header";
 import Footer from "../../Common/Footer.component/Footer";
 import { RegisterContextMembers } from "../../Context/RegisteredMemberContext";
 import TopBgImage from "../../Components/Blogs/TopBgImage";
+import Feeds from "../../Components/Blogs/Feeds";
 
 const BlogPage = () => {
   const [state] = useContext(RegisterContextMembers);
@@ -14,7 +15,7 @@ const BlogPage = () => {
       ) : null}
 
       <TopBgImage />
-
+      <Feeds />
       <Footer />
     </div>
   );

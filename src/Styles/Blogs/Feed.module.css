@@ -1,0 +1,58 @@
+.container {
+  width: 100;
+  max-height: 150em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.feed {
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 3em;
+}
+
+.img {
+  width: 40%;
+  height: 20em;
+  min-width: 20em;
+  display: flex;
+}
+.picture {
+  flex-basis: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.picture img {
+  border-radius: 0;
+  width: 100%;
+}
+
+.viewAside {
+  width: 40%;
+  display: grid;
+  min-width: 20em;
+}
+
+.heading span {
+  text-transform: uppercase;
+  opacity: 0.3;
+}
+
+.heading h3 {
+  text-transform: capitalize;
+}
+
+.postDate em {
+  margin-left: 20px;
+  line-height: 3;
+}
