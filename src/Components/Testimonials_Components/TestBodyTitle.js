@@ -12,5 +12,9 @@ export default class TestBodyTitle extends Component {
 const PStyle = styled.h4`
   color: #333333;
   margin: 60px;
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    margin: 10px;
+  }
 `;
 

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ClientDetails from "./ClientDetails";
-import Image from "../../Asset/preWed.png";
+import Avatar from "../../Asset/preWed.png";
 
 export default class Thumbnail extends React.Component {
   render() {
@@ -10,7 +10,7 @@ export default class Thumbnail extends React.Component {
         <Span1Style>
           <i className="fas fa-quote-left"></i>
         </Span1Style>
-        <ImgStyle src={Image} alt="prewed" />
+        <ImgStyle src={Avatar} alt="Aveteur" />
         <PAfterImg>
           Lorem ipsum dolor sit, amet consectetur adipisicin
         </PAfterImg>

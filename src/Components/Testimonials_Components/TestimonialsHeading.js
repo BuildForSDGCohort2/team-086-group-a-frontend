@@ -14,5 +14,15 @@ const Heading1 = styled.h1`
   font-size: 2.5rem;
   font-weight: bold;
   color: #33394b;
+  @media (max-width: 768px) {
+    border-left: 10px solid #f96058;
+    margin: 20px;
+    margin-left: 10px;
+    padding-left: 10px;
+    line-height: 1.2;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #33394b;
+  }
 `;
 //#f96058
