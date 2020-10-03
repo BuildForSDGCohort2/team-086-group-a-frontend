@@ -1,0 +1,70 @@
+.allContainer {
+  width: 100%;
+  max-height: 350em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.topArea {
+  background-image: linear-gradient(rgba(0, 00, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../../Asset/Rectangle 194.svg");
+  width: 100%;
+  height: 43em;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.emphasis {
+  width: 100%;
+  height: 31em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 4;
+  position: relative;
+}
+
+.textWrapper {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 40%;
+  height: 8em;
+  display: flex;
+  justify-content: center;
+  flex-basis: 25%;
+  transform: translate(0%, -60%);
+}
+
+.text {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-basis: 90%;
+}
+
+.text p {
+  color: #fff;
+  font-size: 3em;
+  text-transform: uppercase;
+  word-spacing: 1.5vw;
+  text-align: center;
+}
+
+.search {
+  width: 32vw;
+  display: flex;
+  align-items: center;
+  transform: translateY(-3em);
+}
+
+.input {
+  width: 33vw;
+  height: 3em;
+  border-radius: 5px;
+  padding-left: 2em;
+  outline: none;
+  border: none;
+  font-size: 1em;
+}
+
+.searchIcon {
+  transform: translateX(-3vw);
+}

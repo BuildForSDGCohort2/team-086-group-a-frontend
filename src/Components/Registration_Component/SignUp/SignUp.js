@@ -42,7 +42,7 @@ const Signup = ({ history }) => {
   } = SignUpStyles;
   const FormRef = useRef();
   const inputsRef = useRef();
-  const { formValue } = datas;
+  const { regValue } = datas;
 
   const handleSignNavigation = async () => {
     await history.push("/team-086-group-a-frontend/signin");
@@ -86,7 +86,7 @@ const Signup = ({ history }) => {
     //function to handle input value onchange
     setData((formData) => ({
       ...formData,
-      formValue: { ...formValue, [target.name]: target.value },
+      formValue: { ...regValue, [target.name]: target.value },
     }));
   };
 
@@ -98,7 +98,7 @@ const Signup = ({ history }) => {
       email,
       password,
       confirmPassword,
-    } = formValue;
+    } = regValue;
 
     //conditionion the input value datas
 
@@ -194,7 +194,7 @@ const Signup = ({ history }) => {
                 placeholder={"fullname"}
                 className={input}
                 onChange={handleChange}
-                value={formValue.fullName}
+                value={regValue.fullName}
                 isRequired={true}
                 color={"black"}
               />
@@ -204,7 +204,7 @@ const Signup = ({ history }) => {
                 name={"phoneNumber"}
                 placeholder={"Phone Number"}
                 className={input}
-                value={formValue.phoneNumber}
+                value={regValue.phoneNumber}
                 onChange={handleChange}
                 isRequired={true}
               />
@@ -214,7 +214,7 @@ const Signup = ({ history }) => {
                 name={"email"}
                 placeholder={"Email"}
                 className={input}
-                value={formValue.email}
+                value={regValue.email}
                 onChange={handleChange}
                 isRequired={true}
               />
@@ -224,7 +224,7 @@ const Signup = ({ history }) => {
                 name={"password"}
                 placeholder={"Password"}
                 className={input}
-                value={formValue.password}
+                value={regValue.password}
                 onChange={handleChange}
                 isRequired={true}
                 icon={
@@ -241,7 +241,7 @@ const Signup = ({ history }) => {
                 name={"confirmPassword"}
                 placeholder={"Confirm Password"}
                 className={input}
-                value={formValue.confirmPassword}
+                value={regValue.confirmPassword}
                 onChange={handleChange}
                 isRequired={true}
                 icon={

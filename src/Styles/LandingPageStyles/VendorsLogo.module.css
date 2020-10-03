@@ -1,0 +1,37 @@
+.section {
+  width: 100%;
+  height: 20em;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.logoField {
+  flex-basis: 13%;
+  height: 10em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border: none;
+}
+
+.logoImage {
+  width: 100%;
+  display: flex;
+  height: inherit;
+  justify-content: center;
+}
+
+.logoImage img {
+  width: 100%;
+}

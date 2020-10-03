@@ -1,0 +1,130 @@
+.section {
+  width: 100%;
+  height: 40em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.CategoryWrapper {
+  height: 6em;
+}
+
+.CategoryName {
+  width: 30%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transform: translateX(10%);
+}
+
+.tag {
+  flex-basis: 4%;
+  height: 4em;
+  background-color: #ff0000;
+  flex-wrap: wrap;
+}
+
+.cat {
+  display: flex;
+  height: inherit;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.cat h2 {
+  font-size: 27pt;
+  text-transform: uppercase;
+  transform: translateX(7%);
+}
+
+.testimony {
+  width: 100%;
+  height: 30em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.testimonyContainer {
+  flex-basis: 40%;
+  height: 25em;
+  display: flex;
+  justify-content: space-evenly;
+  cursor: pointer;
+  flex-wrap: wrap;
+}
+
+.testimonyWrapper {
+  background-color: #fff;
+  flex-basis: 30em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  filter: drop-shadow(10px 10px 30px #ccc);
+  transition: transform 2s ease-in;
+}
+
+.testimonyWrapper:hover {
+  transform: translateX(11%);
+}
+
+.texts {
+  width: 25em;
+  display: flex;
+  align-items: center;
+  flex-basis: 50%;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.texts p {
+  font-family: fantasy;
+  line-height: 2;
+}
+
+.testifierInfo {
+  /* flex-basis: 75%; */
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pix {
+  width: 25%;
+  display: flex;
+  padding-left: 10px;
+}
+
+.pix img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.testifierDesc {
+  flex-basis: 50%;
+  height: 7em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.testifierDesc strong {
+  color: #000;
+  transform: translate(6%, -40%);
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.testifierDesc em {
+  color: #000;
+  transform: translateX(10%);
+  font-weight: bold;
+  text-transform: uppercase;
+}
