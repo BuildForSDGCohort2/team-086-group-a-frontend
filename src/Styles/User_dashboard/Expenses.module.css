@@ -1,0 +1,67 @@
+.expensesWrapper {
+  width: 70%;
+  height: 20em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.delivery {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3em;
+}
+
+.delivery p {
+  text-transform: capitalize;
+}
+
+.delivery span {
+  transform: translateX(-100%);
+}
+
+.vat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3em;
+}
+
+.vat p {
+  text-transform: uppercase;
+}
+.vat span {
+  transform: translateX(-100%);
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3em;
+}
+
+.total p {
+  text-transform: capitalize;
+}
+
+.total span {
+  transform: translateX(-50%);
+}
+
+.checkout {
+  height: 3.2em;
+  outline: none;
+  width: max-content;
+}
+
+.checkout button {
+  width: 10em;
+  flex-basis: 100%;
+  border-radius: 5px;
+  border-color: red;
+  font-size: 0.9em;
+  margin-top: 20px;
+  text-transform: capitalize;
+}

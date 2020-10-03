@@ -8,8 +8,6 @@ const Button = ({
   backgroundColor,
   click,
   text,
-  type,
-
   className,
   width,
   outline,

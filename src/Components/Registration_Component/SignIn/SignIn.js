@@ -16,7 +16,7 @@ import { faKeycdn } from "@fortawesome/free-brands-svg-icons";
 const Signin = () => {
   //function for SignUp users
   const [datas, setData] = useContext(NonRegisterContextMembers);
-
+  console.log("datas", datas);
   const {
     container,
     imageView,
@@ -60,20 +60,20 @@ const Signin = () => {
 
   const FormRef = useRef();
   const inputsRef = useRef();
-  const { formValue } = datas;
+  const { regValue } = datas;
 
   const handleChange = ({ target }) => {
     //function to handle input value onchange
     setData((formData) => ({
       ...formData,
-      formValue: { ...formValue, [target.name]: target.value },
+      formValue: { ...regValue, [target.name]: target.value },
     }));
   };
 
   const handleUSerSigUp = async (e) => {
     e.preventDefault();
 
-    const { email, password } = formValue;
+    const { email, password } = regValue;
 
     //conditionion the input value datas
     if (email) {
@@ -154,7 +154,7 @@ const Signin = () => {
                 name={"email"}
                 placeholder={"Email"}
                 className={input}
-                value={formValue.email}
+                value={regValue.email}
                 onChange={handleChange}
                 isRequired={true}
               />
@@ -164,7 +164,7 @@ const Signin = () => {
                 name={"password"}
                 placeholder={"Password"}
                 className={input}
-                value={formValue.password}
+                value={regValue.password}
                 onChange={handleChange}
                 isRequired={true}
                 icon={

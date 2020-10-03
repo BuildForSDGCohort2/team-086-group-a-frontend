@@ -3,7 +3,7 @@ import { withRouter } from "react-router-dom";
 import CustomList from "../List.component/List";
 import FooterStyles from "./Footer.module.css";
 import { FooterQuickLinksCollections } from "../../Utils/QuickLinks_collection";
-import logoImage from "../../Asset/logo.png";
+import logoImage from "../../Asset/android-chrome-192x192.png";
 import CustomImage from "../Image.component/Image";
 import CustomInput from "../Input.component/Input";
 import CustomButton from "..//Button.component/Button";
@@ -108,6 +108,7 @@ const Footer = () => {
                     <CustomButton text={"sign up"} className={button} />
                   </form>
                 </div>
+
                 <div className={text}>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.

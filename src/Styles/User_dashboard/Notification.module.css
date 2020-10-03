@@ -1,0 +1,77 @@
+.section {
+  display: grid;
+  height: max-content;
+  width: 100%;
+  /* flex-basis: 100%; */
+}
+
+.tag {
+  height: 5em;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tag h2 {
+  text-transform: capitalize;
+  /* transform: translateX(25%); */
+  transform: translateX(40%);
+}
+
+.notificationWrapper {
+  height: 30em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.listWrapper {
+  background-color: #ccc;
+  width: 90%;
+  height: 30em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  /* flex-wrap: wrap; */
+}
+.list {
+  display: flex;
+  background-color: #fff;
+  width: 95%;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.leftView {
+  display: flex;
+  flex-basis: 60%;
+  justify-content: space-between;
+  align-items: center;
+}
+.img {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clip-path: circle(40% at 50%);
+}
+
+.img img {
+  width: 100%;
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  flex-basis: 75%;
+  height: 3em;
+}
+
+.description::first-letter {
+  text-transform: uppercase;
+  color: red;
+}

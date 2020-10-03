@@ -1,6 +1,6 @@
 import React from "react";
 import listStyles from "./List.module.css";
-const Lists = ({ className, color, text, paddingTop, marginTop }) => {
+const Lists = ({ className, color, text, paddingTop, marginTop, click }) => {
   const { list } = { listStyles };
   return (
     <li
@@ -10,6 +10,7 @@ const Lists = ({ className, color, text, paddingTop, marginTop }) => {
         paddingTop: paddingTop ? paddingTop : "",
         marginTop: marginTop ? marginTop : "10px",
       }}
+      onClick={click ? click : null}
     >
       {text}
     </li>
