@@ -10,7 +10,7 @@
     display:  flex;
     justify-content:  center;
     align-items:  center;
-    border:  0px solid red;
+    border:  0 solid red;
     height:  200px;
     text-align:  center;
     background-color:  inherit;
@@ -24,7 +24,7 @@
 /* Welcome Message */
 
 .contactTop {
-    text-align:  center;
+    text-align:center;
     background-color:  white;
     margin-left:  0;
     margin-right:  0;
@@ -52,9 +52,8 @@
 
 /* Small boxes */
 
-.allBoxes{
+.allBoxes {
     justify-content:  space-around;
-
 }
 
 .smallBox {
@@ -72,7 +71,7 @@
 
 /* Forms and map */
 
-.mapForm{
+.mapForm {
     justify-content:  space-between;
 }
 
@@ -87,15 +86,15 @@
 
 
 .formOrder {
-    padding-left:  20px;
-    padding-right:  20px;
+    padding:  0 2.5em;
 }
 
-.map{
+.map {
+    display: flex;
     height:  400px;
     margin-bottom:  40px;
     margin-top:  40px;
-    background-color:  azure;
+    background-color: inherit;
 
 
 }

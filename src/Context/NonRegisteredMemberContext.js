@@ -13,6 +13,16 @@ const NonRegisteredMemberContextProvider = (props) => {
       formData: [],
     },
     collection: null,
+    // ContactPage
+    contactPage : {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+      disabled: false,
+      messageSent : null,
+    },
+
   });
 
   return (
