@@ -11,7 +11,6 @@ import ProtectedRoutes from "./ProtectRouted";
 import { NonRegisteredMemberContextProvider } from "../Context/NonRegisteredMemberContext";
 import NotFoundPage from "../Pages/NotFoundPages/NotFound";
 import Testimonials from "../Pages/TestimonialsPage/Testimonials";
-import ContactPage from "../Pages/ContactPageModule/contact";
 
 const Routes = () => {
   return (

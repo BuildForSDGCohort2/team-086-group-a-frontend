@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Header from "../../Common/Header.Component/Header.jsx";
 import Footer from "../../Common/Footer.component/Footer.jsx";
-import Style from "../../Styles/contact.module.css";
+import Style from "../../Styles/ContactPage/contact.module.css";
 import MapContainer from "../../Components/MapComponent/Map";
 import Button from "../../Common/Button.component/Button";
 import { NonRegisterContextMembers } from "../../Context/NonRegisteredMemberContext";
