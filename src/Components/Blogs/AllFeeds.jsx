@@ -1,16 +1,15 @@
 import React, { useContext } from "react";
-import FeedStyles from "../../Styles/Blogs/Feed.module.css";
 import CustomImage from "../../Common/Image.component/Image";
 import { RegisterContextMembers } from "../../Context/RegisteredMemberContext";
-import Tags from "./Tags";
+import AllFeedsStyles from "../../Styles/Blogs/AllFeeds.module.css";
 
-const Feeds = () => {
+const AllFeeds = () => {
   const [state] = useContext(RegisterContextMembers);
   const { blogs } = state;
   const { feeds } = blogs;
-
   const {
     container,
+    title,
     wrapper,
     feedWrapper,
     feed,
@@ -21,14 +20,13 @@ const Feeds = () => {
     aside,
     postDate,
     description,
-    tagWrapper,
-  } = FeedStyles;
+  } = AllFeedsStyles;
 
-  const newsFeeds = feeds
+  const allFeeds = feeds
     ? feeds
         .filter((value, index) => index <= 2)
         .map(({ title, image, desc, posterId, tags, date, poster }) => (
-          <div className={feed} key={posterId}>
+          <article className={feed} key={posterId}>
             <fieldset className={img}>
               <CustomImage src={image} alt={"feed image"} className={picture} />
             </fieldset>
@@ -47,20 +45,20 @@ const Feeds = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </article>
         ))
     : null;
 
   return (
     <section className={container}>
+      <div className={title}>
+        <h2>all articles</h2>
+      </div>
       <div className={wrapper}>
-        <div className={feedWrapper}>{newsFeeds}</div>
-        <div className={tagWrapper}>
-          <Tags />
-        </div>
+        <div className={feedWrapper}>{allFeeds}</div>
       </div>
     </section>
   );
 };
 
-export default Feeds;
+export default AllFeeds;
