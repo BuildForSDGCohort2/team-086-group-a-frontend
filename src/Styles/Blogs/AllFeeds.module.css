@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .container {
   width: 100;
   max-height: 150em;
@@ -22,7 +23,6 @@
 
 .feedWrapper {
   flex-basis: 100%;
-  min-width: 20%;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
