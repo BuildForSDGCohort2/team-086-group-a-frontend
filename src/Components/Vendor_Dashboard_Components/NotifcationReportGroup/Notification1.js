@@ -1,6 +1,6 @@
-import React from 'react';
-import Logo from '../../../Asset/logo.png';
-import styled from 'styled-components';
+import React from "react";
+import Logo from "../../../Asset/android-chrome-192x192.png";
+import styled from "styled-components";
 
 export default class Notification1 extends React.Component {
   render() {
@@ -8,42 +8,80 @@ export default class Notification1 extends React.Component {
       <ParentDiv className="container">
         <ChildDive>
           <InnerDiv>
-            <RedDot><i className="fas fa-circle"></i></RedDot>
-            <ImageSpan><ImgStyle src={Logo} alt="brand" /></ImageSpan>
-            <span><span>You have a new message</span></span>
-            <FloatRightSpan><span>8:45pm</span></FloatRightSpan>
+            <DotAndImg>
+              <RedDot>
+                <i className="fas fa-circle"></i>
+              </RedDot>
+              <ImageSpan>
+                <ImgStyle src={Logo} alt="brand" />
+              </ImageSpan>
+            </DotAndImg>
+            <span>
+              <span>You have a new message</span>
+            </span>
+            <span>
+              <span>8:45pm</span>
+            </span>
           </InnerDiv>
         </ChildDive>
 
         <ChildDive>
           <InnerDiv>
-            <RedDot><i class="fas fa-cog"></i></RedDot>
-            <span><CogSpan><i className="fas fa-cog"></i></CogSpan></span>
-            <span><span>New customer registered</span></span>
-            <FloatRightSpan><span>1 hour ago</span></FloatRightSpan>
+            <DotAndImg>
+              <RedDot>
+                <i className="fas fa-cog"></i>
+              </RedDot>
+              <CogSpan>
+                <i className="fas fa-cog"></i>
+              </CogSpan>
+            </DotAndImg>
+            <span>
+              <span>New customer registered</span>
+            </span>
+            <span>
+              <span>1 hour ago</span>
+            </span>
           </InnerDiv>
         </ChildDive>
 
         <ChildDive>
           <InnerDiv>
-            <span><i className="fas fa-circle"></i></span>
-            <span><span>15% OFF</span></span>
-            <span><span>15% promo ends today</span></span>
-            <FloatRightSpan><span>3 hours ago</span></FloatRightSpan>
+            <DotAndImg>
+              <GrayDot>
+                <i className="fas fa-circle"></i>
+              </GrayDot>
+              <Span>15% OFF</Span>
+            </DotAndImg>
+            <span>
+              <span>15% promo ends today</span>
+            </span>
+            <span>
+              <span>3 hours ago</span>
+            </span>
           </InnerDiv>
         </ChildDive>
-        
+
         <ChildDive>
           <InnerDiv>
-            <span><i className="fas fa-circle"></i></span>
-            <span><span><i className="fad fa-star"></i></span></span>
-            <span><span>Your weekly ratings are ready</span></span>
-            <FloatRightSpan><span>3 hours ago</span></FloatRightSpan>
+            <DotAndImg>
+              <GrayDot>
+                <i className="fas fa-circle"></i>
+              </GrayDot>
+              <Span>
+                <i className="fas fa-adjust"></i>
+              </Span>
+            </DotAndImg>
+            <span>
+              <span>Your weekly ratings are ready</span>
+            </span>
+            <span>
+              <span>3 hours ago</span>
+            </span>
           </InnerDiv>
         </ChildDive>
-        <span><span>Load More...</span></span>
+        <Learn>Load More...</Learn>
       </ParentDiv>
-    )
+    );
   }
 }
 
@@ -53,10 +91,12 @@ const ParentDiv = styled.div`
   border-radius: 2%;
   width: 95%;
   margin-left: 0;
+  display: flex;
+  flex-direction: column;
 `;
 
 const ChildDive = styled.div`
-  height: 60px;
+  height: 100px;
   padding: 10px 20px;
   background-color: white;
   margin: 20px 10px;
@@ -71,30 +111,56 @@ const ImgStyle = styled.img`
   height: 50px;
 `;
 
-const CogSpan = styled.span`
+const CogSpan = styled.div`
   color: #f96058;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
 `;
 
 const ImageSpan = styled.span`
-  display: inline-block;
+  display: block;
   border-radius: 100%;
   background-color: #f96058;
-  margin: 0 40px 0 20px;
+`;
+
+const Span = styled.span`
+  display: inline-block;
+  width: 60px;
+  text-align: center;
+  color: white;
+  line-height: 200%;
+  font-size: 0.7rem;
+  border-radius: 100%;
+  background-color: #b5b5b5;
 `;
 
 const RedDot = styled.i`
+  display: block;
   font-size: 0.5rem;
-  color:  #f96058;
+  color: #f96058;
 `;
-
-const FloatRightSpan = styled.span`
-  display: inline-block;
-  font-size: 12px;
-  float: right;
+const GrayDot = styled.i`
+  font-size: 0.5rem;
+  color: #b5b5b5;
 `;
 
 const InnerDiv = styled.div`
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
 
+const Learn = styled.div`
+  text-align: right;
+  color: #f96058;
+  margin: 20px 0;
+  padding-right: 10px;
+  font-size: 1.5rem;
+`;
+
+const DotAndImg = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 10%;
+`;

@@ -1,10 +1,11 @@
 import React from 'react';
+import styled from 'styled-components';
 
 
 export default class Report1 extends React.Component {
   render() {
     return (
-      <div>
+      <Div>
         <div>
           <div>
             <p>TOTAL deliveries</p>
@@ -19,8 +20,18 @@ export default class Report1 extends React.Component {
         <div>
           <span><i className="fas fa-caret-up"></i> 16% Since last month</span>
         </div>
-      </div>
+      </Div>
     )
   }
 }
+
+const Div = styled.div`
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 0 40px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
 

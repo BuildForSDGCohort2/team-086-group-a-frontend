@@ -1,9 +1,12 @@
 import React from 'react';
+import styled from 'styled-components';
+import OrderBottomStyle from './OrderTop.module.css';
 
 export default class OrderBottom extends React.Component {
   render() {
+    const {alignRight} = OrderBottomStyle;
     return (
-      <div>
+      <Div className={alignRight}>
         <p>Rows per page:</p>
         <select name="pages">
           <option value="1">1</option>
@@ -19,8 +22,12 @@ export default class OrderBottom extends React.Component {
         </select>
         <p><span>1-5</span> of <span>100</span> <span>&lt;</span> <span>&gt;</span></p>
         
-      </div>
+      </Div>
     )
   }
 }
+
+const Div = styled.div`
+  text-align: right;
+`;
 

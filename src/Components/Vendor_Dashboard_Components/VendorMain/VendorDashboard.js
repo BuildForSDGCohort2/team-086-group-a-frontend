@@ -3,21 +3,20 @@ import HeadGroup from '../HeadGroup/HeadGroup';
 import NotificationGroup from '../NotifcationReportGroup/NotificationReportGroup';
 import FavOrderGroup from '../FavOrderGroup/FavOrderGroup';
 import OrderGroup from '../OrderGroup/Orders';
-import Header from '../../../Common/Header.Component/Header.jsx';
-import Footer from '../../../Common/Footer.component/Footer.jsx';
+import styled from 'styled-components';
 export default class VendorDashboard extends React.Component {
   render() {
     return (
-      <div>
-        <Header />
-        <div className="container">
+        <Div className="container-fluid">
           <HeadGroup />
           <NotificationGroup />
           <FavOrderGroup />
           <OrderGroup />
-          <Footer />
-        </div>
-      </div>
+        </Div>
     );
   };
 };
+
+const Div = styled.div`
+  width: 85%;
+`;

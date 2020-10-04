@@ -1,10 +1,12 @@
 import React from 'react';
+import OrderTableStyle from './OrderTop.module.css';
 
 export default class OrderTable extends React.Component {
   render() {
+    const {table} = OrderTableStyle;
     return (
-      <div>
-        <table>
+      <div className={table}>
+        <table className={table}>
           <thead>
             <tr>
             <th>Order ID</th>
@@ -30,7 +32,7 @@ export default class OrderTable extends React.Component {
               <td>8767465-7</td>
               <td>Henry KC</td>
               <td>05/30/2020</td>
-              <td>Delivered</td>
+              <td>Pending</td>
               <td>
                 <span><i className="fal fa-ellipsis-v"></i></span>
                 <span><i className="fas fa-pen-square"></i></span>
@@ -41,7 +43,7 @@ export default class OrderTable extends React.Component {
               <td>8767465-7</td>
               <td>Henry KC</td>
               <td>05/30/2020</td>
-              <td>Delivered</td>
+              <td>Refund</td>
               <td>
                 <span><i className="fal fa-ellipsis-v"></i></span>
                 <span><i className="fas fa-pen-square"></i></span>
@@ -52,7 +54,7 @@ export default class OrderTable extends React.Component {
               <td>8767465-7</td>
               <td>Henry KC</td>
               <td>05/30/2020</td>
-              <td>Delivered</td>
+              <td>Pending</td>
               <td>
                 <span><i className="fal fa-ellipsis-v"></i></span>
                 <span><i className="fas fa-pen-square"></i></span>
