@@ -1,18 +1,19 @@
 import React, { useContext } from "react";
-import CustomList from "../../Common/List.component/List";
 import CustomImage from "../../Common/Image.component/Image";
 import FeedStyles from "../../Styles/Blogs/Feed.module.css";
 import { RegisterContextMembers } from "../../Context/RegisteredMemberContext";
+import Tags from "./Tags";
 
 const Feeds = () => {
   const [state] = useContext(RegisterContextMembers);
 
   const { blogs } = state;
-  const { feeds, tags: categories } = blogs;
+  const { feeds } = blogs;
 
   const {
     container,
     wrapper,
+    feedWrapper,
     feed,
     img,
     picture,
@@ -21,8 +22,7 @@ const Feeds = () => {
     aside,
     postDate,
     description,
-    tags,
-    list,
+    tagWrapper,
   } = FeedStyles;
 
   const newsFeeds = feeds
@@ -44,7 +44,6 @@ const Feeds = () => {
                   <strong>{poster}</strong>
                   <em>{date}</em>
                   <div className={description}></div>
-                  {/* <p></p> */}
                   <figcaption className={description}>{desc}</figcaption>
                 </div>
               </div>
@@ -55,13 +54,13 @@ const Feeds = () => {
 
   return (
     <section className={container}>
-      <div className={wrapper}>{newsFeeds}</div>
+      <div className={wrapper}>
+        <div className={feedWrapper}>{newsFeeds}</div>
+        <div className={tagWrapper}>
+          <Tags />
+        </div>
+      </div>
     </section>
-
-    //       <h2>tags</h2>
-    //       <div className={list}>
-    //         <ul></ul>
-    //       </div>
   );
 };
 

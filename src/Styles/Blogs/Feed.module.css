@@ -1,44 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .container {
   width: 100;
   max-height: 150em;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .wrapper {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  flex-direction: column;
   flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.feedWrapper {
+  flex-basis: 48em;
+  min-width: 20%;
+  min-width: 20%;
 }
 
 .feed {
-  width: 70%;
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
-  flex-wrap: wrap;
   margin-bottom: 3em;
+  flex-wrap: wrap;
 }
 
 .img {
-  width: 40%;
+  width: 30%;
   height: 20em;
   min-width: 20em;
-  display: flex;
 }
+
 .picture {
-  flex-basis: 100%;
+  width: 100%;
+  min-width: 3em;
   height: 100%;
-  display: flex;
-  align-items: center;
 }
+
 .picture img {
   border-radius: 0;
   width: 100%;
+  min-width: 3em;
 }
 
 .viewAside {
-  width: 40%;
+  flex-basis: 40%;
   display: grid;
   min-width: 20em;
 }
@@ -55,4 +66,11 @@
 .postDate em {
   margin-left: 20px;
   line-height: 3;
+}
+
+.tagWrapper {
+  width: 15em;
+  height: max-content;
+  display: flex;
+  justify-content: center;
 }

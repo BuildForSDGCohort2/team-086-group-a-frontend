@@ -20,8 +20,7 @@
   justify-content: center;
   align-items: center;
   filter: drop-shadow(3px 7px 10px #ccc);
-  transform: translateX(20%);
-  flex-wrap: wrap;
+  margin-left: 3%;
 }
 
 .heading {

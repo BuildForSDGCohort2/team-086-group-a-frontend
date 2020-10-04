@@ -1,0 +1,26 @@
+.tag {
+  width: 100%;
+  height: max-content;
+}
+
+.tagHead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
+}
+
+.tagHead h2 {
+  text-transform: capitalize;
+}
+
+.list ul {
+  list-style: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.tagList {
+  text-transform: capitalize;
+  font-weight: bold;
+}
