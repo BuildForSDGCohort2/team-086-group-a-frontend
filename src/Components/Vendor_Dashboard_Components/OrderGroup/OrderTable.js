@@ -23,7 +23,7 @@ export default class OrderTable extends React.Component {
               <td>05/30/2020</td>
               <td>Delivered</td>
               <td>
-              <span><i class="fas fa-bars"></i></span>  &nbsp;&nbsp;
+              <span><i className="fas fa-bars"></i></span>  &nbsp;&nbsp;
                 <span><i className="fas fa-pen-square"></i></span>
               </td>
             </tr>
@@ -34,7 +34,7 @@ export default class OrderTable extends React.Component {
               <td>05/30/2020</td>
               <td>Pending</td>
               <td>
-              <span><i class="fas fa-bars"></i></span>  &nbsp;&nbsp;
+              <span><i className="fas fa-bars"></i></span>  &nbsp;&nbsp;
                 <span><i className="fas fa-pen-square"></i></span>
               </td>
             </tr>
@@ -45,7 +45,7 @@ export default class OrderTable extends React.Component {
               <td>05/30/2020</td>
               <td>Refund</td>
               <td>
-              <span><i class="fas fa-bars"></i></span>  &nbsp;&nbsp;
+              <span><i className="fas fa-bars"></i></span>  &nbsp;&nbsp;
                 <span><i className="fas fa-pen-square"></i></span>
               </td>
             </tr>
@@ -56,7 +56,7 @@ export default class OrderTable extends React.Component {
               <td>05/30/2020</td>
               <td>Pending</td>
               <td>
-              <span><i class="fas fa-bars"></i></span>  &nbsp;&nbsp;
+              <span><i className="fas fa-bars"></i></span>  &nbsp;&nbsp;
                 <span><i className="fas fa-pen-square"></i></span>
               </td>
             </tr>
@@ -67,7 +67,7 @@ export default class OrderTable extends React.Component {
               <td>05/30/2020</td>
               <td>Delivered</td>
               <td>
-              <span><i class="fas fa-bars"></i></span>  &nbsp;&nbsp;
+              <span><i className="fas fa-bars"></i></span>  &nbsp;&nbsp;
                 <span><i className="fas fa-pen-square"></i></span>
               </td>
             </tr>
@@ -78,7 +78,7 @@ export default class OrderTable extends React.Component {
               <td>05/30/2020</td>
               <td>Delivered</td>
               <td>
-                <span><i class="fas fa-bars"></i></span>  &nbsp;&nbsp;
+                <span><i className="fas fa-bars"></i></span>  &nbsp;&nbsp;
                 <span><i className="fas fa-pen-square"></i></span>
               </td>
             </tr>

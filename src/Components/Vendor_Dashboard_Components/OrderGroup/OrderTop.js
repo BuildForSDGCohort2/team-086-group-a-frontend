@@ -14,7 +14,7 @@ export default class OrderTop extends React.Component {
         <div>
           <MargLeft className={bold}>Sort by:</MargLeft>
           <MargLeftSel className={bold} name="orders">
-            <option value="newest" selected="selected">
+            <option value="newest" defaultValue>
               Newest
             </option>
             <option value="oldest">Oldest</option>
