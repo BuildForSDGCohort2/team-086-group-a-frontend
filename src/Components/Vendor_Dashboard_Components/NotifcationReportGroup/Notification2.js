@@ -36,6 +36,7 @@ const ParentDiv = styled.div`
 `;
 
 const Div = styled.div`
+  border: 1px solid #eee;
   display: inline-block;
   text-align: center;
   min-width: 300px;

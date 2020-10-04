@@ -12,5 +12,8 @@ export default class Welcome extends React.Component {
 
 const WelcomeStyle = styled.h2`
   text-align: center;
+  font-weight: 900;
+  font-size: 3rem;
+  margin-bottom: 50px;
 `;
 
