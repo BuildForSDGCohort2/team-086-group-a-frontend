@@ -38,16 +38,30 @@ export const ContactTag = (props) => {
             inputsRef.current.children[0].firstChild.focus();
             return false;
         }
-        let contactObj = {
-            name,
-            subject,
-            email,
-            message,
-          };
+        else if (message.length < 5 ){
+            alert("You should write a proper message");
+            inputsRef.current.children[0].firstChild.focus();
+            return false;
+        }
+        else if (email.length < 5 ){
+            alert("You should write a proper email");
+            inputsRef.current.children[0].firstChild.focus();
+            return false;
+        }
+        else {
+
+            let contactObj = {
+                name,
+                subject,
+                email,
+                message,
+              };
+            
+            console.log(contactObj)
+            formRef.current.reset();
+            alert("Message Sent")
+        }
         
-        console.log(contactObj)
-        formRef.current.reset();
-        alert("Message Sent")
 
     }
 
