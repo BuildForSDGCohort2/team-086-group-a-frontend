@@ -16,7 +16,7 @@ export default class FavOrder1 extends React.Component {
 
 const Div = styled.div`
 min-width: 400px;
-max-width: 550px;
+max-width: 400px;
   margin: 5px 10px 5px 0;
   text-align: center;
   border: 3px solid #f96058;

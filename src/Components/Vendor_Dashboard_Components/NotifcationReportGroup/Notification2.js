@@ -29,22 +29,24 @@ const ParentDiv = styled.div`
   border: 2px solid #ccc;
   border-radius: 10px;
   width: 95%;
-  margin: 100px 0;
+  margin: 30px 0;
   padding: 30px 0;
   font-size: 2rem;
   text-align: center;
 `;
 
 const Div = styled.div`
-  border: 1px solid #eee;
+  border-right: 1px solid #bbb;
+  border-left: 1px solid #bbb;
+  margin-right: 10px;
   display: inline-block;
   text-align: center;
-  min-width: 300px;
-  max-width: 500px;
+  min-width: 250px;
+  max-width: 300px;
 `;
 
 const Image = styled.img`
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
 `;
 

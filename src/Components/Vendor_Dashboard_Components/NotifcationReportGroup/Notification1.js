@@ -96,7 +96,7 @@ const ParentDiv = styled.div`
 `;
 
 const ChildDive = styled.div`
-  height: 100px;
+  height: 70px;
   padding: 10px 20px;
   background-color: white;
   margin: 20px 10px;
