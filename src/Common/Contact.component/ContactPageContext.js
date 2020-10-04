@@ -57,13 +57,12 @@ export const ContactTag = (props) => {
                 message,
               };
             
-            console.log(contactObj)
             formRef.current.reset();
-            alert("Message Sent")
+            alert("Message Sent");
         }
         
 
-    }
+    };
 
     return(
         <div className={Style.bg}>
@@ -176,6 +175,6 @@ export const ContactTag = (props) => {
             </div>
 
     )
-}
+};
 
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { ContactTag } from "../../Common/Contact.component/ContactPageContext"
+import { ContactTag } from "../../Common/Contact.component/ContactPageContext";
 
 
 const ContactPage = () => {
