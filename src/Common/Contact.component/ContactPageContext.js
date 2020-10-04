@@ -174,7 +174,7 @@ export const ContactTag = (props) => {
             <Footer />
             </div>
 
-    )
+    );
 };
 
 
