@@ -3,6 +3,17 @@
   height: 10vh;
   background-color: rgb(249, 96, 88);
   animation: slide 2s ease-in;
+  margin-bottom: 2em;
+}
+
+@keyframes slide {
+  from {
+    height: 0vh;
+  }
+
+  to {
+    height: 10vh;
+  }
 }
 
 .wrapper {
