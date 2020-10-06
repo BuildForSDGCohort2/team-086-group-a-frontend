@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import OrderBottomStyle from './OrderTop.module.css';
+import React from "react";
+import styled from "styled-components";
+import OrderBottomStyle from "./OrderTop.module.css";
 
 export default class OrderBottom extends React.Component {
   render() {
@@ -23,7 +23,7 @@ export default class OrderBottom extends React.Component {
         <p><span>1-5</span> of <span>100</span> <span>&lt;</span> <span>&gt;</span></p>
         
       </Div>
-    )
+    );
   }
 }
 

@@ -8,15 +8,15 @@ export default class Report2 extends React.Component {
       <Div>
         <Payment>
           <span>Payment Method</span>
-          <Span>
+          <span>
             <i className="fas fa-sync"></i>
-          </Span>
+          </span>
         </Payment>
 
         <div>
-          <div>
+          <DivCenter>
             <Image src={RoundRainbow} alt="round ring" />
-          </div>
+          </DivCenter>
 
           <DivFlex>
             <Method>
@@ -59,37 +59,33 @@ export default class Report2 extends React.Component {
 }
 
 const Image = styled.img`
-  width: 100%;
+  width: 60%;
+  margin-left: 5%;
 `;
 
 const Div = styled.div`
   border: 2px solid #ccc;
   border-radius: 10px;
   padding: 0;
-  margin-top: 60px;
+  margin-top: 10px;
 `;
 
 const Payment = styled.div`
   border-bottom: 2px solid #ccc;
-  line-height: 80px;
-  text-align: left;
-  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
   padding: 20px;
   margin: 0;
 `;
 
 const Last = styled.div`
   border-top: 2px solid #ccc;
-  line-height: 50px;
   text-align: left;
   font-size: 1rem;
-  padding: 20px;
+  padding: 10px;
   margin: 0;
-`;
-
-const Span = styled.span`
-  float: right;
-  font-size: 2rem;
 `;
 
 const SpanBottom = styled.span`
@@ -98,7 +94,7 @@ const SpanBottom = styled.span`
 
 const DivFlex = styled.div`
   margin: 30px 0 70px;
-  font-size: 2rem;
+  font-size: 1rem;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -123,5 +119,7 @@ const MobileVal = styled.div`
   color: #ec4c47;
   font-weight: bolder;
 `;
-
+const DivCenter = styled.div`
+  text-align: center;
+`;
 

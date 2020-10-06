@@ -1,5 +1,5 @@
-import React from 'react';
-import OrderTableStyle from './OrderTop.module.css';
+import React from "react";
+import OrderTableStyle from "./OrderTop.module.css";
 
 export default class OrderTable extends React.Component {
   render() {
@@ -87,7 +87,7 @@ export default class OrderTable extends React.Component {
           <tfoot></tfoot>
         </table>
       </div>
-    )
+    );
   }
 }
 

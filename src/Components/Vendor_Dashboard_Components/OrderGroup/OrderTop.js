@@ -1,6 +1,6 @@
 import React from "react";
-import styled from 'styled-components';
-import OrderTopStyle from './OrderTop.module.css';
+import styled from "styled-components";
+import OrderTopStyle from "./OrderTop.module.css";
 
 export default class OrderTop extends React.Component {
   render() {

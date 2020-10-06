@@ -1,6 +1,6 @@
-import React from 'react';
-import Soup2 from '../../../Asset/soup2.png';
-import styled from 'styled-components';
+import React from "react";
+import Soup2 from "../../../Asset/soup2.png";
+import styled from "styled-components";
 
 export default class FavOrder1 extends React.Component {
   render() {
@@ -10,7 +10,7 @@ export default class FavOrder1 extends React.Component {
         <h3>Fish Soup with Garlic</h3>
         <Button>View</Button>
       </Div>
-    )
+    );
   }
 }
 
@@ -27,13 +27,13 @@ const Img = styled.img`
   margin: 40px 0px;
 `;
 const Button = styled.button`
-  width: 200px;
-  border: 8px solid black;
-  border-radius: 10px;
-  padding: 10px 0;
-  margin: 0 0 10px 0;
-  background-color: white;
-  font-size: 1.5rem;
-  font-weight: bolder;
+width: 150px;
+border: 5px solid black;
+border-radius: 10px;
+padding: 8px 0;
+margin: 0 0 10px 0;
+background-color: white;
+font-size: 1rem;
+font-weight: bolder;
 `;
 

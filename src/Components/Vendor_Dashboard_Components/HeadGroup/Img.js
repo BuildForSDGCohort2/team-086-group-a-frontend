@@ -1,6 +1,6 @@
-import React from 'react';
-import TopImg from '../../../Asset/DASHBOARD.svg';
-import styled from 'styled-components';
+import React from "react";
+import TopImg from "../../../Asset/DASHBOARD.svg";
+import styled from "styled-components";
 
 export default class Img extends React.Component {
   render() {
@@ -8,7 +8,7 @@ export default class Img extends React.Component {
       <div>
         <ImgStyle src={TopImg} alt="Cool Restaurant" />
       </div>
-    )
+    );
   }
 }
 const ImgStyle = styled.img`

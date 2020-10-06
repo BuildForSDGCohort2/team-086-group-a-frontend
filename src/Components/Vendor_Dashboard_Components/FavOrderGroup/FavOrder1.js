@@ -1,6 +1,6 @@
-import React from 'react';
-import Soup1 from '../../../Asset/soup1.png';
-import styled from 'styled-components';
+import React from "react";
+import Soup1 from "../../../Asset/soup1.png";
+import styled from "styled-components";
 
 export default class FavOrder1 extends React.Component {
   render() {
@@ -10,7 +10,7 @@ export default class FavOrder1 extends React.Component {
         <h3>Egusi Soup</h3>
         <Button>View</Button>
       </Div>
-    )
+    );
   }
 }
 
@@ -27,13 +27,13 @@ const Img = styled.img`
   margin: 40px 0px;
 `;
 const Button = styled.button`
-  width: 200px;
-  border: 8px solid black;
+  width: 150px;
+  border: 5px solid black;
   border-radius: 10px;
-  padding: 10px 0;
+  padding: 8px 0;
   margin: 0 0 10px 0;
   background-color: white;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bolder;
 `;
 

@@ -1,6 +1,6 @@
-import React from 'react';
-import Soup3 from '../../../Asset/soup3.png';
-import styled from 'styled-components';
+import React from "react";
+import Soup3 from "../../../Asset/soup3.png";
+import styled from "styled-components";
 
 export default class FavOrder1 extends React.Component {
   render() {
@@ -10,13 +10,13 @@ export default class FavOrder1 extends React.Component {
         <h3>Tai Platter</h3>
         <Button>View</Button>
       </Div>
-    )
+    );
   }
 }
 
 const Div = styled.div`
-min-width: 400px;
-max-width: 400px;
+  min-width: 400px;
+  max-width: 400px;
   margin: 5px 10px 5px 0;
   text-align: center;
   border: 3px solid #f96058;
@@ -27,13 +27,12 @@ const Img = styled.img`
   margin: 40px 0px;
 `;
 const Button = styled.button`
-  width: 200px;
-  border: 8px solid black;
+  width: 150px;
+  border: 5px solid black;
   border-radius: 10px;
-  padding: 10px 0;
+  padding: 8px 0;
   margin: 0 0 10px 0;
   background-color: white;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bolder;
 `;
-

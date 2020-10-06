@@ -1,7 +1,7 @@
-import React from 'react';
-import Notification from './Notification';
-import Report from './Report';
-import styled from 'styled-components';
+import React from "react";
+import Notification from "./Notification";
+import Report from "./Report";
+import styled from "styled-components";
 
 export default class NotificationReportGroup extends React.Component {
   render() {
@@ -10,7 +10,7 @@ export default class NotificationReportGroup extends React.Component {
         <Notification />
         <Report />
       </SectionStyle>
-    )
+    );
   }
 }
 

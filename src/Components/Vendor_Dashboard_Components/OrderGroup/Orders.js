@@ -1,7 +1,7 @@
-import React from 'react';
-import OrderTop from './OrderTop';
-import OrderTable from './OrderTable';
-import OrderBottom from './OrderBottom';
+import React from "react";
+import OrderTop from "./OrderTop";
+import OrderTable from "./OrderTable";
+import OrderBottom from "./OrderBottom";
 
 export default class Orders extends React.Component {
   render() {
@@ -11,7 +11,7 @@ export default class Orders extends React.Component {
         <OrderTable />
         <OrderBottom />
       </div>
-    )
+    );
   }
 }
 

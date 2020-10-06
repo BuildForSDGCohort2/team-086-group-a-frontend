@@ -2,7 +2,7 @@ import React from "react";
 import FavOrder1 from "./FavOrder1";
 import FavOrder2 from "./FavOrder2";
 import FavOrder3 from "./FavOrder3";
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export default class FavOrderGroup extends React.Component {
   render() {
@@ -29,5 +29,5 @@ const FlexDiv = styled.div`
 
 const H1 = styled.h1`
   font-weight: bolder;
-  font-size: 3rem;
+  font-size: 2rem;
 `;

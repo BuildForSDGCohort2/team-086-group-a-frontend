@@ -1,7 +1,7 @@
-import React from 'react';
-import Heading from './Heading';
-import Welcome from './Welcome';
-import Img from './Img';
+import React from "react";
+import Heading from "./Heading";
+import Welcome from "./Welcome";
+import Img from "./Img";
 
 export default class HeadGroup extends React.Component {
   render() {
@@ -11,6 +11,6 @@ export default class HeadGroup extends React.Component {
         <Welcome />
         <Img />
       </section>
-    )
+    );
   }
 }
