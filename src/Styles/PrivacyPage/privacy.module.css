@@ -17,8 +17,8 @@
     flex-direction: column;
     position: absolute;
     margin: 10%;
-    top: -2rem;
-    max-height: 30em;
+    top: -5em;
+    max-height: 35em;
 }
 
 .caption {
@@ -48,15 +48,15 @@
 }
 
 /* width */
-::-webkit-scrollbar {
+.over ::-webkit-scrollbar {
     width: 5px;
 }
 /* track of scroll */
-::-webkit-scrollbar-track {
+.over ::-webkit-scrollbar-track {
     background: #c3b8b6;
 }
 /* Handle */
-::-webkit-scrollbar-thumb {
+.over ::-webkit-scrollbar-thumb {
     background: tomato;
 }
 

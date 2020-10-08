@@ -1,14 +1,6 @@
 import React from "react";
-import Row from "react-bootstrap/Row";
-import Form from "react-bootstrap/Form";
-import Container from "react-bootstrap/Container";
-import Col from "react-bootstrap/Col";
-import Header from "../../Common/Header.Component/Header.jsx";
-import Footer from "../../Common/Footer.component/Footer.jsx";
 import Style from "../../Styles/PrivacyPage/privacy.module.css";
-import MapContainer from "../../Components/MapComponent/Map";
 import Button from "../../Common/Button.component/Button";
-import { NonRegisterContextMembers } from "../../Context/NonRegisteredMemberContext";
 
 // Privacy Page COmponent
 function PrivacyPage(){
@@ -17,6 +9,8 @@ function PrivacyPage(){
         console.log(e);
     }
     document.body.style.backgroundColor = "#e8d9d6";
+    document.body.style.minHeight = "100vh";
+    document.body.style.overflow = "hidden";
     return(
         <div className={Style.main}>
             <div className={Style.top}></div>
@@ -64,7 +58,7 @@ function PrivacyPage(){
             </div>
             <div className={Style.under}></div>
         </div>
-    )
-}
+    );
+};
 
 export default PrivacyPage;
