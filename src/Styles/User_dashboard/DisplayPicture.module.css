@@ -61,12 +61,13 @@
 
 .textWrapper {
   background-color: rgba(0, 0, 0, 0.2);
-  height: 8em;
+  /* height: 8em; */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-basis: 40%;
   flex-wrap: wrap;
+  flex-shrink: inherit;
 }
 
 .textWrapper span {

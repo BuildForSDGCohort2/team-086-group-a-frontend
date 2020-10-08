@@ -1,13 +1,16 @@
 .section {
   display: grid;
   height: max-content;
+  margin-bottom: 2em;
 }
 
 .tag {
+  width: 50%;
   height: 5em;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 .tag h2 {
@@ -24,7 +27,8 @@
 }
 
 .wrapper {
-  flex-basis: 20em;
+  flex-basis: 25%;
+  min-width: 20em;
   display: flex;
   justify-content: center;
   border: 2px solid transparent yellow;
@@ -58,13 +62,13 @@
   height: inherit;
 }
 
-.caretAngle {
+/* .caretAngle {
   width: 13vw;
   height: 10em;
   background-color: #f76057;
   clip-path: polygon(80% 0, 100% 24%, 100% 0);
   transform: translate(66%, -155%);
-}
+} */
 
 .menuCaption {
   height: 18em;
@@ -83,7 +87,7 @@
   height: 10em;
   text-align: center;
   transform: translateY(10%);
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
 }
 
 .captionsWrapper h3 {

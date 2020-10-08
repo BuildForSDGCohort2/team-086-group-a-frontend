@@ -2,7 +2,8 @@
   display: grid;
   height: max-content;
   width: 100%;
-  /* flex-basis: 100%; */
+  min-width: 20em;
+  margin-bottom: 2em;
 }
 
 .tag {
@@ -14,36 +15,40 @@
 
 .tag h2 {
   text-transform: capitalize;
-  /* transform: translateX(25%); */
   transform: translateX(40%);
 }
 
 .notificationWrapper {
   height: 30em;
   width: 100%;
+  min-width: 20em;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  flex-shrink: inherit;
 }
 
 .listWrapper {
   background-color: #ccc;
   width: 90%;
-  height: 30em;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+
   /* flex-wrap: wrap; */
 }
 .list {
   display: flex;
+  height: 3em;
   background-color: #fff;
   width: 95%;
   justify-content: space-around;
   align-items: center;
   border-radius: 5px;
+  margin-bottom: 1em;
+  flex-shrink: inherit;
 }
 
 .leftView {
@@ -51,6 +56,8 @@
   flex-basis: 60%;
   justify-content: space-between;
   align-items: center;
+
+  flex-shrink: inherit;
 }
 .img {
   width: 15%;
