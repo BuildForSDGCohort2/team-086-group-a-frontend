@@ -4,7 +4,7 @@ import Button from "../../Common/Button.component/Button";
 
 // Privacy Page COmponent
 function PrivacyPage(){
-    const handleSubmit = (e)=>{
+    const handleSubmit = (e)=> {
         e.preventDefault();
         console.log(e);
     }
