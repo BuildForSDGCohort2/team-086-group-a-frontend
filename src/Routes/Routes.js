@@ -11,6 +11,7 @@ import ProtectedRoutes from "./ProtectRouted";
 import { NonRegisteredMemberContextProvider } from "../Context/NonRegisteredMemberContext";
 import NotFoundPage from "../Pages/NotFoundPages/NotFound";
 import Testimonials from "../Pages/TestimonialsPage/Testimonials";
+import PrivacyPage from "../Pages/PrivacyPage/PrivacyPage";
 
 const Routes = () => {
   return (
@@ -37,12 +38,10 @@ const Routes = () => {
             />
             <UnProtectedRoutes
               path="/team-086-group-a-frontend/testimonials"
-              // exact
               component={Testimonials}
             />
             <UnProtectedRoutes
               path="/team-086-group-a-frontend/contact"
-              // exact
               component={ContactPage}
             />
             <ProtectedRoutes
@@ -52,6 +51,11 @@ const Routes = () => {
             <ProtectedRoutes
               path="/team-086-group-a-frontend/dashboard"
               component={UserDashBoard}
+            />
+              <UnProtectedRoutes
+              path="/team-086-group-a-frontend/privacy"
+              // exact
+              component={PrivacyPage}
             />
             <Route render={NotFoundPage} />
           </Switch>

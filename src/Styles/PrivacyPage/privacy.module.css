@@ -1,0 +1,62 @@
+/* .main {
+    background-color: #e8d9d6;
+    min-height: 102vh;
+} */
+
+.top {
+    background-color: tomato;
+    height: 10em;
+}
+
+.over {
+    background-color: white;
+    /* border: 1px solid tomato; */
+    border-radius: 11px;
+    padding: 4em 4em 2em 4em;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin: 10%;
+    top: -2rem;
+    max-height: 30em;
+}
+
+.caption {
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.3em;
+}
+
+.under {
+    background-color: #c3b8b6;
+}
+
+.scroll {
+    color: #272524;
+    font-size: 13px;
+    text-align: justify;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding-right: 3em;
+}
+
+.btn {
+    align-self: flex-end;
+    padding-right: inherit;
+    padding-top: inherit;
+    padding-top: 2em;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+/* track of scroll */
+::-webkit-scrollbar-track {
+    background: #c3b8b6;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: tomato;
+}
+
