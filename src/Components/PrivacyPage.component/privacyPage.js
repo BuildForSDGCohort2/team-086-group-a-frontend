@@ -4,10 +4,10 @@ import Button from "../../Common/Button.component/Button";
 
 // Privacy Page COmponent
 function PrivacyPage(){
-    const handleSubmit = (e)=> {
+    const handleSubmit = (e) => {
         e.preventDefault();
         console.log(e);
-    }
+    };
     document.body.style.backgroundColor = "#e8d9d6";
     document.body.style.minHeight = "100vh";
     document.body.style.overflow = "hidden";
@@ -59,6 +59,6 @@ function PrivacyPage(){
             <div className={Style.under}></div>
         </div>
     );
-};
+}
 
 export default PrivacyPage;

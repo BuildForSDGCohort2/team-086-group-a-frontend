@@ -6,7 +6,7 @@ import PrivacyPage from "../../Components/PrivacyPage.component/privacyPage";
 function Privacy(){
     return(
         <PrivacyPage />
-    )
+    );
 }
 
-export default Privacy
+export default Privacy;
