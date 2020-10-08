@@ -6,7 +6,6 @@ import Button from "../../Common/Button.component/Button";
 function PrivacyPage(){
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(e);
     };
     document.body.style.backgroundColor = "#e8d9d6";
     document.body.style.minHeight = "100vh";
