@@ -20,7 +20,7 @@ const Routes = () => {
         <NonRegisteredMemberContextProvider>
           <Switch>
             <UnProtectedRoutes
-              path="/team-086-group-a-frontend/"
+              path="/team-086-group-a-frontend"
               exact
               component={LandingPage}
             />
