@@ -11,6 +11,7 @@ import { NonRegisteredMemberContextProvider } from "../Context/NonRegisteredMemb
 import NotFoundPage from "../Pages/NotFoundPages/NotFound";
 import Testimonials from "../Pages/TestimonialsPage/Testimonials";
 import ContactPage from "../Pages/ContactPageModule/contact";
+import PaymentModal from "../Components/Payment_modal/paymentModal";
 
 const Routes = () => {
   return (
@@ -39,6 +40,11 @@ const Routes = () => {
               path="/team-086-group-a-frontend/testimonials"
               // exact
               component={Testimonials}
+            />{" "}
+            <UnProtectedRoutes
+              path="/team-086-group-a-frontend/paymentModal"
+              // exact
+              component={PaymentModal}
             />
             <UnProtectedRoutes
               path="/team-086-group-a-frontend/contact"
