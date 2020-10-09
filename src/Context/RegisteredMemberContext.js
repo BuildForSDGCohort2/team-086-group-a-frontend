@@ -20,6 +20,62 @@ const RegisteredMemberContextProvider = (props) => {
       "contact",
       "blogs",
     ],
+
+    blogs: {
+      tags: ["food", "vendor", "cooking", "fruit", "drinks", "restaurants"],
+      feeds: [
+        {
+          poster: "chucks",
+          title: "top 5 restaurants",
+          image: BreakFast,
+          posterId: "1234",
+          tags: "food",
+          desc:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eveniet aliquam nam odio, ullam voluptates suscipit architecto quibusdam unde ipsam. Commodi placeat itaque labore sed maxime, consequuntur corporis a hic!",
+          date: new Date().toDateString(),
+        },
+        {
+          poster: "jennifer",
+          title: "mango: the golden fruit",
+          image: Drinks,
+          posterId: "123",
+          tags: "drinks",
+          desc:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eveniet aliquam nam odio, ullam voluptates suscipit architecto quibusdam unde ipsam. Commodi placeat itaque labore sed maxime, consequuntur corporis a hic!",
+          date: new Date().toDateString(),
+        },
+        {
+          poster: "womi",
+          title: "thing to know of this spicy soup",
+          image: SoupOne,
+          posterId: "1235",
+          tags: "food",
+          desc:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eveniet aliquam nam odio, ullam voluptates suscipit architecto quibusdam unde ipsam. Commodi placeat itaque labore sed maxime, consequuntur corporis a hic!",
+          date: new Date().toDateString(),
+        },
+        {
+          poster: "womi",
+          title: "thing to know of this spicy soup",
+          image: SoupOne,
+          posterId: "1236",
+          tags: "food",
+          desc:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eveniet aliquam nam odio, ullam voluptates suscipit architecto quibusdam unde ipsam. Commodi placeat itaque labore sed maxime, consequuntur corporis a hic!",
+          date: new Date().toDateString(),
+        },
+        {
+          poster: "womi",
+          title: "thing to know of this spicy soup",
+          image: SoupOne,
+          posterId: "12357",
+          tags: "food",
+          desc:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eveniet aliquam nam odio, ullam voluptates suscipit architecto quibusdam unde ipsam. Commodi placeat itaque labore sed maxime, consequuntur corporis a hic!",
+          date: new Date().toDateString(),
+        },
+      ],
+    },
     collection: {
       categories: [
         "soup",
