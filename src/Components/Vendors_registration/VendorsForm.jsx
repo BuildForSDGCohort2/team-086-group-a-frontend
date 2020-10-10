@@ -1,18 +1,11 @@
 import React, { useRef, useContext } from "react";
 import CustomInput from "../../Common/Input.component/Input";
 import vendorFormStyles from "../../Styles/Vendor_registration/vendorForm.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDropbox } from "@fortawesome/free-brands-svg-icons";
 import { RegisterContextMembers } from "../../Context/RegisteredMemberContext";
 
 const VendorsForm = ({ history }) => {
   //destructuring the styles
-  const {
-    formWrapper,
-    form,
-    input,
-    passwordVisibilityStatus,
-  } = vendorFormStyles;
+  const { formWrapper, form, input } = vendorFormStyles;
 
   const FormRef = useRef();
 
@@ -21,7 +14,7 @@ const VendorsForm = ({ history }) => {
   //destructuring the context
   const [state, setState] = useContext(RegisterContextMembers);
 
-  const { vendorFormData } = state;
+  const { vendorFormData, businessTypes, subscriptionPlans } = state;
 
   //destructuring the input data
   const {
@@ -64,7 +57,14 @@ const VendorsForm = ({ history }) => {
             value={businessType}
             onChange={handleChange}
             isRequired={true}
+            list={"btype"}
           />
+          <datalist id={"btype"} name={"btype"}>
+            {businessTypes &&
+              businessTypes.map((values, index) => (
+                <option key={index} value={values} />
+              ))}
+          </datalist>
           <CustomInput
             type={"email"}
             name={"email"}
@@ -109,13 +109,14 @@ const VendorsForm = ({ history }) => {
             value={subscriptionPlan}
             onChange={handleChange}
             isRequired={true}
-            icon={
-              <FontAwesomeIcon
-                icon={faDropbox}
-                className={passwordVisibilityStatus}
-              />
-            }
+            list="plans"
           />
+          <datalist id={"plans"} name={"plans"}>
+            {subscriptionPlans &&
+              subscriptionPlans.map((values, index) => (
+                <option key={index} value={values} />
+              ))}
+          </datalist>
         </div>
       </form>
     </div>

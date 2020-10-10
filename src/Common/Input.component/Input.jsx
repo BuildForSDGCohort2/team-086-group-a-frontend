@@ -28,7 +28,10 @@ const Input = ({
   readOnly,
   onInput,
   icon,
+  isChecked,
   iconClick,
+  click,
+  onClickCapture,
 }) => {
   const textInput = useRef(null);
 
@@ -50,6 +53,7 @@ const Input = ({
         }}
         type={type ? type : "text"}
         list={list ? list : null}
+        checked={isChecked ? isChecked : null}
         placeholder={placeholder}
         onChange={onChange}
         value={value ? value : ""}
@@ -63,6 +67,8 @@ const Input = ({
         spellCheck={spellCheck ? spellCheck : null}
         readOnly={readOnly ? readOnly : null}
         onInput={onInput ? onInput : null}
+        onClick={click ? click : null}
+        onClickCapture={onClickCapture ? onClickCapture : null}
       />
       <span onClick={iconClick ? iconClick : null}>{icon ? icon : null}</span>
     </div>

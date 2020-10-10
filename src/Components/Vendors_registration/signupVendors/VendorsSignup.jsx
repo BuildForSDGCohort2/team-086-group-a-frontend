@@ -10,7 +10,8 @@ import Axios from "axios";
 import Text from "./Text";
 import VendorsForm from "../VendorsForm";
 import PrivacyPaths from "./PrivacyPaths";
-//
+import { errorToastify } from "../../../Components/react_toastify/toastify";
+
 const VendorSignup = ({ history }) => {
   //function for SignUp users
   const {
@@ -22,15 +23,19 @@ const VendorSignup = ({ history }) => {
     button,
     signinNav,
   } = SignUpVendorStyles;
+
   const [state] = useContext(RegisterContextMembers);
 
-  const { vendorFormData } = state;
+  const { vendorFormData, privacyCheck } = state;
 
   const handleSignNavigation = async () => {
     await history.push("/team-086-group-a-frontend/vendor-dashboard");
   };
   const handleVendorSubmit = async (e) => {
     e.preventDefault();
+    if (privacyCheck !== true) {
+      return errorToastify("You are yet to check the required box");
+    }
 
     const config = {
       method: "post",
@@ -44,13 +49,13 @@ const VendorSignup = ({ history }) => {
     Axios(config)
       .then((res) => {
         console.log(res.data);
-        handleSignNavigation();
+        // handleSignNavigation();
       })
       .catch((error) => {
         if (error.response === undefined) {
           return;
         }
-        console.error(error.response);
+        errorToastify(error.response.data.message);
       });
   };
   return (

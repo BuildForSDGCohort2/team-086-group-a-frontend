@@ -20,6 +20,9 @@ const RegisteredMemberContextProvider = (props) => {
       taxId: "",
       subscriptionPlan: "",
     },
+    businessTypes: ["roadside", "restaurant", "hotel"],
+    subscriptionPlans: ["monthly", "quarterly", "yearly"],
+    privacyCheck: "",
     specifiedFood: [],
     Notifications: [],
     headerNavLinksRegCollections: [
