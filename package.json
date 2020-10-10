@@ -24,6 +24,7 @@
     "react-flutterwave-rave": "^1.0.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
+    "react-toastify": "^6.0.9",
     "styled-components": "^5.2.0"
   },
   "scripts": {

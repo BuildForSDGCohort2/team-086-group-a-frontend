@@ -6,7 +6,7 @@ import CustomInput from "../../../Common/Input.component/Input";
 import CustomLink from "../../../Common/Link.component/Link";
 import CustomImage from "../../../Common/Image.component/Image";
 import RegImage from "../../../Asset/Rectangle 105.png";
-// import axios from "axios";
+import axios from "axios";
 import { NonRegisterContextMembers } from "../../../Context/NonRegisteredMemberContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -14,6 +14,8 @@ import {
   faFacebookF,
   faKeycdn,
 } from "@fortawesome/free-brands-svg-icons";
+import { errorToastify } from "../../react_toastify/toastify";
+
 //
 const Signup = ({ history }) => {
   //function for SignUp users
@@ -86,7 +88,7 @@ const Signup = ({ history }) => {
     //function to handle input value onchange
     setData((formData) => ({
       ...formData,
-      formValue: { ...regValue, [target.name]: target.value },
+      regValue: { ...regValue, [target.name]: target.value },
     }));
   };
 
@@ -105,19 +107,19 @@ const Signup = ({ history }) => {
     if (isNumeric(fullName)) {
       alert("Number is not an option");
       inputsRef.current.children[0].firstChild.focus();
-      return false;
+      return;
     } else if (password.length < 8) {
       alert("Password must not be less 8 characters");
       inputsRef.current.children[3].firstChild.focus();
-      return false;
+      return;
     } else if (confirmPassword.length < 8) {
       alert("confirm password must not be less 8 characters");
       inputsRef.current.children[4].firstChild.focus();
-      return false;
+      return;
     } else if (confirmPassword !== password) {
       alert("Password does not match");
       inputsRef.current.children[4].firstChild.focus();
-      return false;
+      return;
     }
 
     //adding the userInformations to an object
@@ -128,19 +130,30 @@ const Signup = ({ history }) => {
       password,
       confirmPassword,
     };
-    console.log(userObject);
 
     FormRef.current.reset(); //reset form on submit
 
     //post to the server
-    try {
-      // await axios.post("http://endPoint/", userObject)
-    } catch (error) {
-      throw error;
-    }
-    alert("sign up successfully");
-    //routing to signin page on componentdid update
-    handleSignNavigation();
+    const config = {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      data: JSON.stringify(userObject),
+    };
+
+    await axios
+      .post(`http://localhost:5000/api/v1/user/signup`, config)
+      .then((response) => {
+        // routing to signin page on componentdid update
+        handleSignNavigation();
+      })
+      .catch((error) => {
+        if (error.response.data.message !== "") {
+          console.log("object", error.response.data.message);
+          return errorToastify(error.response.data.message);
+        }
+      });
   };
 
   return (
@@ -185,6 +198,7 @@ const Signup = ({ history }) => {
             className={rightLine}
           ></div>
         </div>
+
         <div className={formWrapper}>
           <form ref={FormRef} onSubmit={handleUSerSigUp} className={form}>
             <div ref={inputsRef}>
