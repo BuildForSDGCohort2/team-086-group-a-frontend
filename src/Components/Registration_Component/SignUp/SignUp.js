@@ -135,6 +135,8 @@ const Signup = ({ history }) => {
 
     //post to the server
     const config = {
+      method: "post",
+      url: "http://localhost:4000/api/v1/user/signup",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -143,7 +145,7 @@ const Signup = ({ history }) => {
     };
 
     await axios
-      .post(`http://localhost:5000/api/v1/user/signup`, config)
+      .post(config)
       .then((response) => {
         // routing to signin page on componentdid update
         handleSignNavigation();
