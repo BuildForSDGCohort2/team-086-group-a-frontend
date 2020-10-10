@@ -18,6 +18,17 @@ const NonRegisteredMemberContextProvider = (props) => {
       confirmPassword: "",
       formData: [],
     },
+    collection: null,
+    // ContactPage
+    contactPage : {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+      disabled: false,
+      messageSent : null,
+    },
+
     headerNavLinksCollections: [
       "home",
       "about",

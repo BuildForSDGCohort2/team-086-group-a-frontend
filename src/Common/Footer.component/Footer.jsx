@@ -77,7 +77,7 @@ const Footer = () => {
               </div>
             </div>
             <div className={contactInfo}>
-              <h3>contant info</h3>
+              <h3>contact info</h3>
               <div className={contactInfoDetail}>
                 <div>
                   <span>address:</span>

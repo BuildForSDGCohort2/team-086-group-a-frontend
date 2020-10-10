@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import LandingPage from "../Pages/LandingPage/LandingPage";
+import ContactPage from "../Pages/ContactPage/contact";
 import SigninRegistrationPage from "../Pages/RegistrationPages/SigninRegistration";
 import SignupRegistrationPage from "../Pages/RegistrationPages/RegistrationPages";
 import MenuPage from "../Pages/menuPage/MenuPage";
@@ -10,7 +11,7 @@ import ProtectedRoutes from "./ProtectRouted";
 import { NonRegisteredMemberContextProvider } from "../Context/NonRegisteredMemberContext";
 import NotFoundPage from "../Pages/NotFoundPages/NotFound";
 import Testimonials from "../Pages/TestimonialsPage/Testimonials";
-import ContactPage from "../Pages/ContactPageModule/contact";
+import ContactUs from "../Pages/ContactPageModule/contact";
 import BlogPage from "../Pages/BlogPage/BlogPage";
 
 const Routes = () => {
@@ -36,15 +37,17 @@ const Routes = () => {
               path="/team-086-group-a-frontend/signup"
               component={SignupRegistrationPage}
             />
+            <UnProtectedRoutes
+              path="/team-086-group-a-frontend/contactUs"
+              component={ContactUs}
+            />
 
             <UnProtectedRoutes
               path="/team-086-group-a-frontend/testimonials"
-              // exact
               component={Testimonials}
             />
             <UnProtectedRoutes
               path="/team-086-group-a-frontend/contact"
-              // exact
               component={ContactPage}
             />
             <ProtectedRoutes
@@ -58,6 +61,11 @@ const Routes = () => {
             <ProtectedRoutes
               path="/team-086-group-a-frontend/dashboard"
               component={UserDashBoard}
+            />
+            <UnProtectedRoutes
+              path="/team-086-group-a-frontend/privacy"
+              // exact
+              component={PrivacyPage}
             />
             <Route render={NotFoundPage} />
           </Switch>
