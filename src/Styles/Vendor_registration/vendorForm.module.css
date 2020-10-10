@@ -1,0 +1,30 @@
+.formWrapper {
+  flex-basis: 40%;
+  width: 100%;
+  display: flex;
+  justify-self: flex-end;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 3;
+}
+
+.input {
+  position: relative;
+  right: -2%;
+  width: 40vw;
+  min-width: 15em;
+  height: 2.5em;
+  border-radius: 5px;
+  outline: none;
+  padding-left: 10px;
+}
+.passwordVisibilityStatus {
+  position: relative;
+  right: 8%;
+  cursor: pointer;
+}

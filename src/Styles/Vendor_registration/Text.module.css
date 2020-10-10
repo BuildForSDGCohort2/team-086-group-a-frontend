@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  justify-content: center;
+  text-align: center;
+}
+
+.text {
+  font-size: 0.9rem;
+  padding: 10px;
+}
+
+.text::first-letter {
+  text-transform: uppercase;
+}

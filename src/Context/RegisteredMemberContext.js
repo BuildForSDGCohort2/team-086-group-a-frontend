@@ -10,6 +10,16 @@ const RegisteredMemberContextProvider = (props) => {
   const [registeredMemberScreens, setRegisteredMemberScreens] = useState({
     menuSearchBar: "",
     toggleMenuIcon: false,
+    handleVendorSubmitFunction: null,
+    vendorFormData: {
+      businessName: "",
+      businessType: "",
+      businessNumber: "",
+      officeAddress: "",
+      email: "",
+      taxId: "",
+      subscriptionPlan: "",
+    },
     specifiedFood: [],
     Notifications: [],
     headerNavLinksRegCollections: [

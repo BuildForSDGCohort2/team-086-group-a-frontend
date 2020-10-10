@@ -1,0 +1,21 @@
+.container {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.text {
+  font-size: 0.8rem;
+  padding: 5px;
+}
+
+.text::first-letter {
+  text-transform: uppercase;
+}
+
+.unique {
+  text-transform: capitalize;
+}
