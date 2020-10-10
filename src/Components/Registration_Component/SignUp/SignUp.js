@@ -107,19 +107,19 @@ const Signup = ({ history }) => {
     if (isNumeric(fullName)) {
       alert("Number is not an option");
       inputsRef.current.children[0].firstChild.focus();
-      return false;
+      return;
     } else if (password.length < 8) {
       alert("Password must not be less 8 characters");
       inputsRef.current.children[3].firstChild.focus();
-      return false;
+      return;
     } else if (confirmPassword.length < 8) {
       alert("confirm password must not be less 8 characters");
       inputsRef.current.children[4].firstChild.focus();
-      return false;
+      return;
     } else if (confirmPassword !== password) {
       alert("Password does not match");
       inputsRef.current.children[4].firstChild.focus();
-      return false;
+      return;
     }
 
     //adding the userInformations to an object
@@ -134,27 +134,26 @@ const Signup = ({ history }) => {
     FormRef.current.reset(); //reset form on submit
 
     //post to the server
-    var config = {
-      method: "post",
-      url: "https://team-086-group-a-backend.herokuapp.com/api/v1/user/signup",
+    const config = {
       headers: {
+        Accept: "application/json",
         "Content-Type": "application/json",
       },
-      data: userObject,
+      data: JSON.stringify(userObject),
     };
 
-    await axios(config)
+    await axios
+      .post(`http://localhost:5000/api/v1/user/signup`, config)
       .then((response) => {
         // routing to signin page on componentdid update
-        return handleSignNavigation();
+        handleSignNavigation();
       })
       .catch((error) => {
         if (error.response.data.message !== "") {
+          console.log("object", error.response.data.message);
           return errorToastify(error.response.data.message);
         }
       });
-
-    // alert("sign up successfully");
   };
 
   return (

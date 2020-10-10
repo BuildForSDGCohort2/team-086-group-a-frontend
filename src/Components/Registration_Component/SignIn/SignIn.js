@@ -1,4 +1,5 @@
 import React, { useContext, useRef } from "react";
+import { withRouter } from "react-router-dom";
 import SigninStyles from "../../../Styles/Signin.module.css";
 import Button from "../../../Common/Button.component/Button";
 import CustomInput from "../../../Common/Input.component/Input";
@@ -9,14 +10,15 @@ import RegImage from "../../../Asset/Rectangle 105.png";
 import { NonRegisterContextMembers } from "../../../Context/NonRegisteredMemberContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle, faFacebookF } from "@fortawesome/free-brands-svg-icons";
-
 import { faKeycdn } from "@fortawesome/free-brands-svg-icons";
+import Axios from "axios";
+import { errorToastify, successToastify } from "../../react_toastify/toastify";
 
 //
-const Signin = () => {
+const Signin = ({ history }) => {
   //function for SignUp users
   const [datas, setData] = useContext(NonRegisterContextMembers);
-  console.log("datas", datas);
+
   const {
     container,
     imageView,
@@ -66,7 +68,7 @@ const Signin = () => {
     //function to handle input value onchange
     setData((formData) => ({
       ...formData,
-      formValue: { ...regValue, [target.name]: target.value },
+      regValue: { ...regValue, [target.name]: target.value },
     }));
   };
 
@@ -75,33 +77,41 @@ const Signin = () => {
 
     const { email, password } = regValue;
 
-    //conditionion the input value datas
-    if (email) {
-      alert("Email or Password is incorrect");
-      inputsRef.current.children[0].firstChild.focus();
-      return false;
-    } else if (password.length < 8) {
-      alert("Password must not be less 8 characters");
-      inputsRef.current.children[1].firstChild.focus();
-      return false;
-    }
-
     //adding the userInformations to an object
     let userObject = {
       email,
       password,
     };
 
-    console.log(userObject);
-
     FormRef.current.reset(); //reset form on submit
-    alert("sign in successfully");
 
-    try {
-      // await axios.post("http://endPoint/", userObject)
-    } catch (error) {
-      throw error;
-    }
+    const config = {
+      method: "post",
+      url: "http://localhost:3000/api/v1/user/login",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      data: JSON.stringify(userObject),
+    };
+
+    await Axios(config)
+      .then((response) => {
+        successToastify(response.data.message);
+        sessionStorage.setItem("Token", JSON.stringify(response.data.token));
+
+        return history.push({
+          pathname: "/team-086-group-a-frontend/dashboard",
+          state: response.data.userId,
+        });
+      })
+      .catch((error) => {
+        if (error.response === undefined) {
+          return;
+        } else {
+          return errorToastify(error.response.data.message);
+        }
+      });
   };
 
   return (
@@ -204,4 +214,4 @@ const Signin = () => {
   );
 };
 
-export default Signin;
+export default withRouter(Signin);
