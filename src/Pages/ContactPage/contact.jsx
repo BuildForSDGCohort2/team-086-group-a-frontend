@@ -1,16 +1,12 @@
 import React from "react";
-import { ContactTag } from "../../Common/Contact.component/ContactPageContext";
-
+import { ContactTag } from "../..//Components/Contact.component/ContactPageContext";
 
 const ContactPage = () => {
-    return (
-            <div>
-               <ContactTag />
-            </div>
-
-
-    );
+  return (
+    <div>
+      <ContactTag />
+    </div>
+  );
 };
-
 
 export default ContactPage;

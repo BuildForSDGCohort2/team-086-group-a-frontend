@@ -16,17 +16,15 @@ const NonRegisteredMemberContextProvider = (props) => {
       phoneNumber: "",
       password: "",
       confirmPassword: "",
-      formData: [],
+      regValue: [],
     },
-    collection: null,
-    // ContactPage
-    contactPage : {
+    contactPage: {
       name: "",
       email: "",
       subject: "",
       message: "",
       disabled: false,
-      messageSent : null,
+      messageSent: null,
     },
 
     headerNavLinksCollections: [
