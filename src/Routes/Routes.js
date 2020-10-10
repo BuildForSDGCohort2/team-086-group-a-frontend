@@ -13,6 +13,7 @@ import NotFoundPage from "../Pages/NotFoundPages/NotFound";
 import Testimonials from "../Pages/TestimonialsPage/Testimonials";
 import BlogPage from "../Pages/BlogPage/BlogPage";
 import PrivacyPage from "../Pages/PrivacyPage/PrivacyPage";
+import VendorSignUp from "../Pages/Vendor_registrationPage/VendorSignUp";
 
 const Routes = () => {
   return (
@@ -57,7 +58,10 @@ const Routes = () => {
               path="/team-086-group-a-frontend/blogs"
               component={BlogPage}
             />
-
+            <ProtectedRoutes
+              path="/team-086-group-a-frontend/vendorsignup"
+              component={VendorSignUp}
+            />
             <ProtectedRoutes
               path="/team-086-group-a-frontend/dashboard"
               component={UserDashBoard}
