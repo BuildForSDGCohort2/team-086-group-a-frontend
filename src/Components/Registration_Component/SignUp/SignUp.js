@@ -144,8 +144,7 @@ const Signup = ({ history }) => {
       data: JSON.stringify(userObject),
     };
 
-    await axios
-      .post(config)
+    await axios(config)
       .then((response) => {
         // routing to signin page on componentdid update
         handleSignNavigation();
