@@ -14,6 +14,7 @@ import Testimonials from "../Pages/TestimonialsPage/Testimonials";
 import BlogPage from "../Pages/BlogPage/BlogPage";
 import PrivacyPage from "../Pages/PrivacyPage/PrivacyPage";
 import VendorSignUp from "../Pages/Vendor_registrationPage/VendorSignUp";
+import PaymentModal from "../Components/Payment_modal/paymentModal";
 
 const Routes = () => {
   return (
@@ -38,22 +39,23 @@ const Routes = () => {
               path="/team-086-group-a-frontend/signup"
               component={SignupRegistrationPage}
             />
-
             <UnProtectedRoutes
               path="/team-086-group-a-frontend/testimonials"
               component={Testimonials}
+            />{" "}
+            <UnProtectedRoutes
+              path="/team-086-group-a-frontend/paymentModal"
+              // exact
+              component={PaymentModal}
             />
-
             <UnProtectedRoutes
               path="/team-086-group-a-frontend/contact"
               component={ContactPage}
             />
-
             <ProtectedRoutes
               path="/team-086-group-a-frontend/menu"
               component={MenuPage}
             />
-
             <ProtectedRoutes
               path="/team-086-group-a-frontend/blogs"
               component={BlogPage}
@@ -66,12 +68,10 @@ const Routes = () => {
               path="/team-086-group-a-frontend/dashboard"
               component={UserDashBoard}
             />
-
             <UnProtectedRoutes
               path="/team-086-group-a-frontend/privacy"
               component={PrivacyPage}
             />
-
             <Route render={NotFoundPage} />
           </Switch>
         </NonRegisteredMemberContextProvider>

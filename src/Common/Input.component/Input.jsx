@@ -29,6 +29,7 @@ const Input = ({
   onInput,
   icon,
   isChecked,
+  focus,
   iconClick,
   click,
   onClickCapture,
@@ -69,6 +70,7 @@ const Input = ({
         onInput={onInput ? onInput : null}
         onClick={click ? click : null}
         onClickCapture={onClickCapture ? onClickCapture : null}
+        onFocus={focus ? focus : null}
       />
       <span onClick={iconClick ? iconClick : null}>{icon ? icon : null}</span>
     </div>
