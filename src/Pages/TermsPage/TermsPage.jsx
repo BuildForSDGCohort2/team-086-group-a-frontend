@@ -1,5 +1,5 @@
-import React from 'react';
-import TermsPage from '../../Components/TermsPage.component/termsPage';
+import React from "react";
+import TermsPage from "../../Components/TermsPage.component/termsPage";
 
 const Terms = () => {
     return(
@@ -8,6 +8,6 @@ const Terms = () => {
 
 
     );
-}
+};
 
 export default Terms;
