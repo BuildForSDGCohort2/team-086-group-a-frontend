@@ -10,7 +10,6 @@ const RegisteredMemberContextProvider = (props) => {
   const [registeredMemberScreens, setRegisteredMemberScreens] = useState({
     menuSearchBar: "",
     toggleMenuIcon: false,
-    handleVendorSubmitFunction: null,
     vendorFormData: {
       businessName: "",
       businessType: "",
@@ -20,6 +19,35 @@ const RegisteredMemberContextProvider = (props) => {
       taxId: "",
       subscriptionPlan: "",
     },
+    subscriptionCharge: {
+      expiry: "",
+      data: {
+        email: "",
+        amount: "3000",
+        first_name: "",
+        metadata: {
+          account_name: "",
+          phone: "",
+        },
+        // metadata: {
+        //   custom_fields: [
+        //     {
+        //       value: "",
+        //       variable_name: "donation_for",
+        //       mobile_number: "",
+        //     },
+        //   ],
+        // },
+        card: {
+          cvv: "",
+          number: "",
+          expiry_month: "",
+          expiry_year: "",
+        },
+        pin: "",
+      },
+    },
+
     businessTypes: ["roadside", "restaurant", "hotel"],
     subscriptionPlans: ["monthly", "quarterly", "yearly"],
     privacyCheck: "",

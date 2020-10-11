@@ -1,7 +1,7 @@
 import React, { useRef, useContext } from "react";
-import CustomInput from "../../Common/Input.component/Input";
-import vendorFormStyles from "../../Styles/Vendor_registration/vendorForm.module.css";
-import { RegisterContextMembers } from "../../Context/RegisteredMemberContext";
+import CustomInput from "../../../Common/Input.component/Input";
+import vendorFormStyles from "../../../Styles/Vendor_registration/vendorForm.module.css";
+import { RegisterContextMembers } from "../../../Context/RegisteredMemberContext";
 
 const VendorsForm = ({ history }) => {
   //destructuring the styles

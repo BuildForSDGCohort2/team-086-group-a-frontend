@@ -33,6 +33,7 @@ const Input = ({
   iconClick,
   click,
   onClickCapture,
+  onKeyup,
 }) => {
   const textInput = useRef(null);
 
@@ -71,6 +72,7 @@ const Input = ({
         onClick={click ? click : null}
         onClickCapture={onClickCapture ? onClickCapture : null}
         onFocus={focus ? focus : null}
+        onKeyUp={onKeyup ? onKeyup : null}
       />
       <span onClick={iconClick ? iconClick : null}>{icon ? icon : null}</span>
     </div>

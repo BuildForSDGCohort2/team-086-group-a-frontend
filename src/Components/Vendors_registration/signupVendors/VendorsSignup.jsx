@@ -8,9 +8,10 @@ import RegImage from "../../../Asset/Rectangle 105.png";
 import { RegisterContextMembers } from "../../../Context/RegisteredMemberContext";
 import Axios from "axios";
 import Text from "./Text";
-import VendorsForm from "../VendorsForm";
+import VendorsForm from "../signupVendors/VendorsForm";
 import PrivacyPaths from "./PrivacyPaths";
 import { errorToastify } from "../../../Components/react_toastify/toastify";
+import PaymentModal from "../../Payment_modal/paymentModal";
 
 const VendorSignup = ({ history }) => {
   //function for SignUp users
@@ -76,7 +77,7 @@ const VendorSignup = ({ history }) => {
           className={button}
           click={handleVendorSubmit}
         />
-
+        <PaymentModal />
         <div className={signinNav}>
           <span>
             back to the{" "}
