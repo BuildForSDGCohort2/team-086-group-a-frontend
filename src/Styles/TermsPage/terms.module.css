@@ -17,7 +17,7 @@ body {
     flex-direction: column;
     position: absolute;
     margin: 10%;
-    top: -3%;
+    top: -5em;
     max-height: 35em;
 }
   
