@@ -13,6 +13,7 @@ import NotFoundPage from "../Pages/NotFoundPages/NotFound";
 import Testimonials from "../Pages/TestimonialsPage/Testimonials";
 import BlogPage from "../Pages/BlogPage/BlogPage";
 import PrivacyPage from "../Pages/PrivacyPage/PrivacyPage";
+import VendorDashboard from "../Pages/VendorDashboardPage/VendorDashboardPage";
 
 const Routes = () => {
   return (
@@ -68,6 +69,10 @@ const Routes = () => {
               component={PrivacyPage}
             />
 
+            <ProtectedRoutes
+              path="/team-086-group-a-frontend/vendor-dashboard"
+              component={VendorDashboard}
+            />
             <Route render={NotFoundPage} />
           </Switch>
         </NonRegisteredMemberContextProvider>
