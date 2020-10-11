@@ -1,18 +1,16 @@
 import React from "react";
-import Style from "../../Styles/PrivacyPage/privacy.module.css";
+import Style from "../../Styles/TermsPage/terms.module.css";
 import Button from "../../Common/Button.component/Button";
 
-// Privacy Page COmponent
-function PrivacyPage(){
+function TermsPage(){
     const handleSubmit = (e) => {
         e.preventDefault();
     };
-
     return(
         <main className={Style.main}>
             <div className={Style.top}></div>
             <div className={Style.over}>
-                <p className={Style.caption}> Privacy Policy</p>
+                <p className={Style.caption}> Terms Of Conditions</p>
                 <p className={Style.scroll}>
                     Ad minim aliqua deserunt veniam laborum. Aliquip fugiat voluptate ex nostrud sint nostrud ullamco ad consectetur do labore. Et pariatur sint 
                     eu deserunt ut sit magna irure magna laboris consectetur ea veniam ullamco. Est dolore nulla mollit amet do est veniam.
@@ -50,12 +48,17 @@ function PrivacyPage(){
                     Laboris duis reprehenderit fugiat laborum eu tempor reprehenderit.
                 </p>
                 <div className={Style.btn}>
-                    <Button backgroundColor="#ff6347" width="8em" text="I understand" click={handleSubmit}/>
+                    <div className={Style.btn1}>
+
+                        <Button backgroundColor="#fff" width="8em" borderRadius="8px" name="cancel" text="Cancel" color="black" click={handleSubmit}/>
+                        <Button backgroundColor="#ff6347" width="8em" borderRadius="8px" name="submit" text="I Agree" click={handleSubmit}/>
+                    </div>
                 </div>
             </div>
             <div className={Style.under}></div>
+
         </main>
     );
 }
 
-export default PrivacyPage;
+export default TermsPage;

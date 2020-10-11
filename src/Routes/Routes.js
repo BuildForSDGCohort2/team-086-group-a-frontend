@@ -13,6 +13,7 @@ import NotFoundPage from "../Pages/NotFoundPages/NotFound";
 import Testimonials from "../Pages/TestimonialsPage/Testimonials";
 import BlogPage from "../Pages/BlogPage/BlogPage";
 import PrivacyPage from "../Pages/PrivacyPage/PrivacyPage";
+import TermsPage from "../Pages/TermsPage/TermsPage";
 
 const Routes = () => {
   return (
@@ -66,6 +67,10 @@ const Routes = () => {
             <UnProtectedRoutes
               path="/team-086-group-a-frontend/privacy"
               component={PrivacyPage}
+            />
+            <UnProtectedRoutes
+              path="/team-086-group-a-frontend/terms"
+              component={TermsPage}
             />
 
             <Route render={NotFoundPage} />
