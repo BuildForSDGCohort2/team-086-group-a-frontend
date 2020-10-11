@@ -27,6 +27,7 @@ const RegisteredMemberContextProvider = (props) => {
         first_name: "",
         metadata: {
           account_name: "",
+          name: "",
           phone: "",
         },
         // metadata: {
