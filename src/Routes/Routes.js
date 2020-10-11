@@ -14,6 +14,7 @@ import Testimonials from "../Pages/TestimonialsPage/Testimonials";
 import BlogPage from "../Pages/BlogPage/BlogPage";
 import PrivacyPage from "../Pages/PrivacyPage/PrivacyPage";
 import TermsPage from "../Pages/TermsPage/TermsPage";
+import VendorDashboard from "../Pages/VendorDashboardPage/VendorDashboardPage";
 
 const Routes = () => {
   return (
@@ -73,6 +74,10 @@ const Routes = () => {
               component={TermsPage}
             />
 
+            <ProtectedRoutes
+              path="/team-086-group-a-frontend/vendor-dashboard"
+              component={VendorDashboard}
+            />
             <Route render={NotFoundPage} />
           </Switch>
         </NonRegisteredMemberContextProvider>

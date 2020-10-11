@@ -1,0 +1,22 @@
+.bold {
+  font-weight: bolder;
+}
+
+.table {
+  width: 100%;
+  margin: 50px 0;
+}
+
+.table tr {
+  line-height: 70px;
+  border-bottom: 1px solid rgb(231, 222, 222);
+}
+
+.table tr td:nth-child(2) {
+  font-weight: bold;
+}
+
+.alignRight * {
+  display: inline-block;
+  margin-left: 10px;
+}
