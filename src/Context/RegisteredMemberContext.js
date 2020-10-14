@@ -18,34 +18,32 @@ const RegisteredMemberContextProvider = (props) => {
       email: "",
       taxId: "",
       subscriptionPlan: "",
+      paymentReference: "",
+      customerId: "",
     },
+    vendorLoginForm: {
+      vendorId: "",
+      paymentReference: "",
+    },
+    openModal: true,
+
     subscriptionCharge: {
-      expiry: "",
+      expiry: "1220",
       data: {
         email: "",
-        amount: "3000",
-        first_name: "",
+        amount: "300000",
+
         metadata: {
-          account_name: "",
-          name: "",
-          phone: "",
+          custom_fields: [],
         },
-        // metadata: {
-        //   custom_fields: [
-        //     {
-        //       value: "",
-        //       variable_name: "donation_for",
-        //       mobile_number: "",
-        //     },
-        //   ],
-        // },
+
         card: {
-          cvv: "",
-          number: "",
-          expiry_month: "",
-          expiry_year: "",
+          cvv: "408",
+          number: "4084084084084081",
+          expiry_month: "12",
+          expiry_year: "2020",
         },
-        pin: "",
+        pin: "0000",
       },
     },
 

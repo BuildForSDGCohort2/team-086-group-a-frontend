@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 
 const Input = ({
   name,
@@ -35,8 +35,6 @@ const Input = ({
   onClickCapture,
   onKeyup,
 }) => {
-  const textInput = useRef(null);
-
   return (
     <div>
       <input
@@ -63,7 +61,7 @@ const Input = ({
         name={name}
         required={isRequired}
         id={id ? id : null}
-        ref={isRefs ? (isRefs = textInput) : null}
+        ref={isRefs ? isRefs : null}
         autoComplete={autoComplete ? autoComplete : null}
         autoCorrect={autoCorrect ? autoCorrect : null}
         spellCheck={spellCheck ? spellCheck : null}

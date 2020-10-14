@@ -7,17 +7,21 @@ import "react-credit-cards/es/styles-compiled.css";
 import Axios from "axios";
 import CustomButton from "../../Common/Button.component/Button";
 import { RegisterContextMembers } from "../../Context/RegisteredMemberContext";
+import {
+  errorToastify,
+  successToastify,
+} from "../../Components/react_toastify/toastify";
 
 Modal.setAppElement("#root");
-const PaymentModal = ({ openModal }) => {
+const PaymentModal = () => {
   const { input, react_modal, form, button, container, wrapper } = paymentStyle;
   const [focus, setFocus] = useState("");
+  const [name, setName] = useState("");
   const [state, setState] = useContext(RegisterContextMembers);
-  const { subscriptionCharge } = state;
+  const { subscriptionCharge, openModal } = state;
   const { data, expiry } = subscriptionCharge;
   const { card, metadata, email, amount, pin } = data;
   const { number, cvv } = card;
-  const { name } = metadata;
 
   //setting the input field to the state
   const handleCardChange = ({ target }) => {
@@ -59,14 +63,22 @@ const PaymentModal = ({ openModal }) => {
   };
 
   //setting the user extra info to the state
-  const handleMetaData = ({ target }) => {
+  const handleAccountName = ({ target }) => {
+    let customFields = [
+      {
+        account_name: target.value,
+      },
+    ];
     setState((datas) => ({
       ...datas,
       subscriptionCharge: {
         ...subscriptionCharge,
         data: {
           ...data,
-          metadata: { ...metadata, [target.name]: target.value },
+          metadata: {
+            ...metadata,
+            custom_fields: customFields,
+          },
         },
       },
     }));
@@ -86,6 +98,7 @@ const PaymentModal = ({ openModal }) => {
       let split = expiry.split("");
       let expiryMonth = `${split[0]}${split[1]}`;
       let expiryYear = `${split[2]}${split[3]}`;
+
       setState((datas) => ({
         ...datas,
         subscriptionCharge: {
@@ -121,31 +134,54 @@ const PaymentModal = ({ openModal }) => {
     };
 
     Axios(config)
-      .then(function (response) {
-        console.log("response.data", response.data);
+      .then(async (response) => {
+        if (response) {
+          const chargeReferenc = await getpaymentReference(
+            response.data.data.reference
+          );
+
+          //checking for network failure
+          if (!chargeReferenc) {
+            return;
+          }
+        }
       })
       .catch(function (error) {
         console.error(error.response);
       });
   };
 
+  const getpaymentReference = async (ref) => {
+    await Axios.get(`http://localhost:4000/api/v1/payment/${ref}`)
+      .then((res) => {
+        if (res) {
+          successToastify(res.data.message);
+          setState((datas) => ({
+            ...datas,
+            openModal: false,
+            vendorFormData: {
+              ...datas.vendorFormData,
+              paymentReference: res.data.reference,
+              customerId: res.data.customerId,
+            },
+          }));
+        }
+      })
+      .catch((error) => {
+        if (error.response === undefined) {
+          return;
+        }
+        errorToastify(error.response.data.message);
+      });
+  };
   return (
     <div className={container}>
       <div className={wrapper}>
         <Modal
-          isOpen={true}
+          isOpen={openModal}
           shouldCloseOnEsc={false}
           onRequestClose={(e) => (e.target.isOpen === false ? false : null)}
           className={react_modal}
-          // style={{
-          //   overlay: {
-          //     backgroundColor: "grey",
-          //     width: "30px",
-          //   },
-          //   content: {
-          //     colors: "orange",
-          //   },
-          // }}
         >
           <Cards
             number={number.substr(0, 16)}
@@ -164,14 +200,16 @@ const PaymentModal = ({ openModal }) => {
               onChange={handleCardChange}
               focus={(e) => setFocus(e.target.name)}
               className={input}
+              readOnly={true}
             />
             <CustomInput
               type={"text"}
               name="name"
               placeholder="Name"
               value={name}
-              onChange={handleMetaData}
+              onChange={(e) => setName(e.target.value)}
               focus={(e) => setFocus(e.target.name)}
+              onKeyup={handleAccountName}
               className={input}
             />
             <CustomInput
@@ -182,6 +220,7 @@ const PaymentModal = ({ openModal }) => {
               onChange={handleExpiry}
               focus={(e) => setFocus(e.target.name)}
               className={input}
+              readOnly={true}
               onKeyup={handleMonthChange}
             />
             <CustomInput
@@ -192,6 +231,7 @@ const PaymentModal = ({ openModal }) => {
               onChange={handleCvcChange}
               focus={(e) => setFocus(e.target.name)}
               className={input}
+              readOnly={true}
             />
 
             <CustomInput
@@ -210,6 +250,7 @@ const PaymentModal = ({ openModal }) => {
               value={amount}
               onChange={handlePaymentChange}
               className={input}
+              readOnly={true}
             />
 
             <CustomInput
@@ -218,6 +259,7 @@ const PaymentModal = ({ openModal }) => {
               placeholder="pin"
               value={pin}
               onChange={handlePaymentChange}
+              readOnly={true}
               className={input}
             />
           </form>

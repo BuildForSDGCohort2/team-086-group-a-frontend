@@ -34,6 +34,7 @@ const VendorSignup = ({ history }) => {
   };
   const handleVendorSubmit = async (e) => {
     e.preventDefault();
+
     if (privacyCheck !== true) {
       return errorToastify("You are yet to check the required box");
     }
@@ -42,15 +43,14 @@ const VendorSignup = ({ history }) => {
       method: "post",
       url: "http://localhost:4000/api/v1/vendor/signup",
       headers: {
-        "content-type": "application/json",
+        "Content-Type": "application/json",
       },
       data: JSON.stringify(vendorFormData),
     };
 
     Axios(config)
       .then((res) => {
-        console.log(res.data);
-        // handleSignNavigation();
+        handleSignNavigation();
       })
       .catch((error) => {
         if (error.response === undefined) {

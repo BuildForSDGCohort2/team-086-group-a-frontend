@@ -52,6 +52,7 @@ export const ContactTag = (props) => {
       };
 
       formRef.current.reset();
+      console.log("contactObj", contactObj);
       alert("Message Sent");
     }
   };
