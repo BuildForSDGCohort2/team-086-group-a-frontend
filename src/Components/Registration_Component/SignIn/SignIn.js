@@ -6,17 +6,14 @@ import CustomInput from "../../../Common/Input.component/Input";
 import CustomLink from "../../../Common/Link.component/Link";
 import CustomImage from "../../../Common/Image.component/Image";
 import RegImage from "../../../Asset/Rectangle 105.png";
-// import axios from "axios";
 import { NonRegisterContextMembers } from "../../../Context/NonRegisteredMemberContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle, faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import { faKeycdn } from "@fortawesome/free-brands-svg-icons";
 import Axios from "axios";
 import { errorToastify, successToastify } from "../../react_toastify/toastify";
-import NavigationComponent from "../../Navigation_components/NavigationComponent";
 
-//
-const Signin = () => {
+const Signin = ({ history }) => {
   //function for SignUp users
   const [datas, setData] = useContext(NonRegisterContextMembers);
 
@@ -101,9 +98,11 @@ const Signin = () => {
         successToastify(response.data.message);
 
         sessionStorage.setItem("Token", JSON.stringify(response.data.token));
-        const pathname = "/team-086-group-a-frontend/dashboard";
-        const state = response.data.userId;
-        return NavigationComponent(pathname, state);
+
+        history.push({
+          pathname: "/team-086-group-a-frontend/dashboard",
+          state: response.data.userId,
+        });
       })
       .catch((error) => {
         if (error.response === undefined) {

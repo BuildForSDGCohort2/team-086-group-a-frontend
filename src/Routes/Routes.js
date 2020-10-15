@@ -16,6 +16,7 @@ import PrivacyPage from "../Pages/PrivacyPage/PrivacyPage";
 import VendorSignUp from "../Pages/Vendor_registrationPage/VendorSignUp";
 import VendorLoginPage from "../Pages/Vendor_registrationPage/VendorLoginPage";
 import PaymentModal from "../Components/Payment_modal/paymentModal";
+import VendorDashboard from "../Pages/VendorDashboardPage/VendorDashboardPage";
 
 const Routes = () => {
   return (
@@ -65,16 +66,24 @@ const Routes = () => {
               component={BlogPage}
             />
             <ProtectedRoutes
-              path="/team-086-group-a-frontend/vendorsignup"
+              path="/team-086-group-a-frontend/vendor/signup"
               component={VendorSignUp}
             />
             <ProtectedRoutes
               path="/team-086-group-a-frontend/dashboard"
               component={UserDashBoard}
-            />{" "}
+            />
             <ProtectedRoutes
               path="/team-086-group-a-frontend/vendor/login"
               component={VendorLoginPage}
+            />
+            <UnProtectedRoutes
+              path="/team-086-group-a-frontend/privacy"
+              component={PrivacyPage}
+            />
+            <ProtectedRoutes
+              path="/team-086-group-a-frontend/vendor-dashboard"
+              component={VendorDashboard}
             />
             <Route render={NotFoundPage} />
           </Switch>
