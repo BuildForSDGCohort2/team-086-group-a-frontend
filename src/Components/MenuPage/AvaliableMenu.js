@@ -56,6 +56,7 @@ const AvaliableMenu = ({ match }) => {
   const { category: filterCategory } = filters;
 
   const handleListClick = ({ target }) => {
+    //fetch the categories that match the menu been clicked
     let response =
       availableMenu &&
       availableMenu
@@ -67,8 +68,59 @@ const AvaliableMenu = ({ match }) => {
     }));
   };
 
+  const handleBrandNameClick = async ({ target }) => {
+    //fetch the menu and the category of the brandname that was click
+    // set it the state to replace the previous state values
+
+    await axios
+      .get(
+        `http://localhost:4000/api/v1/dashboard/user/one_category/${target.innerText.toLowerCase()}`,
+        {
+          "Content-Type": "application/json",
+          withCredentials: true,
+        }
+      )
+      .then((res) => {
+        console.log("res.data.data", res.data.data);
+        setState((datas) => ({
+          ...datas,
+          categories: res.data.data,
+        }));
+      })
+      .catch((err) => {
+        if (err.response === undefined) {
+          return;
+        }
+
+        return errorToastify(err.response.data.message);
+      });
+
+    await axios
+      .get(
+        `http://localhost:4000/api/v1/dashboard/user/one_menu/${target.innerText.toLowerCase()}`,
+        {
+          "Content-Type": "application/json",
+          withCredentials: true,
+        }
+      )
+      .then((res) => {
+        setState((datas) => ({
+          ...datas,
+          availableMenu: res.data.data,
+        }));
+      })
+      .catch((err) => {
+        if (err.response === undefined) {
+          return;
+        }
+
+        return errorToastify(err.response.data.message);
+      });
+  };
+
   useEffect(() => {
-    const displayReadyFood = async () => {
+    //setting the available menu, brandName and categories to the state on didmount
+    const availableMenu = async () => {
       await axios
         .get(`http://localhost:4000/api/v1/dashboard/user/category`, {
           "Content-Type": "application/json",
@@ -77,7 +129,7 @@ const AvaliableMenu = ({ match }) => {
         .then((res) => {
           setState((data) => ({
             ...data,
-            categories: res.data.data[0].category,
+            categories: res.data.data[0],
           }));
         })
         .catch((error) => {
@@ -88,9 +140,10 @@ const AvaliableMenu = ({ match }) => {
           }
         });
     };
-    displayReadyFood();
+    availableMenu();
 
     const handlebrandsNames = async () => {
+      //fetching the brandNames from the server
       await axios
         .get(`http://localhost:4000/api/v1/menu/all`, {
           "Content-Type": "application/json",
@@ -107,6 +160,7 @@ const AvaliableMenu = ({ match }) => {
     handlebrandsNames();
 
     const handleMenu = async () => {
+      //fetching the menu to be displayed on didmount
       await axios
         .get(`http://localhost:4000/api/v1/dashboard/user/menu/`, {
           "Content-Type": "application/json",
@@ -134,8 +188,8 @@ const AvaliableMenu = ({ match }) => {
                 <FontAwesomeIcon icon={faCheckSquare} className={checkIcon} />
               </div>
               <ul className={list}>
-                {categories &&
-                  categories.map((categoriesList, index) => (
+                {categories.category &&
+                  categories.category.map((categoriesList, index) => (
                     <CustomList
                       text={categoriesList}
                       key={index}
@@ -196,7 +250,7 @@ const AvaliableMenu = ({ match }) => {
                         <CustomList
                           text={categoriesList}
                           key={index}
-                          click={() => alert("hello this is brands")}
+                          click={handleBrandNameClick}
                           className={brand}
                         />
                       ))}
