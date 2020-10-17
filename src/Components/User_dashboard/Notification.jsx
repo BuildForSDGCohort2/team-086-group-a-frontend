@@ -24,10 +24,12 @@ const Notification = ({ history }) => {
   useEffect(() => {
     const handleNotifications = async () => {
       await axios
-        .get(`http://localhost:4000/api/v1/dashboard/loggin_user/${userId}`)
+        .get(`http://localhost:4000/api/v1/dashboard/loggin_user/${userId}`, {
+          "Content-Type": "application/json",
+          withCredentials: true,
+        })
         .then((res) => {
           const { notification } = res.data.data;
-          console.log("notification", notification);
           setState((data) => ({ ...data, Notifications: notification }));
         })
         .catch((err) => {
