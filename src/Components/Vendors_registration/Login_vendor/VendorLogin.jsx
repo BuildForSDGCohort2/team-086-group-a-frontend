@@ -51,6 +51,7 @@ const VendorLogin = ({ history }) => {
       headers: {
         "Content-Type": "application/json",
       },
+      withCredentials: true,
       data: JSON.stringify({ vendorId, paymentReference }),
     };
 

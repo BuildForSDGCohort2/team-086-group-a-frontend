@@ -11,6 +11,9 @@ import {
   faCaretDown,
   faCaretUp,
 } from "@fortawesome/free-solid-svg-icons";
+import axios from "axios";
+import { errorToastify } from "../react_toastify/toastify";
+
 const AvaliableMenu = ({ match }) => {
   const {
     container,
@@ -42,14 +45,20 @@ const AvaliableMenu = ({ match }) => {
     brandLists,
   } = AvaliableMenuStyles;
   const [state, setState] = useContext(RegisterContextMembers);
-  const { collection, specifiedFood } = state;
-  const { availableFood, categories, filters } = collection;
-  const { brands, category: filterCategory } = filters;
+  const {
+    specifiedFood,
+    categories,
+    brandNames,
+    availableMenu,
+    filters,
+  } = state;
+
+  const { category: filterCategory } = filters;
 
   const handleListClick = ({ target }) => {
     let response =
-      availableFood &&
-      availableFood
+      availableMenu &&
+      availableMenu
         .filter((foodName) => foodName.name === target.innerText.toLowerCase())
         .filter((v, i) => i <= 6);
     setState((data) => ({
@@ -59,15 +68,60 @@ const AvaliableMenu = ({ match }) => {
   };
 
   useEffect(() => {
-    const displayReadyFood = () => {
-      let response = availableFood && availableFood.filter((v, i) => i <= 3);
-      setState((data) => ({
-        ...data,
-        specifiedFood: response,
-      }));
+    const displayReadyFood = async () => {
+      await axios
+        .get(`http://localhost:4000/api/v1/dashboard/user/category`, {
+          "Content-Type": "application/json",
+          withCredentials: true,
+        })
+        .then((res) => {
+          setState((data) => ({
+            ...data,
+            categories: res.data.data[0].category,
+          }));
+        })
+        .catch((error) => {
+          if (error.response === undefined) {
+            return;
+          } else {
+            return errorToastify(error.response.data.message);
+          }
+        });
     };
     displayReadyFood();
-  }, [setState, availableFood]);
+
+    const handlebrandsNames = async () => {
+      await axios
+        .get(`http://localhost:4000/api/v1/menu/all`, {
+          "Content-Type": "application/json",
+          withCredentials: true,
+        })
+        .then((res) => {
+          setState((datas) => ({
+            ...datas,
+            brandNames: res.data.data,
+          }));
+        })
+        .catch((err) => console.error(err.response));
+    };
+    handlebrandsNames();
+
+    const handleMenu = async () => {
+      await axios
+        .get(`http://localhost:4000/api/v1/dashboard/user/menu/`, {
+          "Content-Type": "application/json",
+          withCredentials: true,
+        })
+        .then((res) => {
+          setState((datas) => ({
+            ...datas,
+            availableMenu: res.data.data,
+          }));
+        })
+        .catch((err) => errorToastify(err.response.data.message));
+    };
+    handleMenu();
+  }, [setState]);
 
   return (
     <section className={container}>
@@ -137,8 +191,8 @@ const AvaliableMenu = ({ match }) => {
                     <h3>brands</h3>
                   </div>
                   <ul className={brandLists}>
-                    {brands &&
-                      brands.map((categoriesList, index) => (
+                    {brandNames &&
+                      brandNames.map((categoriesList, index) => (
                         <CustomList
                           text={categoriesList}
                           key={index}
@@ -152,7 +206,7 @@ const AvaliableMenu = ({ match }) => {
             </div>
           </aside>
           <div className={display}>
-            {handleListClick && specifiedFood.length > 0 ? (
+            {handleListClick && specifiedFood ? (
               specifiedFood.map(({ image, type, desc, price }, index) => (
                 <fieldset key={index} className={menuDisplay}>
                   <CustomImage

@@ -90,18 +90,17 @@ const Signin = ({ history }) => {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
+      withCredentials: true,
       data: JSON.stringify(userObject),
     };
-
+    console.log("userId", datas.userId);
     await Axios(config)
       .then((response) => {
         successToastify(response.data.message);
-
         sessionStorage.setItem("Token", JSON.stringify(response.data.token));
-
+        localStorage.setItem("code", JSON.stringify(response.data.userId));
         history.push({
           pathname: "/team-086-group-a-frontend/dashboard",
-          state: response.data.userId,
         });
       })
       .catch((error) => {
