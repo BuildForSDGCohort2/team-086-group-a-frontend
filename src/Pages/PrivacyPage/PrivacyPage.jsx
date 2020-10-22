@@ -2,7 +2,7 @@ import React from "react";
 import PrivacyPage from "../../Components/PrivacyPage.component/privacyPage";
 
 
-function Privacy(){
+const Privacy = () => {
     return(
         <PrivacyPage />
     );

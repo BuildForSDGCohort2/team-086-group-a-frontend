@@ -16,6 +16,7 @@ import PrivacyPage from "../Pages/PrivacyPage/PrivacyPage";
 import VendorSignUp from "../Pages/Vendor_registrationPage/VendorSignUp";
 import VendorLoginPage from "../Pages/Vendor_registrationPage/VendorLoginPage";
 import PaymentModal from "../Components/Payment_modal/paymentModal";
+import TermsPage from "../Pages/TermsPage/TermsPage";
 import VendorDashboard from "../Pages/VendorDashboardPage/VendorDashboardPage";
 
 const Routes = () => {
@@ -81,6 +82,11 @@ const Routes = () => {
               path="/team-086-group-a-frontend/privacy"
               component={PrivacyPage}
             />
+            <UnProtectedRoutes
+              path="/team-086-group-a-frontend/terms"
+              component={TermsPage}
+            />
+
             <ProtectedRoutes
               path="/team-086-group-a-frontend/vendor-dashboard"
               component={VendorDashboard}
