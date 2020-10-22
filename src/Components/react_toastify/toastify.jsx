@@ -16,3 +16,10 @@ export const errorToastify = (message) => {
     hideProgressBar: true,
   });
 };
+
+export const infoToastify = (message) => {
+  return toast.info(message, {
+    position: "top-center",
+    hideProgressBar: true,
+  });
+};

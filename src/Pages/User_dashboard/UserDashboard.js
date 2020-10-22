@@ -8,6 +8,7 @@ import UserOrders from "../../Components/User_dashboard/UserOrders";
 import RecommendedMeal from "../../Components/User_dashboard/RecommendedMeal";
 import Footer from "../../Common/Footer.component/Footer";
 import { RegisterContextMembers } from "../../Context/RegisteredMemberContext";
+import VendorSignUpBar from "../../Components/User_dashboard/Vendor_SignUp_Bar";
 
 const UserDashboard = () => {
   const [state] = useContext(RegisterContextMembers);
@@ -17,6 +18,7 @@ const UserDashboard = () => {
   return (
     <div className={container}>
       <Header headerNavLinks={headerNavLinksRegCollections} />
+      <VendorSignUpBar />
       <DisplayPicture />
       <div className={wrapper}>
         <div className={leftDisplay}>

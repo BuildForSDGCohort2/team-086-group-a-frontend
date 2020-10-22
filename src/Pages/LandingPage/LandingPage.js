@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { NonRegisterContextMembers } from "../../Context/NonRegisteredMemberContext";
 import Header from "../../Common/Header.Component/Header";
-import VendorBar from "../../Components/LandingPage/Vendor_SignUp_Bar.jsx";
 import AboutSection from "../../Components/LandingPage/AboutSection";
 import IllustrationSection from "../../Components/LandingPage/Illustration_Section.jsx";
 import SpecialOffer from "../../Components/LandingPage/SpecialOffer.jsx";
@@ -38,7 +37,7 @@ const LandingPage = () => {
     <div className={allContainer}>
       <div className={topArea}>
         <Header headerNavLinks={headerNavLinksCollections} />
-        <VendorBar />
+
         <div className={emphasis}>
           <div className={textWrapper}>
             <div className={text}>

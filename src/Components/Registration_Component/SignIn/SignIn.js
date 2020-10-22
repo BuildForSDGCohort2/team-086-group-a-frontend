@@ -93,7 +93,7 @@ const Signin = ({ history }) => {
       withCredentials: true,
       data: JSON.stringify(userObject),
     };
-    console.log("userId", datas.userId);
+
     await Axios(config)
       .then((response) => {
         successToastify(response.data.message);

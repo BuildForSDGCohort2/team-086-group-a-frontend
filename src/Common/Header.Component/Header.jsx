@@ -14,6 +14,12 @@ const Header = (props) => {
   const { path } = match;
 
   const authorization = path === "/team-086-group-a-frontend/home";
+  const dropDownArray = [
+    "vendor account",
+    "give your testimony",
+    "my profile",
+    "log out",
+  ];
 
   const handleSignupButton = () => {
     // routing to the signin page
@@ -31,8 +37,38 @@ const Header = (props) => {
     links,
     buttonWrapper,
     button,
+    icon,
+    fontIcon,
+    list,
+    dropDowns,
   } = HeaderStyles;
 
+  const logOut = () => {
+    sessionStorage.removeItem("Token");
+    localStorage.removeItem("code");
+    return history.push("/team-086-group-a-frontend/signin");
+  };
+  const handleDropDownClicks = ({ target }) => {
+    switch (target.innerText) {
+      case "vendor account":
+        history.push("/team-086-group-a-frontend/vendor/login");
+        break;
+
+      case "give your testimony":
+        break;
+
+      case "my profile":
+        history.push("/team-086-group-a-frontend/vendor/");
+        break;
+
+      case "log out":
+        logOut();
+        break;
+
+      default:
+        break;
+    }
+  };
   return (
     <div className={container}>
       <div className={headerBackground}>
@@ -57,7 +93,27 @@ const Header = (props) => {
           </div>
           <div className={buttonWrapper}>
             {!authorization && sessionStorage.getItem("Token") ? (
-              <FontAwesomeIcon icon={faUser} color={"white"} size="2x" />
+              <div className={icon}>
+                <FontAwesomeIcon
+                  icon={faUser}
+                  color={"white"}
+                  size="2x"
+                  className={fontIcon}
+                />
+
+                <ul className={list}>
+                  {dropDownArray &&
+                    dropDownArray.map((value, index) => (
+                      <CustomList
+                        key={index}
+                        text={value}
+                        className={dropDowns}
+                        color={"#fff"}
+                        click={handleDropDownClicks}
+                      />
+                    ))}
+                </ul>
+              </div>
             ) : (
               <CustomButton
                 text={"Sign Up"}

@@ -35,6 +35,7 @@ const VendorLogin = ({ history }) => {
     forgotPassword,
     noAccount,
   } = SigninStyles;
+
   const handleChange = ({ target }) => {
     setState((data) => ({
       ...data,

@@ -79,3 +79,42 @@
   border-radius: 5px;
   font-weight: bolder;
 }
+
+.icon {
+  border-radius: 50%;
+}
+
+/* transition: width 2s ease-in; */
+.fontIcon {
+  border-radius: 50%;
+  size: 3x;
+  clip-path: circle(50%);
+}
+
+.icon:hover .list {
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  width: 10em;
+}
+
+.list {
+  display: none;
+  width: 10em;
+  max-height: 15em;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  transform: translate(-20%, 0.1em);
+  position: absolute;
+  list-style: none;
+}
+
+.dropDowns {
+  width: inherit;
+  text-align: center;
+  cursor: pointer;
+}
+
+.dropDowns:hover {
+  background-color: rgba(0, 0, 0, 0.75);
+}

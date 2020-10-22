@@ -6,10 +6,13 @@ import Drinks from "../Asset/Rectangle 27.png";
 import BreakFast from "../Asset/Ellipse 75.svg";
 
 const RegisterContextMembers = React.createContext([{}, () => {}]);
+
 const RegisteredMemberContextProvider = (props) => {
   const [registeredMemberScreens, setRegisteredMemberScreens] = useState({
     menuSearchBar: "",
+
     toggleMenuIcon: false,
+
     vendorFormData: {
       businessName: "",
       businessType: "",
@@ -21,10 +24,17 @@ const RegisteredMemberContextProvider = (props) => {
       paymentReference: "",
       customerId: "",
     },
+
     vendorLoginForm: {
       vendorId: "",
       paymentReference: "",
     },
+
+    vendorRequestDropDown: "",
+
+    vendorOptionsRequest: [],
+
+    categoryModal: false,
 
     specifiedFood: [],
     Notifications: [],
@@ -118,11 +128,15 @@ const RegisteredMemberContextProvider = (props) => {
       ],
     },
     categories: [],
+
     brandsNames: [],
+
     availableMenu: [],
+
     filters: {
       category: ["popularity", "rating ", "price"],
     },
+
     collection: {
       availableFood: [
         {

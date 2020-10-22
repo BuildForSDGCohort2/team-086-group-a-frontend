@@ -4,6 +4,7 @@ import CustomImage from "../../Common/Image.component/Image";
 import CustomInput from "../../Common/Input.component/Input";
 import NotificationStyles from "../../Styles/User_dashboard/Notification.module.css";
 import axios from "axios";
+import { errorToastify } from "../react_toastify/toastify";
 
 const Notification = ({ history }) => {
   const {
@@ -37,13 +38,10 @@ const Notification = ({ history }) => {
             return;
           }
 
-          return console.log("err.response.data", err.response.data);
+          errorToastify(err.response.data.message);
         });
     };
     handleNotifications();
-    return () => {
-      handleNotifications();
-    };
   }, [setState, userId]);
 
   return (

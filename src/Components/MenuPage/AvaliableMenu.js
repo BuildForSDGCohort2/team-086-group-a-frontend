@@ -3,7 +3,7 @@ import { withRouter } from "react-router-dom";
 import { RegisterContextMembers } from "../../Context/RegisteredMemberContext";
 import CustomList from "../../Common/List.component/List";
 import CustomImage from "../../Common/Image.component/Image";
-import AvaliableMenuStyles from "../../Styles/MenuPageStyles/AvaliableMenu.module.css";
+import AvailableMenuStyles from "../../Styles/MenuPageStyles/AvaliableMenu.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCheckSquare,
@@ -43,7 +43,7 @@ const AvaliableMenu = ({ match }) => {
     brandWrapper,
     brand,
     brandLists,
-  } = AvaliableMenuStyles;
+  } = AvailableMenuStyles;
   const [state, setState] = useContext(RegisterContextMembers);
   const {
     specifiedFood,
