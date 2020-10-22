@@ -10,6 +10,7 @@ const VendorRequest = () => {
   const [state, setState] = useContext(RegisterContextMembers);
   const { vendorRequestDropDown, vendorOptionsRequest } = state;
 
+  //handling the vendor request
   const handleRequestchange = ({ target }) => {
     setState((datas) => ({
       ...datas,
@@ -34,6 +35,7 @@ const VendorRequest = () => {
     }
   };
 
+  //handling the vendor category request
   const CategoryDropDownComponent = () => {
     const categoryRequests = ["add category", "update category"];
 
@@ -43,6 +45,7 @@ const VendorRequest = () => {
     }));
   };
 
+  //handling the vendor menu request
   const MenuDropDownComponent = () => {
     const menuRequests = ["add menu", "update menu", "remove menu"];
 
@@ -52,12 +55,14 @@ const VendorRequest = () => {
     }));
   };
 
+  //removing the vendor request option
   const removeStateLists = () =>
     setState((datas) => ({
       ...datas,
       vendorOptionsRequest: [],
     }));
 
+  //displayed the category request modal for category actions
   const displayCategoryModal = () => {
     return setState((datas) => ({
       ...datas,
@@ -65,8 +70,9 @@ const VendorRequest = () => {
     }));
   };
 
+  //handling the request options click
   const requestClick = ({ target }) => {
-    console.log("target.va;ie", target.innerText);
+    //handling the vendor request actions
     switch (target.innerText.toLowerCase()) {
       case "add category":
         displayCategoryModal();

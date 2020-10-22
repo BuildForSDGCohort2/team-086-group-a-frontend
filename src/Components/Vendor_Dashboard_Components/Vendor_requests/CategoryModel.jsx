@@ -10,6 +10,7 @@ import {
 import Axios from "axios";
 import { RegisterContextMembers } from "../../../Context/RegisteredMemberContext";
 
+//seting the appending node as the root
 Modal.setAppElement("#root");
 
 const CategoryModel = () => {
