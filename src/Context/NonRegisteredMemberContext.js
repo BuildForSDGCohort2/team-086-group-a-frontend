@@ -18,6 +18,7 @@ const NonRegisteredMemberContextProvider = (props) => {
       confirmPassword: "",
       regValue: [],
     },
+
     contactPage: {
       name: "",
       email: "",

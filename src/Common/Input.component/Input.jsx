@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 
 const Input = ({
   name,
@@ -28,10 +28,13 @@ const Input = ({
   readOnly,
   onInput,
   icon,
+  isChecked,
+  focus,
   iconClick,
+  click,
+  onClickCapture,
+  onKeyup,
 }) => {
-  const textInput = useRef(null);
-
   return (
     <div>
       <input
@@ -50,6 +53,7 @@ const Input = ({
         }}
         type={type ? type : "text"}
         list={list ? list : null}
+        checked={isChecked ? isChecked : null}
         placeholder={placeholder}
         onChange={onChange}
         value={value ? value : ""}
@@ -57,12 +61,16 @@ const Input = ({
         name={name}
         required={isRequired}
         id={id ? id : null}
-        ref={isRefs ? (isRefs = textInput) : null}
+        ref={isRefs ? isRefs : null}
         autoComplete={autoComplete ? autoComplete : null}
         autoCorrect={autoCorrect ? autoCorrect : null}
         spellCheck={spellCheck ? spellCheck : null}
         readOnly={readOnly ? readOnly : null}
         onInput={onInput ? onInput : null}
+        onClick={click ? click : null}
+        onClickCapture={onClickCapture ? onClickCapture : null}
+        onFocus={focus ? focus : null}
+        onKeyUp={onKeyup ? onKeyup : null}
       />
       <span onClick={iconClick ? iconClick : null}>{icon ? icon : null}</span>
     </div>

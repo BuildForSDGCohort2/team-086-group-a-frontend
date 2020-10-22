@@ -6,7 +6,6 @@ import CustomInput from "../../../Common/Input.component/Input";
 import CustomLink from "../../../Common/Link.component/Link";
 import CustomImage from "../../../Common/Image.component/Image";
 import RegImage from "../../../Asset/Rectangle 105.png";
-// import axios from "axios";
 import { NonRegisterContextMembers } from "../../../Context/NonRegisteredMemberContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle, faFacebookF } from "@fortawesome/free-brands-svg-icons";
@@ -14,7 +13,6 @@ import { faKeycdn } from "@fortawesome/free-brands-svg-icons";
 import Axios from "axios";
 import { errorToastify, successToastify } from "../../react_toastify/toastify";
 
-//
 const Signin = ({ history }) => {
   //function for SignUp users
   const [datas, setData] = useContext(NonRegisterContextMembers);
@@ -92,6 +90,7 @@ const Signin = ({ history }) => {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
+      withCredentials: true,
       data: JSON.stringify(userObject),
     };
 
@@ -99,10 +98,9 @@ const Signin = ({ history }) => {
       .then((response) => {
         successToastify(response.data.message);
         sessionStorage.setItem("Token", JSON.stringify(response.data.token));
-
-        return history.push({
+        localStorage.setItem("code", JSON.stringify(response.data.userId));
+        history.push({
           pathname: "/team-086-group-a-frontend/dashboard",
-          state: response.data.userId,
         });
       })
       .catch((error) => {

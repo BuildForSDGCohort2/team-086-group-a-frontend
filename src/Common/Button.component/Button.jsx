@@ -16,6 +16,7 @@ const Button = ({
   border,
   borderRadius,
   ref,
+  textTransform,
 }) => (
   <div className={className ? className : button}>
     <button
@@ -29,6 +30,7 @@ const Button = ({
         border: border ? border : null,
         borderRadius: borderRadius ? borderRadius : null,
         cursor: "pointer",
+        textTransform: textTransform ? textTransform : null,
       }}
       onClick={click ? click : null}
       name={name ? name : null}

@@ -6,12 +6,63 @@ import Drinks from "../Asset/Rectangle 27.png";
 import BreakFast from "../Asset/Ellipse 75.svg";
 
 const RegisterContextMembers = React.createContext([{}, () => {}]);
+
 const RegisteredMemberContextProvider = (props) => {
   const [registeredMemberScreens, setRegisteredMemberScreens] = useState({
     menuSearchBar: "",
+
     toggleMenuIcon: false,
+
+    vendorFormData: {
+      businessName: "",
+      businessType: "",
+      businessNumber: "",
+      officeAddress: "",
+      email: "",
+      taxId: "",
+      subscriptionPlan: "",
+      paymentReference: "",
+      customerId: "",
+    },
+
+    vendorLoginForm: {
+      vendorId: "",
+      paymentReference: "",
+    },
+
+    vendorRequestDropDown: "",
+
+    vendorOptionsRequest: [],
+
+    categoryModal: false,
+
     specifiedFood: [],
     Notifications: [],
+    openModal: true,
+
+    subscriptionCharge: {
+      expiry: "1220",
+      data: {
+        email: "",
+        amount: "300000",
+
+        metadata: {
+          custom_fields: [],
+        },
+
+        card: {
+          cvv: "408",
+          number: "4084084084084081",
+          expiry_month: "12",
+          expiry_year: "2020",
+        },
+        pin: "0000",
+      },
+    },
+
+    businessTypes: ["roadside", "restaurant", "hotel"],
+    subscriptionPlans: ["monthly", "quarterly", "yearly"],
+    privacyCheck: "",
     headerNavLinksRegCollections: [
       "home",
       "dashboard",
@@ -76,31 +127,17 @@ const RegisteredMemberContextProvider = (props) => {
         },
       ],
     },
+    categories: [],
+
+    brandsNames: [],
+
+    availableMenu: [],
+
+    filters: {
+      category: ["popularity", "rating ", "price"],
+    },
+
     collection: {
-      categories: [
-        "soup",
-        "rice",
-        "platter",
-        "drinks",
-        "fit meals",
-        "1k+ combos",
-        "breakfast",
-        "sunday family",
-        "sides",
-      ],
-
-      filters: {
-        category: ["popularity", "rating ", "price"],
-        brands: [
-          "bukka hut",
-          "home cooking",
-          "cake",
-          "52",
-          "food & wine",
-          "dominos",
-        ],
-      },
-
       availableFood: [
         {
           name: "soup",
