@@ -97,8 +97,9 @@ const Signin = ({ history }) => {
     await Axios(config)
       .then((response) => {
         successToastify(response.data.message);
+
         sessionStorage.setItem("Token", JSON.stringify(response.data.token));
-        localStorage.setItem("code", JSON.stringify(response.data.userId));
+
         history.push({
           pathname: "/team-086-group-a-frontend/dashboard",
         });

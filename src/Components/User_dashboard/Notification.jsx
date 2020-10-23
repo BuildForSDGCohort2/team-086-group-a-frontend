@@ -21,11 +21,10 @@ const Notification = ({ history }) => {
   const [state, setState] = useContext(RegisterContextMembers);
   const { Notifications } = state;
 
-  const userId = JSON.parse(localStorage.getItem("code"));
   useEffect(() => {
     const handleNotifications = async () => {
       await axios
-        .get(`http://localhost:4000/api/v1/dashboard/loggin_user/${userId}`, {
+        .get(`http://localhost:4000/api/v1/dashboard/loggin_user/`, {
           "Content-Type": "application/json",
           withCredentials: true,
         })
@@ -42,7 +41,7 @@ const Notification = ({ history }) => {
         });
     };
     handleNotifications();
-  }, [setState, userId]);
+  }, [setState]);
 
   return (
     <section className={section}>

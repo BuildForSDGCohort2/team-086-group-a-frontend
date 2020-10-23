@@ -13,7 +13,7 @@ import { RegisterContextMembers } from "../../../Context/RegisteredMemberContext
 //seting the appending node as the root
 Modal.setAppElement("#root");
 
-const CategoryModel = () => {
+const AddCategoryModel = () => {
   const [state, setState] = useContext(RegisterContextMembers);
   const { categoryModal } = state;
   const [input, setInput] = useState([""]);
@@ -45,7 +45,7 @@ const CategoryModel = () => {
   };
 
   //submiting the category to the endpoint
-  const handleSubmitCategory = (e) => {
+  const handleSubmitCategory = async (e) => {
     e.preventDefault();
     let category;
     input.length &&
@@ -57,12 +57,17 @@ const CategoryModel = () => {
         return false;
       });
 
+    //validating the business name field
+    if (brandName === "" || undefined) {
+      return infoToastify("business name field is required");
+    }
+
     //assigning vendor data to menuObject
     const menuObject = { category, brandName };
 
     //sending data to the endpoints
-    Axios.post(
-      `http://localhost:4000/api/v1/dashboard/vendor/category`,
+    await Axios.post(
+      `http://localhost:4000/api/v1/dashboard/vendor/category/${brandName}`,
       menuObject,
       {
         "Content-Type": "application/json",
@@ -131,4 +136,4 @@ const CategoryModel = () => {
   );
 };
 
-export default CategoryModel;
+export default AddCategoryModel;

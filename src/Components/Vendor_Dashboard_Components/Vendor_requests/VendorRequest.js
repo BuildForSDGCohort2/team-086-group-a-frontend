@@ -3,7 +3,8 @@ import CustomInput from "../../../Common/Input.component/Input";
 import { RegisterContextMembers } from "../../../Context/RegisteredMemberContext";
 import CustomList from "../../../Common/List.component/List";
 import styled from "styled-components";
-import CategoryModel from "./CategoryModel";
+import AddCategoryModel from "./AddCategoryModel";
+import UpdateCategoryModal from "./UpdateCategoryModal";
 
 const VendorRequest = () => {
   const requestList = ["category", "menu"];
@@ -78,6 +79,10 @@ const VendorRequest = () => {
         displayCategoryModal();
         break;
 
+      case "update category":
+        // UpdateCategoryModal();
+        break;
+
       default:
         break;
     }
@@ -116,7 +121,7 @@ const VendorRequest = () => {
             ))}
         </ul>
       </div>
-      <CategoryModel />
+      <AddCategoryModel />
     </Container>
   );
 };
