@@ -67,7 +67,13 @@ const VendorRequest = () => {
   const displayCategoryModal = () => {
     return setState((datas) => ({
       ...datas,
-      categoryModal: true,
+      addCategoryModal: true,
+    }));
+  };
+  const updateCategory = () => {
+    return setState((datas) => ({
+      ...datas,
+      updateCategoryModal: true,
     }));
   };
 
@@ -80,7 +86,7 @@ const VendorRequest = () => {
         break;
 
       case "update category":
-        // UpdateCategoryModal();
+        updateCategory();
         break;
 
       default:
@@ -122,6 +128,7 @@ const VendorRequest = () => {
         </ul>
       </div>
       <AddCategoryModel />
+      <UpdateCategoryModal />
     </Container>
   );
 };

@@ -15,7 +15,7 @@ Modal.setAppElement("#root");
 
 const AddCategoryModel = () => {
   const [state, setState] = useContext(RegisterContextMembers);
-  const { categoryModal } = state;
+  const { addCategoryModal } = state;
   const [input, setInput] = useState([""]);
   const [brandName, setBrandName] = useState("");
 
@@ -76,6 +76,10 @@ const AddCategoryModel = () => {
     )
       .then((res) => {
         successToastify(res.data.message);
+        setState((datas) => ({
+          ...datas,
+          addCategoryModal: false,
+        }));
       })
       .catch((err) => {
         if (err.response === undefined) {
@@ -88,7 +92,7 @@ const AddCategoryModel = () => {
 
   return (
     <div>
-      <Modal isOpen={categoryModal}>
+      <Modal isOpen={addCategoryModal}>
         <div>
           <CustomInput
             value={brandName}
