@@ -69,7 +69,10 @@ const UpdateCategoryModal = () => {
       }
     )
       .then((res) => {
+        //sending a success message to the client
         successToastify(res.data.message);
+
+        //closing the category modal
         setState((datas) => ({
           ...datas,
           updateCategoryModal: false,
@@ -77,16 +80,22 @@ const UpdateCategoryModal = () => {
       })
       .catch((err) => {
         if (err.response === undefined) {
+          //break the response once the response is undefined
           return;
         } else {
+          //sending an error message to  client
           errorToastify(err.response.data.message);
         }
       });
   };
 
+  //getting the vendor category once the component mount
   useEffect(() => {
+    //function to handle the get request of the vendor category
     const fetchCategoryForUPdate = async () => {
+      //fetching the category once the category modal is opened
       if (updateCategoryModal === true) {
+        //making a get request of the category of the logged vendor
         await Axios.get(
           `http://localhost:4000/api/v1/dashboard/vendor/category/list`,
           {
@@ -95,13 +104,18 @@ const UpdateCategoryModal = () => {
           }
         )
           .then((res) => {
+            //setting the response data to the state
             setcategory(res.data.data);
+
+            //setting the category to the state
             setInput(res.data.data.category);
           })
           .catch((err) => {
             if (err.response === undefined) {
               return;
             }
+
+            //returning an error message to the client
             return errorToastify(err.response.data.message);
           });
       }

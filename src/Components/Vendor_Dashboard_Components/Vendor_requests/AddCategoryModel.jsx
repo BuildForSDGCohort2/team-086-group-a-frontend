@@ -75,16 +75,21 @@ const AddCategoryModel = () => {
       }
     )
       .then((res) => {
+        //sending a success message to the client
         successToastify(res.data.message);
+
+        //closing the modal
         setState((datas) => ({
           ...datas,
           addCategoryModal: false,
         }));
       })
       .catch((err) => {
+        //breaking the process if error is undefined
         if (err.response === undefined) {
           return;
         } else {
+          //sending an error message to the client
           errorToastify(err.response.data.message);
         }
       });
