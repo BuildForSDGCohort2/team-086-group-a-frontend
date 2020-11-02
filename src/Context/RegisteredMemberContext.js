@@ -35,6 +35,7 @@ const RegisteredMemberContextProvider = (props) => {
     vendorOptionsRequest: [],
 
     addCategoryModal: false,
+    addMenuModal: false,
 
     updateCategoryModal: false,
 

@@ -22,6 +22,7 @@ const PaymentModal = () => {
   const { data, expiry } = subscriptionCharge;
   const { card, metadata, email, amount, pin } = data;
   const { number, cvv } = card;
+  const { REACT_APP_ENDPOINT } = process.env;
 
   //setting the input field to the state
   const handleCardChange = ({ target }) => {
@@ -152,7 +153,7 @@ const PaymentModal = () => {
   };
 
   const getpaymentReference = async (ref) => {
-    await Axios.get(`http://localhost:4000/api/v1/payment/${ref}`)
+    await Axios.get(`${REACT_APP_ENDPOINT}/api/v1/payment/${ref}`)
       .then((res) => {
         if (res) {
           successToastify(res.data.message);

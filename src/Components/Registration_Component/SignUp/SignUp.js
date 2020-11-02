@@ -45,6 +45,7 @@ const Signup = ({ history }) => {
   const FormRef = useRef();
   const inputsRef = useRef();
   const { regValue } = datas;
+  const { REACT_APP_ENDPOINT } = process.env;
 
   const handleSignNavigation = async () => {
     await history.push("/team-086-group-a-frontend/signin");
@@ -136,7 +137,7 @@ const Signup = ({ history }) => {
     //post to the server
     const config = {
       method: "post",
-      url: "http://localhost:4000/api/v1/user/signup",
+      url: `${REACT_APP_ENDPOINT}/api/v1/user/signup`,
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",

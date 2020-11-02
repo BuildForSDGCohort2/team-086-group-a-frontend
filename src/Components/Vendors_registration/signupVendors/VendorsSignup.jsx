@@ -29,6 +29,8 @@ const VendorSignup = ({ history }) => {
 
   const { vendorFormData, privacyCheck } = state;
 
+  const { REACT_APP_ENDPOINT } = process.env;
+
   const handleSignNavigation = async () => {
     await history.push("/team-086-group-a-frontend/vendor-dashboard");
   };
@@ -41,7 +43,7 @@ const VendorSignup = ({ history }) => {
 
     const config = {
       method: "post",
-      url: "http://localhost:4000/api/v1/vendor/signup",
+      url: `${REACT_APP_ENDPOINT}/api/v1/vendor/signup`,
       headers: {
         "Content-Type": "application/json",
       },

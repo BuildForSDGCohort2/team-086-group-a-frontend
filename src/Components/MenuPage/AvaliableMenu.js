@@ -54,6 +54,7 @@ const AvaliableMenu = ({ match }) => {
   } = state;
 
   const { category: filterCategory } = filters;
+  const { REACT_APP_ENDPOINT } = process.env;
 
   const handleListClick = ({ target }) => {
     //fetch the categories that match the menu been clicked
@@ -74,7 +75,7 @@ const AvaliableMenu = ({ match }) => {
 
     await axios
       .get(
-        `http://localhost:4000/api/v1/dashboard/user/one_category/${target.innerText.toLowerCase()}`,
+        `${REACT_APP_ENDPOINT}/api/v1/dashboard/user/one_category/${target.innerText.toLowerCase()}`,
         {
           "Content-Type": "application/json",
           withCredentials: true,
@@ -97,7 +98,7 @@ const AvaliableMenu = ({ match }) => {
 
     await axios
       .get(
-        `http://localhost:4000/api/v1/dashboard/user/one_menu/${target.innerText.toLowerCase()}`,
+        `${REACT_APP_ENDPOINT}api/v1/dashboard/user/one_menu/${target.innerText.toLowerCase()}`,
         {
           "Content-Type": "application/json",
           withCredentials: true,
@@ -122,7 +123,7 @@ const AvaliableMenu = ({ match }) => {
     //setting the available menu, brandName and categories to the state on didmount
     const availableMenu = async () => {
       await axios
-        .get(`http://localhost:4000/api/v1/dashboard/user/category`, {
+        .get(`${REACT_APP_ENDPOINT}/api/v1/dashboard/user/category`, {
           "Content-Type": "application/json",
           withCredentials: true,
         })
@@ -145,7 +146,7 @@ const AvaliableMenu = ({ match }) => {
     const handlebrandsNames = async () => {
       //fetching the brandNames from the server
       await axios
-        .get(`http://localhost:4000/api/v1/menu/all`, {
+        .get(`${REACT_APP_ENDPOINT}/api/v1/menu/all`, {
           "Content-Type": "application/json",
           withCredentials: true,
         })
@@ -162,7 +163,7 @@ const AvaliableMenu = ({ match }) => {
     const handleMenu = async () => {
       //fetching the menu to be displayed on didmount
       await axios
-        .get(`http://localhost:4000/api/v1/dashboard/user/menu/`, {
+        .get(`${REACT_APP_ENDPOINT}/api/v1/dashboard/user/menu/`, {
           "Content-Type": "application/json",
           withCredentials: true,
         })
@@ -175,7 +176,7 @@ const AvaliableMenu = ({ match }) => {
         .catch((err) => errorToastify(err.response.data.message));
     };
     handleMenu();
-  }, [setState]);
+  }, [setState, REACT_APP_ENDPOINT]);
 
   return (
     <section className={container}>

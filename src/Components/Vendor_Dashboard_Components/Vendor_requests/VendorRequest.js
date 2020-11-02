@@ -3,8 +3,9 @@ import CustomInput from "../../../Common/Input.component/Input";
 import { RegisterContextMembers } from "../../../Context/RegisteredMemberContext";
 import CustomList from "../../../Common/List.component/List";
 import styled from "styled-components";
-import AddCategoryModel from "./AddCategoryModel";
-import UpdateCategoryModal from "./UpdateCategoryModal";
+import AddCategoryModel from "./Category/AddCategoryModel";
+import UpdateCategoryModal from "./Category/UpdateCategoryModal";
+import AddMenuModal from "./Menu/AddMenu";
 
 const VendorRequest = () => {
   const requestList = ["category", "menu"];
@@ -70,10 +71,20 @@ const VendorRequest = () => {
       addCategoryModal: true,
     }));
   };
+
+  //opening the update category modal
   const updateCategory = () => {
     return setState((datas) => ({
       ...datas,
       updateCategoryModal: true,
+    }));
+  };
+
+  // opening the add menu modal
+  const addMenu = () => {
+    return setState((datas) => ({
+      ...datas,
+      addMenuModal: true,
     }));
   };
 
@@ -89,6 +100,9 @@ const VendorRequest = () => {
         updateCategory();
         break;
 
+      case "add menu":
+        addMenu();
+        break;
       default:
         break;
     }
@@ -129,6 +143,7 @@ const VendorRequest = () => {
       </div>
       <AddCategoryModel />
       <UpdateCategoryModal />
+      <AddMenuModal />
     </Container>
   );
 };
