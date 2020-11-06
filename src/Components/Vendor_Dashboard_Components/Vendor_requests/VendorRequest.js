@@ -6,8 +6,9 @@ import styled from "styled-components";
 import AddCategoryModel from "./Category/AddCategoryModel";
 import UpdateCategoryModal from "./Category/UpdateCategoryModal";
 import AddMenuModal from "./Menu/AddMenu";
+import { withRouter } from "react-router-dom";
 
-const VendorRequest = () => {
+const VendorRequest = ({ history }) => {
   const requestList = ["category", "menu"];
   const [state, setState] = useContext(RegisterContextMembers);
   const { vendorRequestDropDown, vendorOptionsRequest } = state;
@@ -36,7 +37,7 @@ const VendorRequest = () => {
         break;
     }
   };
-
+  console.log("history", history);
   //handling the vendor category request
   const CategoryDropDownComponent = () => {
     const categoryRequests = ["add category", "update category"];
@@ -49,7 +50,7 @@ const VendorRequest = () => {
 
   //handling the vendor menu request
   const MenuDropDownComponent = () => {
-    const menuRequests = ["add menu", "update menu", "remove menu"];
+    const menuRequests = ["add menu", "view menus", "remove menu"];
 
     return setState((datas) => ({
       ...datas,
@@ -88,6 +89,12 @@ const VendorRequest = () => {
     }));
   };
 
+  const displayMenuModal = () => {
+    return history.push({
+      pathname: "/team-086-group-a-frontend/display_menu/",
+    });
+  };
+
   //handling the request options click
   const requestClick = ({ target }) => {
     //handling the vendor request actions
@@ -103,6 +110,11 @@ const VendorRequest = () => {
       case "add menu":
         addMenu();
         break;
+
+      case "view menus":
+        displayMenuModal();
+        break;
+
       default:
         break;
     }
@@ -152,4 +164,4 @@ const Container = styled.div`
   margin-top: 3em;
 `;
 
-export default VendorRequest;
+export default withRouter(VendorRequest);

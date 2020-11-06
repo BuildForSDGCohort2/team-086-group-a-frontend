@@ -13,6 +13,7 @@ const RegisteredMemberContextProvider = (props) => {
 
     toggleMenuIcon: false,
 
+    vendorMenus: [],
     vendorFormData: {
       businessName: "",
       businessType: "",
@@ -38,6 +39,8 @@ const RegisteredMemberContextProvider = (props) => {
     addMenuModal: false,
 
     updateCategoryModal: false,
+
+    viewMenuModal: false,
 
     specifiedFood: [],
     Notifications: [],

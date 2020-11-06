@@ -81,10 +81,10 @@ const AddMenuModal = () => {
         successToastify(res.data.message);
 
         //closing the modal
-        // setState((datas) => ({
-        //   ...datas,
-        //   addCategoryModal: false,
-        // }));
+        setState((datas) => ({
+          ...datas,
+          addCategoryModal: false,
+        }));
       })
       .catch((err) => {
         //breaking the process if error is undefined

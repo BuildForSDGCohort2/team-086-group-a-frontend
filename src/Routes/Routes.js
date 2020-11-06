@@ -18,6 +18,7 @@ import VendorLoginPage from "../Pages/Vendor_registrationPage/VendorLoginPage";
 import PaymentModal from "../Components/Payment_modal/paymentModal";
 import TermsPage from "../Pages/TermsPage/TermsPage";
 import VendorDashboard from "../Pages/VendorDashboardPage/VendorDashboardPage";
+import DisplaySpecifiedVendorMenu from "../Components/Vendor_Dashboard_Components/Vendor_requests/Menu/DisplaySpecifiedVendorMenu";
 
 const Routes = () => {
   return (
@@ -90,6 +91,10 @@ const Routes = () => {
             <ProtectedRoutes
               path="/team-086-group-a-frontend/vendor-dashboard"
               component={VendorDashboard}
+            />
+            <ProtectedRoutes
+              path="/team-086-group-a-frontend/display_menu/"
+              component={DisplaySpecifiedVendorMenu}
             />
             <Route render={NotFoundPage} />
           </Switch>
