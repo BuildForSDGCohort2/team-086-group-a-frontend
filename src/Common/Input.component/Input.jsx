@@ -34,6 +34,7 @@ const Input = ({
   click,
   onClickCapture,
   onKeyup,
+  accept,
 }) => {
   return (
     <div>
@@ -71,6 +72,7 @@ const Input = ({
         onClickCapture={onClickCapture ? onClickCapture : null}
         onFocus={focus ? focus : null}
         onKeyUp={onKeyup ? onKeyup : null}
+        accept={accept ? accept : null}
       />
       <span onClick={iconClick ? iconClick : null}>{icon ? icon : null}</span>
     </div>

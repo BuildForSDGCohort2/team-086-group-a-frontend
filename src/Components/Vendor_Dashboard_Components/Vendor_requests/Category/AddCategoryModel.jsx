@@ -1,14 +1,14 @@
 import React, { useState, useContext } from "react";
 import Modal from "react-modal";
-import CustomInput from "../../../Common/Input.component/Input";
-import CustomButton from "../../../Common/Button.component/Button";
+import CustomInput from "../../../../Common/Input.component/Input";
+import CustomButton from "../../../../Common/Button.component/Button";
 import {
   infoToastify,
   successToastify,
   errorToastify,
-} from "../../react_toastify/toastify";
+} from "../../../react_toastify/toastify";
 import Axios from "axios";
-import { RegisterContextMembers } from "../../../Context/RegisteredMemberContext";
+import { RegisterContextMembers } from "../../../../Context/RegisteredMemberContext";
 
 //seting the appending node as the root
 Modal.setAppElement("#root");
@@ -18,6 +18,7 @@ const AddCategoryModel = () => {
   const { addCategoryModal } = state;
   const [input, setInput] = useState([""]);
   const [brandName, setBrandName] = useState("");
+  const { REACT_APP_ENDPOINT } = process.env;
 
   //adding new inputs
   const handleAppendNewInput = () => {
@@ -67,7 +68,7 @@ const AddCategoryModel = () => {
 
     //sending data to the endpoints
     await Axios.post(
-      `http://localhost:4000/api/v1/dashboard/vendor/category/${brandName}`,
+      `${REACT_APP_ENDPOINT}/api/v1/dashboard/vendor/category/${brandName}`,
       menuObject,
       {
         "Content-Type": "application/json",

@@ -42,6 +42,7 @@ const Signin = ({ history }) => {
     forgotPassword,
     noAccount,
   } = SigninStyles;
+  const { REACT_APP_ENDPOINT } = process.env;
 
   //toggling the visibility status of password
   const handleTogglePassword = () => {
@@ -69,7 +70,6 @@ const Signin = ({ history }) => {
       regValue: { ...regValue, [target.name]: target.value },
     }));
   };
-
   const handleUSerSigUp = async (e) => {
     e.preventDefault();
 
@@ -85,7 +85,7 @@ const Signin = ({ history }) => {
 
     const config = {
       method: "post",
-      url: "http://localhost:4000/api/v1/user/login",
+      url: `${REACT_APP_ENDPOINT}/api/v1/user/login`,
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",

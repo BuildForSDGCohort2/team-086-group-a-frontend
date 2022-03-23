@@ -1,14 +1,14 @@
 import React, { useEffect, useState, useContext } from "react";
 import Axios from "axios";
 import Modal from "react-modal";
-import { RegisterContextMembers } from "../../../Context/RegisteredMemberContext";
+import { RegisterContextMembers } from "../../../../Context/RegisteredMemberContext";
 import {
   errorToastify,
   infoToastify,
   successToastify,
-} from "../../react_toastify/toastify";
-import CustomInput from "../../../Common/Input.component/Input";
-import CustomButton from "../../../Common/Button.component/Button";
+} from "../../../react_toastify/toastify";
+import CustomInput from "../../../../Common/Input.component/Input";
+import CustomButton from "../../../../Common/Button.component/Button";
 
 Modal.setAppElement("#root");
 
@@ -17,6 +17,7 @@ const UpdateCategoryModal = () => {
   const [categories, setcategory] = useState([]);
   const { updateCategoryModal } = state;
   const [input, setInput] = useState([""]);
+  const { REACT_APP_ENDPOINT } = process.env;
 
   const handleAppendNewInput = () => {
     if (input.length + 1 > 10) {
@@ -61,7 +62,7 @@ const UpdateCategoryModal = () => {
 
     //sending updated data to the endpoints
     await Axios.put(
-      `http://localhost:4000/api/v1/dashboard/vendor/category/list/${id}`,
+      `${REACT_APP_ENDPOINT}/api/v1/dashboard/vendor/category/list/${id}`,
       { category },
       {
         "Content-Type": "application/json",
@@ -97,7 +98,7 @@ const UpdateCategoryModal = () => {
       if (updateCategoryModal === true) {
         //making a get request of the category of the logged vendor
         await Axios.get(
-          `http://localhost:4000/api/v1/dashboard/vendor/category/list`,
+          `${REACT_APP_ENDPOINT}/api/v1/dashboard/vendor/category/list`,
           {
             "Content-Type": "application/json",
             withCredentials: true,
@@ -122,7 +123,7 @@ const UpdateCategoryModal = () => {
     };
 
     fetchCategoryForUPdate();
-  }, [updateCategoryModal]);
+  }, [updateCategoryModal, REACT_APP_ENDPOINT]);
 
   return (
     <div>

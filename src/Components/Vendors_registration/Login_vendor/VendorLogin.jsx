@@ -35,6 +35,7 @@ const VendorLogin = ({ history }) => {
     forgotPassword,
     noAccount,
   } = SigninStyles;
+  const { REACT_APP_ENDPOINT } = process.env;
 
   const handleChange = ({ target }) => {
     setState((data) => ({
@@ -48,7 +49,7 @@ const VendorLogin = ({ history }) => {
 
     const config = {
       method: "post",
-      url: "http://localhost:4000/api/v1/vendor/login",
+      url: `${REACT_APP_ENDPOINT}/api/v1/vendor/login`,
       headers: {
         "Content-Type": "application/json",
       },
