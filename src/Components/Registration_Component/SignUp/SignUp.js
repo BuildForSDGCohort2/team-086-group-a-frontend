@@ -95,13 +95,8 @@ const Signup = ({ history }) => {
 
   const handleUSerSigUp = async (e) => {
     e.preventDefault();
-    const {
-      fullName,
-      phoneNumber,
-      email,
-      password,
-      confirmPassword,
-    } = regValue;
+    const { fullName, phoneNumber, email, password, confirmPassword } =
+      regValue;
 
     //conditionion the input value datas
 
@@ -133,7 +128,7 @@ const Signup = ({ history }) => {
     };
 
     FormRef.current.reset(); //reset form on submit
-
+    console.log("userObject", userObject);
     //post to the server
     const config = {
       method: "post",
@@ -148,13 +143,15 @@ const Signup = ({ history }) => {
     await axios(config)
       .then((response) => {
         // routing to signin page on componentdid update
+        console.log("response", response);
         handleSignNavigation();
       })
       .catch((error) => {
-        if (error.response.data.message !== "") {
-          console.log("object", error.response.data.message);
-          return errorToastify(error.response.data.message);
-        }
+        console.log("error.response.data", error.response);
+        // if (error.response.data.message !== "") {
+        //   console.log("object", error.response.data.message);
+        //   return errorToastify(error.response.data.message);
+        // }
       });
   };
 
